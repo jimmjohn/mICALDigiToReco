@@ -1,0 +1,36 @@
+#Compile Using CMakeLists.txt.
+Make file Generated inside build.
+excetutable file generated in main directory.
+From main directory SingleCode:
+mkdir build
+cd build
+rm -rf *
+cmake ../
+make
+cd ../
+
+then see following commands to excecute:
+
+#...............................Single Stack.....................
+
+For data: ./anal_ical data_test_digi.log 1 0.1 corrections_pos_time_26122018.root 1000 0 1 0 0 
+
+For MC: ./anal_ical MC_test_digi.log 2 0.1 0 1000 0 1 0 0 
+
+# 2: is for data
+  last 0: is for Single stack geometry.
+
+..................................................................
+
+
+
+
+#root Filename to be given in data_test_digi.log
+(Do not include _digi.root in the name)
+- MC rootfilenames to be listed in MC_test_digi.log
+
+
+#MC Digi input data in datadigi/
+#Experiment digi input data in rredata/
+
+# Output will be stored in recodata/

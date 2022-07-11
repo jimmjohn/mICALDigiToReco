@@ -1,0 +1,25 @@
+initialdir = .
+
+Universe   = vanilla
+notify_user = rajbhupen20@gmail.com
+
+Log        = condorOutput/jobraj_$(Cluster).$(Process).log
+Output     = condorOutput/jobraj_$(Cluster).$(Process).out
+Error      = condorOutput/jobraj_$(Cluster).$(Process).err
+
+Executable = raj_jobwrapper.sh
+
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+transfer_input_files = anal_ical,geo_mical_world20rpc.gdml,B_mical_hist.root,env.sh,Range.txt,runFiles,OneStack_NoCMVD.gdml,TwoStacks_NoCMVD.gdml,corrections_pos_time_26122018.root
+
+transfer_output_files = fileOut
+
+queue arguments from (
+runFiles/MC_test_digi_0001.log 1 0.1 0 1000 0 1 1 0
+runFiles/MC_test_digi_0002.log 1 0.1 0 1000 0 1 1 0
+)
+
+

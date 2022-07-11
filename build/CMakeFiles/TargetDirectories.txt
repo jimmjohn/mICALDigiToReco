@@ -1,0 +1,8 @@
+/media/jim/Research_Files/INO/Geant_Code_Development/GenSimReco/DigitoReco_Updated/SingleCode/build/CMakeFiles/install/strip.dir
+/media/jim/Research_Files/INO/Geant_Code_Development/GenSimReco/DigitoReco_Updated/SingleCode/build/CMakeFiles/install/local.dir
+/media/jim/Research_Files/INO/Geant_Code_Development/GenSimReco/DigitoReco_Updated/SingleCode/build/CMakeFiles/edit_cache.dir
+/media/jim/Research_Files/INO/Geant_Code_Development/GenSimReco/DigitoReco_Updated/SingleCode/build/CMakeFiles/inotarget.dir
+/media/jim/Research_Files/INO/Geant_Code_Development/GenSimReco/DigitoReco_Updated/SingleCode/build/CMakeFiles/install.dir
+/media/jim/Research_Files/INO/Geant_Code_Development/GenSimReco/DigitoReco_Updated/SingleCode/build/CMakeFiles/list_install_components.dir
+/media/jim/Research_Files/INO/Geant_Code_Development/GenSimReco/DigitoReco_Updated/SingleCode/build/CMakeFiles/rebuild_cache.dir
+/media/jim/Research_Files/INO/Geant_Code_Development/GenSimReco/DigitoReco_Updated/SingleCode/build/CMakeFiles/anal_ical.dir
