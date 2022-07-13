@@ -1,0 +1,85 @@
+\hypertarget{HitPosdict_8cc}{}\doxysection{src/\+Hit\+Posdict.cc File Reference}
+\label{HitPosdict_8cc}\index{src/HitPosdict.cc@{src/HitPosdict.cc}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}R\+Config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Class.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Dict\+Attribute\+Map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Interpreter.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+R\+O\+O\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Buffer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Member\+Inspector.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Virtual\+Mutex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Rtypes\+Imp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Is\+A\+Proxy.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+File\+Merge\+Info.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}T\+Collection\+Proxy\+Info.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Data\+Member.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Hit\+Pos.\+h\char`\"{}}\newline
+Include dependency graph for Hit\+Posdict.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{HitPosdict_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacestd}{std}}
+\item 
+ \mbox{\hyperlink{namespaceROOT}{R\+O\+OT}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{HitPosdict_8cc_a685704d1d4b17cca97c2c35ec173710f}{R\+\_\+\+\_\+\+D\+I\+C\+T\+I\+O\+N\+A\+R\+Y\+\_\+\+F\+I\+L\+E\+N\+A\+ME}}~d\+Od\+Od\+Isrcd\+I\+Hit\+Posdict
+\item 
+\#define \mbox{\hyperlink{HitPosdict_8cc_a103d9f389ee705e8cba5d2ddc87ac03c}{G\+\_\+\+\_\+\+D\+I\+C\+T\+I\+O\+N\+A\+RY}}
+\item 
+\#define \mbox{\hyperlink{HitPosdict_8cc_a5e463e8285138c1c80c5d74221237e0b}{G\+\_\+\+\_\+\+R\+O\+OT}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+T\+Generic\+Class\+Info $\ast$ \mbox{\hyperlink{namespaceROOT_af2bccafe2265d6c63c5cf5d77f91eb15}{R\+O\+O\+T\+::\+Generate\+Init\+Instance}} (const \+::\mbox{\hyperlink{classHitPos}{Hit\+Pos}} $\ast$)
+\item 
+\mbox{\hyperlink{namespaceROOT_a3cb77492566f63ed000b83e5d32810a2}{R\+O\+O\+T\+::\+R\+\_\+\+\_\+\+Use\+Dummy}} (\+\_\+\+R\+\_\+\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+D\+I\+C\+T\+\_\+(Init))
+\item 
+void \mbox{\hyperlink{HitPosdict_8cc_aa8ebfa977d92deb01070e244b0544f46}{Trigger\+Dictionary\+Initialization\+\_\+\+Hit\+Posdict}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{HitPosdict_8cc_a103d9f389ee705e8cba5d2ddc87ac03c}\label{HitPosdict_8cc_a103d9f389ee705e8cba5d2ddc87ac03c}} 
+\index{HitPosdict.cc@{HitPosdict.cc}!G\_\_DICTIONARY@{G\_\_DICTIONARY}}
+\index{G\_\_DICTIONARY@{G\_\_DICTIONARY}!HitPosdict.cc@{HitPosdict.cc}}
+\doxysubsubsection{\texorpdfstring{G\_\_DICTIONARY}{G\_\_DICTIONARY}}
+{\footnotesize\ttfamily \#define G\+\_\+\+\_\+\+D\+I\+C\+T\+I\+O\+N\+A\+RY}
+
+\mbox{\Hypertarget{HitPosdict_8cc_a5e463e8285138c1c80c5d74221237e0b}\label{HitPosdict_8cc_a5e463e8285138c1c80c5d74221237e0b}} 
+\index{HitPosdict.cc@{HitPosdict.cc}!G\_\_ROOT@{G\_\_ROOT}}
+\index{G\_\_ROOT@{G\_\_ROOT}!HitPosdict.cc@{HitPosdict.cc}}
+\doxysubsubsection{\texorpdfstring{G\_\_ROOT}{G\_\_ROOT}}
+{\footnotesize\ttfamily \#define G\+\_\+\+\_\+\+R\+O\+OT}
+
+\mbox{\Hypertarget{HitPosdict_8cc_a685704d1d4b17cca97c2c35ec173710f}\label{HitPosdict_8cc_a685704d1d4b17cca97c2c35ec173710f}} 
+\index{HitPosdict.cc@{HitPosdict.cc}!R\_\_DICTIONARY\_FILENAME@{R\_\_DICTIONARY\_FILENAME}}
+\index{R\_\_DICTIONARY\_FILENAME@{R\_\_DICTIONARY\_FILENAME}!HitPosdict.cc@{HitPosdict.cc}}
+\doxysubsubsection{\texorpdfstring{R\_\_DICTIONARY\_FILENAME}{R\_\_DICTIONARY\_FILENAME}}
+{\footnotesize\ttfamily \#define R\+\_\+\+\_\+\+D\+I\+C\+T\+I\+O\+N\+A\+R\+Y\+\_\+\+F\+I\+L\+E\+N\+A\+ME~d\+Od\+Od\+Isrcd\+I\+Hit\+Posdict}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{HitPosdict_8cc_aa8ebfa977d92deb01070e244b0544f46}\label{HitPosdict_8cc_aa8ebfa977d92deb01070e244b0544f46}} 
+\index{HitPosdict.cc@{HitPosdict.cc}!TriggerDictionaryInitialization\_HitPosdict@{TriggerDictionaryInitialization\_HitPosdict}}
+\index{TriggerDictionaryInitialization\_HitPosdict@{TriggerDictionaryInitialization\_HitPosdict}!HitPosdict.cc@{HitPosdict.cc}}
+\doxysubsubsection{\texorpdfstring{TriggerDictionaryInitialization\_HitPosdict()}{TriggerDictionaryInitialization\_HitPosdict()}}
+{\footnotesize\ttfamily void Trigger\+Dictionary\+Initialization\+\_\+\+Hit\+Posdict (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

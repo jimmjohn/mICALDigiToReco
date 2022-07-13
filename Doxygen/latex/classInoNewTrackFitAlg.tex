@@ -1,0 +1,1028 @@
+\hypertarget{classInoNewTrackFitAlg}{}\doxysection{Ino\+New\+Track\+Fit\+Alg Class Reference}
+\label{classInoNewTrackFitAlg}\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+
+
+{\ttfamily \#include $<$Ino\+New\+Track\+Fit\+Alg.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structInoNewTrackFitAlg_1_1ClustStruct}{Clust\+Struct}}
+\item 
+struct \mbox{\hyperlink{structInoNewTrackFitAlg_1_1FiltDataStruct}{Filt\+Data\+Struct}}
+\item 
+struct \mbox{\hyperlink{structInoNewTrackFitAlg_1_1TrkDataStruct}{Trk\+Data\+Struct}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInoNewTrackFitAlg_a46be32354ad39b079b0e1da02c8cf8be}{Ino\+New\+Track\+Fit\+Alg}} ()
+\item 
+virtual \mbox{\hyperlink{classInoNewTrackFitAlg_abf99322e608fee2468ffef2bda5e4b0c}{$\sim$\+Ino\+New\+Track\+Fit\+Alg}} ()
+\item 
+virtual void \mbox{\hyperlink{classInoNewTrackFitAlg_a5ff749daa81a509756e9354dfa2bde67}{Run\+Alg}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_af5e3450e5dcf9d8970ef1c66184ed9be}{Initial\+Framework}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a6962742d54bfc627978be083bb87acfa}{Run\+The\+Fitter}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a5b496bd31cf1a27b03ceb070e0cb0238}{Store\+Filtered\+Data}} (const int New\+Plane)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a9a8379ac5050c9522c19f2c5756f4646}{Store\+Filtered\+Data\+\_\+sr}} (const int New\+Plane, double $\ast$, bool)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_ae69d5184291a7b76a819e89460b81311}{Fill\+Gaps\+In\+Track}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a870e32f2b60c8514fa85dd196021a618}{Get\+Fit\+Data}} (int \&Plane1, int \&Plane2)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a37d6ce4d4bd32e71fecd174a65a1bc78}{Shower\+Strips}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a2351a4edc628aeda5c7aede3d520f1ba}{Remove\+Trk\+Hits\+In\+Shw}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a9e39873a367ca46ec843562f18fd38bd}{Shower\+Swim}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a0565da9319e41475a744f3a020632f4a}{Go\+Backwards}} (const bool first)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_aa6cad03ff3af40e93f26401685958867}{Go\+Forwards}} (const bool first)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_ac4226957532c329cad92639d78e462ae}{Get\+Propagator}} (double $\ast$istate, double Bx, double By, double d\+Bxbx, double d\+Bxdy, double d\+Bydx, double d\+Bydy, double dz, T\+Geo\+Material $\ast$material)
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_a8bd9bb7628a329444b76bda195eb632b}{Swim}} (double $\ast$State\+Vector, double $\ast$Output, const int Plane, const int New\+Plane, const bool Go\+Forward, double $\ast$dS=0, double $\ast$Range=0, double $\ast$dE=0)
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_a6190d2a34acdd3e743e78dbe1f765680}{Swim}} (double $\ast$State\+Vector, double $\ast$Output, const double zbeg, const int New\+Plane, const bool Go\+Forward, double $\ast$dS=0, double $\ast$Range=0, double $\ast$dE=0)
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_a3bfcadc166db6d8e1120e7753e69398f}{Swim}} (double $\ast$State\+Vector, double $\ast$Output, const int Plane, const double zend, const bool Go\+Forward, double $\ast$dS=0, double $\ast$Range=0, double $\ast$dE=0)
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_a0f0d70db6018ba097e78fb15689aeeb2}{Swim\+\_\+new}} (double $\ast$State\+Vector, double $\ast$Output, const int Plane, int \&New\+Plane, const bool Go\+Forward, double $\ast$dS=0, double $\ast$Range=0, double $\ast$dE=0)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_ad8d8a3291f90fb70472781bb619de88b}{Track\+Element\+Merging}} (double $\ast$Tr1, double TargetZ, double $\ast$Tr2)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a50c6eb4b014e9aaf7720a6e337bf917c}{Get\+Initial\+Covariance\+Matrix}} (const bool First\+Iteration)
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_a9aba46cc3eafb4a3c85d05d609a1142a}{Predicted\+State\+Cov}} (double $\ast$State\+Vector, const int Plane, int \&New\+Plane, const bool Go\+Forward, double $\ast$ax\+\_\+\+\_\+minus, int is\+Half=0, double $\ast$dS=0, double $\ast$Range=0)
+\item 
+double \mbox{\hyperlink{classInoNewTrackFitAlg_a23389b4c1d21a91e1b8bd3402927b8f7}{Get\+Energy\+Loss}} (double $\ast$istate, double dz, double \&axi, double \&a\+T\+\_\+max, double \&aI, T\+Geo\+Material $\ast$material)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_ad4946111c6a261eb891ed008e1af771e}{Get\+Multiple\+Scattering}} (double $\ast$mstate, double Bx, double By, double dz, double a\+T\+\_\+max, double aI, T\+Geo\+Material $\ast$material)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a28b7ade3ca7ee32210f2600dcf00f187}{Extrap\+Cov\+Matrix}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a4626ac58aa1bf624f82de09732a62de6}{Extrap\+Cov\+Matrixall}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a4284d897d5b3b49215d9a39520b4d1cc}{Calc\+Kalman\+Gain}} (double $\ast$x\+\_\+\+\_\+minus, const int New\+Plane)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_ab1ce94c065a4e50b3d929305f36db35c}{Kalman\+Filter\+State\+Vector}} (double $\ast$x\+\_\+\+\_\+minus, const int Plane, const bool Go\+Forward, double $\ast$xk)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_abbb20a97adb8ea7eb8b2f851e08e6585}{Update\+Cov\+Matrix}} (const int New\+Plane)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_ac6b5c494c728652afad59e25c4ad98bb}{Move\+Arrays}} (const int New\+Plane, const bool Go\+Forward)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a07a70b80df97f1fd89f4c2703a1756a0}{Set\+Track\+Properties}} (double $\ast$Input, double $\ast$input2, double $\ast$input3)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a314b8411a715584c84c5bcf2061d09ac}{Timing\+Fit}} ()
+\item 
+virtual void \mbox{\hyperlink{classInoNewTrackFitAlg_a12104cf22e5fee03c6507aabb7853bd5}{Trace}} (const char $\ast$c) const
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a29ad190335d6acb2e6cff77c528703dd}{Reset\+Covariance\+Matrix}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a1ef977db9ab4f15fb15cab005a74cd15}{SetT}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_aa8c77a84801478cdcacefaca3bd5e9af}{Calculate\+Trace}} ()
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_a28c217fae8468c2c3f6a2c77706149ed}{Direction\+From\+Finder\+Hits}} (\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$trk, double \&Finder\+Path\+Length, double \&Finder\+Distance)
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_ad1534364d1ddd989d26fea15ab7128dc}{Direction\+From\+Finder\+Hits\+Old\+Func}} (\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$trk, double \&Finder\+Path\+Length, double \&Finder\+Distance)
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_af2e7a0b004eccb236a70eb11ecf1b816}{Check\+F\+C\+PC}} (double $\ast$x\+\_\+k, bool Go\+Forward)
+\item 
+int \mbox{\hyperlink{classInoNewTrackFitAlg_ac75d3e52b3fb3e3427d4e85fc8349c72}{Check\+F\+C\+P\+C\+Up\+Or\+Dn}} (double $\ast$x\+\_\+k, bool Dir\+Extra\+Pol, int Max\+Min\+Plane, bool Go\+Dir)
+\item 
+\mbox{\hyperlink{classInoNewTrackFitAlg_a46be32354ad39b079b0e1da02c8cf8be}{Ino\+New\+Track\+Fit\+Alg}} ()
+\item 
+virtual \mbox{\hyperlink{classInoNewTrackFitAlg_aa55aba4d8bd8778ea4698bf975877a85}{$\sim$\+Ino\+New\+Track\+Fit\+Alg}} ()
+\item 
+virtual void \mbox{\hyperlink{classInoNewTrackFitAlg_a32272aaad0e12b562abc3f285280cca3}{Run\+Alg}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_af5e3450e5dcf9d8970ef1c66184ed9be}{Initial\+Framework}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a6962742d54bfc627978be083bb87acfa}{Run\+The\+Fitter}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a5b496bd31cf1a27b03ceb070e0cb0238}{Store\+Filtered\+Data}} (const int New\+Plane)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a9a8379ac5050c9522c19f2c5756f4646}{Store\+Filtered\+Data\+\_\+sr}} (const int New\+Plane, double $\ast$, bool)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_ae69d5184291a7b76a819e89460b81311}{Fill\+Gaps\+In\+Track}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a870e32f2b60c8514fa85dd196021a618}{Get\+Fit\+Data}} (int \&Plane1, int \&Plane2)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a37d6ce4d4bd32e71fecd174a65a1bc78}{Shower\+Strips}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a2351a4edc628aeda5c7aede3d520f1ba}{Remove\+Trk\+Hits\+In\+Shw}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a9e39873a367ca46ec843562f18fd38bd}{Shower\+Swim}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a0565da9319e41475a744f3a020632f4a}{Go\+Backwards}} (const bool first)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_aa6cad03ff3af40e93f26401685958867}{Go\+Forwards}} (const bool first)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_ac4226957532c329cad92639d78e462ae}{Get\+Propagator}} (double $\ast$istate, double Bx, double By, double d\+Bxbx, double d\+Bxdy, double d\+Bydx, double d\+Bydy, double dz, T\+Geo\+Material $\ast$material)
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_a8bd9bb7628a329444b76bda195eb632b}{Swim}} (double $\ast$State\+Vector, double $\ast$Output, const int Plane, const int New\+Plane, const bool Go\+Forward, double $\ast$dS=0, double $\ast$Range=0, double $\ast$dE=0)
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_a6190d2a34acdd3e743e78dbe1f765680}{Swim}} (double $\ast$State\+Vector, double $\ast$Output, const double zbeg, const int New\+Plane, const bool Go\+Forward, double $\ast$dS=0, double $\ast$Range=0, double $\ast$dE=0)
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_a3bfcadc166db6d8e1120e7753e69398f}{Swim}} (double $\ast$State\+Vector, double $\ast$Output, const int Plane, const double zend, const bool Go\+Forward, double $\ast$dS=0, double $\ast$Range=0, double $\ast$dE=0)
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_a0f0d70db6018ba097e78fb15689aeeb2}{Swim\+\_\+new}} (double $\ast$State\+Vector, double $\ast$Output, const int Plane, int \&New\+Plane, const bool Go\+Forward, double $\ast$dS=0, double $\ast$Range=0, double $\ast$dE=0)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_ad8d8a3291f90fb70472781bb619de88b}{Track\+Element\+Merging}} (double $\ast$Tr1, double TargetZ, double $\ast$Tr2)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a50c6eb4b014e9aaf7720a6e337bf917c}{Get\+Initial\+Covariance\+Matrix}} (const bool First\+Iteration)
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_a9aba46cc3eafb4a3c85d05d609a1142a}{Predicted\+State\+Cov}} (double $\ast$State\+Vector, const int Plane, int \&New\+Plane, const bool Go\+Forward, double $\ast$ax\+\_\+\+\_\+minus, int is\+Half=0, double $\ast$dS=0, double $\ast$Range=0)
+\item 
+double \mbox{\hyperlink{classInoNewTrackFitAlg_a23389b4c1d21a91e1b8bd3402927b8f7}{Get\+Energy\+Loss}} (double $\ast$istate, double dz, double \&axi, double \&a\+T\+\_\+max, double \&aI, T\+Geo\+Material $\ast$material)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_ad4946111c6a261eb891ed008e1af771e}{Get\+Multiple\+Scattering}} (double $\ast$mstate, double Bx, double By, double dz, double a\+T\+\_\+max, double aI, T\+Geo\+Material $\ast$material)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a28b7ade3ca7ee32210f2600dcf00f187}{Extrap\+Cov\+Matrix}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a4626ac58aa1bf624f82de09732a62de6}{Extrap\+Cov\+Matrixall}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a4284d897d5b3b49215d9a39520b4d1cc}{Calc\+Kalman\+Gain}} (double $\ast$x\+\_\+\+\_\+minus, const int New\+Plane)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_ab1ce94c065a4e50b3d929305f36db35c}{Kalman\+Filter\+State\+Vector}} (double $\ast$x\+\_\+\+\_\+minus, const int Plane, const bool Go\+Forward, double $\ast$xk)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_abbb20a97adb8ea7eb8b2f851e08e6585}{Update\+Cov\+Matrix}} (const int New\+Plane)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_ac6b5c494c728652afad59e25c4ad98bb}{Move\+Arrays}} (const int New\+Plane, const bool Go\+Forward)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a8f4e2a38210defa4ca2d0cc543d783df}{Set\+Track\+Properties}} (double $\ast$Input, double $\ast$input2)
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a314b8411a715584c84c5bcf2061d09ac}{Timing\+Fit}} ()
+\item 
+virtual void \mbox{\hyperlink{classInoNewTrackFitAlg_a3f8841686000d6abed9d4eb1e8087723}{Trace}} (const char $\ast$c) const
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a29ad190335d6acb2e6cff77c528703dd}{Reset\+Covariance\+Matrix}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_a1ef977db9ab4f15fb15cab005a74cd15}{SetT}} ()
+\item 
+void \mbox{\hyperlink{classInoNewTrackFitAlg_aa8c77a84801478cdcacefaca3bd5e9af}{Calculate\+Trace}} ()
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_a28c217fae8468c2c3f6a2c77706149ed}{Direction\+From\+Finder\+Hits}} (\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$trk, double \&Finder\+Path\+Length, double \&Finder\+Distance)
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_ad1534364d1ddd989d26fea15ab7128dc}{Direction\+From\+Finder\+Hits\+Old\+Func}} (\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$trk, double \&Finder\+Path\+Length, double \&Finder\+Distance)
+\item 
+bool \mbox{\hyperlink{classInoNewTrackFitAlg_af2e7a0b004eccb236a70eb11ecf1b816}{Check\+F\+C\+PC}} (double $\ast$x\+\_\+k, bool Go\+Forward)
+\item 
+int \mbox{\hyperlink{classInoNewTrackFitAlg_ac75d3e52b3fb3e3427d4e85fc8349c72}{Check\+F\+C\+P\+C\+Up\+Or\+Dn}} (double $\ast$x\+\_\+k, bool Dir\+Extra\+Pol, int Max\+Min\+Plane, bool Go\+Dir)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned int \mbox{\hyperlink{classInoNewTrackFitAlg_a0a501bb7ddeeef956427827b54a9211d}{double\+La}} =10
+\item 
+static const unsigned int \mbox{\hyperlink{classInoNewTrackFitAlg_ab8ee50d6d7de80f11e37b8b67ab15815}{shift\+La}} =250
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a46be32354ad39b079b0e1da02c8cf8be}\label{classInoNewTrackFitAlg_a46be32354ad39b079b0e1da02c8cf8be}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{InoNewTrackFitAlg()}{InoNewTrackFitAlg()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Ino\+New\+Track\+Fit\+Alg\+::\+Ino\+New\+Track\+Fit\+Alg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classInoNewTrackFitAlg_a46be32354ad39b079b0e1da02c8cf8be_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a46be32354ad39b079b0e1da02c8cf8be_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_abf99322e608fee2468ffef2bda5e4b0c}\label{classInoNewTrackFitAlg_abf99322e608fee2468ffef2bda5e4b0c}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!````~InoNewTrackFitAlg@{$\sim$InoNewTrackFitAlg}}
+\index{````~InoNewTrackFitAlg@{$\sim$InoNewTrackFitAlg}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{$\sim$InoNewTrackFitAlg()}{~InoNewTrackFitAlg()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Ino\+New\+Track\+Fit\+Alg\+::$\sim$\+Ino\+New\+Track\+Fit\+Alg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_abf99322e608fee2468ffef2bda5e4b0c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a46be32354ad39b079b0e1da02c8cf8be}\label{classInoNewTrackFitAlg_a46be32354ad39b079b0e1da02c8cf8be}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{InoNewTrackFitAlg()}{InoNewTrackFitAlg()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Ino\+New\+Track\+Fit\+Alg\+::\+Ino\+New\+Track\+Fit\+Alg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_aa55aba4d8bd8778ea4698bf975877a85}\label{classInoNewTrackFitAlg_aa55aba4d8bd8778ea4698bf975877a85}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!````~InoNewTrackFitAlg@{$\sim$InoNewTrackFitAlg}}
+\index{````~InoNewTrackFitAlg@{$\sim$InoNewTrackFitAlg}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{$\sim$InoNewTrackFitAlg()}{~InoNewTrackFitAlg()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual Ino\+New\+Track\+Fit\+Alg\+::$\sim$\+Ino\+New\+Track\+Fit\+Alg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a4284d897d5b3b49215d9a39520b4d1cc}\label{classInoNewTrackFitAlg_a4284d897d5b3b49215d9a39520b4d1cc}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!CalcKalmanGain@{CalcKalmanGain}}
+\index{CalcKalmanGain@{CalcKalmanGain}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{CalcKalmanGain()}{CalcKalmanGain()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Calc\+Kalman\+Gain (\begin{DoxyParamCaption}\item[{double $\ast$}]{x\+\_\+\+\_\+minus,  }\item[{const int}]{New\+Plane }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a4284d897d5b3b49215d9a39520b4d1cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a4284d897d5b3b49215d9a39520b4d1cc}\label{classInoNewTrackFitAlg_a4284d897d5b3b49215d9a39520b4d1cc}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!CalcKalmanGain@{CalcKalmanGain}}
+\index{CalcKalmanGain@{CalcKalmanGain}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{CalcKalmanGain()}{CalcKalmanGain()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Calc\+Kalman\+Gain (\begin{DoxyParamCaption}\item[{double $\ast$}]{x\+\_\+\+\_\+minus,  }\item[{const int}]{New\+Plane }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_aa8c77a84801478cdcacefaca3bd5e9af}\label{classInoNewTrackFitAlg_aa8c77a84801478cdcacefaca3bd5e9af}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!CalculateTrace@{CalculateTrace}}
+\index{CalculateTrace@{CalculateTrace}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{CalculateTrace()}{CalculateTrace()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Calculate\+Trace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_aa8c77a84801478cdcacefaca3bd5e9af}\label{classInoNewTrackFitAlg_aa8c77a84801478cdcacefaca3bd5e9af}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!CalculateTrace@{CalculateTrace}}
+\index{CalculateTrace@{CalculateTrace}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{CalculateTrace()}{CalculateTrace()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Calculate\+Trace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_af2e7a0b004eccb236a70eb11ecf1b816}\label{classInoNewTrackFitAlg_af2e7a0b004eccb236a70eb11ecf1b816}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!CheckFCPC@{CheckFCPC}}
+\index{CheckFCPC@{CheckFCPC}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{CheckFCPC()}{CheckFCPC()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Check\+F\+C\+PC (\begin{DoxyParamCaption}\item[{double $\ast$}]{x\+\_\+k,  }\item[{bool}]{Go\+Forward }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_af2e7a0b004eccb236a70eb11ecf1b816_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_af2e7a0b004eccb236a70eb11ecf1b816}\label{classInoNewTrackFitAlg_af2e7a0b004eccb236a70eb11ecf1b816}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!CheckFCPC@{CheckFCPC}}
+\index{CheckFCPC@{CheckFCPC}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{CheckFCPC()}{CheckFCPC()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Check\+F\+C\+PC (\begin{DoxyParamCaption}\item[{double $\ast$}]{x\+\_\+k,  }\item[{bool}]{Go\+Forward }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ac75d3e52b3fb3e3427d4e85fc8349c72}\label{classInoNewTrackFitAlg_ac75d3e52b3fb3e3427d4e85fc8349c72}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!CheckFCPCUpOrDn@{CheckFCPCUpOrDn}}
+\index{CheckFCPCUpOrDn@{CheckFCPCUpOrDn}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{CheckFCPCUpOrDn()}{CheckFCPCUpOrDn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Ino\+New\+Track\+Fit\+Alg\+::\+Check\+F\+C\+P\+C\+Up\+Or\+Dn (\begin{DoxyParamCaption}\item[{double $\ast$}]{x\+\_\+k,  }\item[{bool}]{Dir\+Extra\+Pol,  }\item[{int}]{Max\+Min\+Plane,  }\item[{bool}]{Go\+Dir }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_ac75d3e52b3fb3e3427d4e85fc8349c72_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ac75d3e52b3fb3e3427d4e85fc8349c72}\label{classInoNewTrackFitAlg_ac75d3e52b3fb3e3427d4e85fc8349c72}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!CheckFCPCUpOrDn@{CheckFCPCUpOrDn}}
+\index{CheckFCPCUpOrDn@{CheckFCPCUpOrDn}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{CheckFCPCUpOrDn()}{CheckFCPCUpOrDn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Ino\+New\+Track\+Fit\+Alg\+::\+Check\+F\+C\+P\+C\+Up\+Or\+Dn (\begin{DoxyParamCaption}\item[{double $\ast$}]{x\+\_\+k,  }\item[{bool}]{Dir\+Extra\+Pol,  }\item[{int}]{Max\+Min\+Plane,  }\item[{bool}]{Go\+Dir }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a28c217fae8468c2c3f6a2c77706149ed}\label{classInoNewTrackFitAlg_a28c217fae8468c2c3f6a2c77706149ed}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!DirectionFromFinderHits@{DirectionFromFinderHits}}
+\index{DirectionFromFinderHits@{DirectionFromFinderHits}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{DirectionFromFinderHits()}{DirectionFromFinderHits()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Direction\+From\+Finder\+Hits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$}]{trk,  }\item[{double \&}]{Finder\+Path\+Length,  }\item[{double \&}]{Finder\+Distance }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a28c217fae8468c2c3f6a2c77706149ed_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a28c217fae8468c2c3f6a2c77706149ed}\label{classInoNewTrackFitAlg_a28c217fae8468c2c3f6a2c77706149ed}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!DirectionFromFinderHits@{DirectionFromFinderHits}}
+\index{DirectionFromFinderHits@{DirectionFromFinderHits}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{DirectionFromFinderHits()}{DirectionFromFinderHits()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Direction\+From\+Finder\+Hits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$}]{trk,  }\item[{double \&}]{Finder\+Path\+Length,  }\item[{double \&}]{Finder\+Distance }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ad1534364d1ddd989d26fea15ab7128dc}\label{classInoNewTrackFitAlg_ad1534364d1ddd989d26fea15ab7128dc}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!DirectionFromFinderHitsOldFunc@{DirectionFromFinderHitsOldFunc}}
+\index{DirectionFromFinderHitsOldFunc@{DirectionFromFinderHitsOldFunc}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{DirectionFromFinderHitsOldFunc()}{DirectionFromFinderHitsOldFunc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Direction\+From\+Finder\+Hits\+Old\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$}]{trk,  }\item[{double \&}]{Finder\+Path\+Length,  }\item[{double \&}]{Finder\+Distance }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_ad1534364d1ddd989d26fea15ab7128dc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ad1534364d1ddd989d26fea15ab7128dc}\label{classInoNewTrackFitAlg_ad1534364d1ddd989d26fea15ab7128dc}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!DirectionFromFinderHitsOldFunc@{DirectionFromFinderHitsOldFunc}}
+\index{DirectionFromFinderHitsOldFunc@{DirectionFromFinderHitsOldFunc}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{DirectionFromFinderHitsOldFunc()}{DirectionFromFinderHitsOldFunc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Direction\+From\+Finder\+Hits\+Old\+Func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$}]{trk,  }\item[{double \&}]{Finder\+Path\+Length,  }\item[{double \&}]{Finder\+Distance }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a28b7ade3ca7ee32210f2600dcf00f187}\label{classInoNewTrackFitAlg_a28b7ade3ca7ee32210f2600dcf00f187}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!ExtrapCovMatrix@{ExtrapCovMatrix}}
+\index{ExtrapCovMatrix@{ExtrapCovMatrix}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{ExtrapCovMatrix()}{ExtrapCovMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Extrap\+Cov\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a28b7ade3ca7ee32210f2600dcf00f187_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a28b7ade3ca7ee32210f2600dcf00f187}\label{classInoNewTrackFitAlg_a28b7ade3ca7ee32210f2600dcf00f187}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!ExtrapCovMatrix@{ExtrapCovMatrix}}
+\index{ExtrapCovMatrix@{ExtrapCovMatrix}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{ExtrapCovMatrix()}{ExtrapCovMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Extrap\+Cov\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a4626ac58aa1bf624f82de09732a62de6}\label{classInoNewTrackFitAlg_a4626ac58aa1bf624f82de09732a62de6}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!ExtrapCovMatrixall@{ExtrapCovMatrixall}}
+\index{ExtrapCovMatrixall@{ExtrapCovMatrixall}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{ExtrapCovMatrixall()}{ExtrapCovMatrixall()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Extrap\+Cov\+Matrixall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classInoNewTrackFitAlg_a4626ac58aa1bf624f82de09732a62de6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a4626ac58aa1bf624f82de09732a62de6}\label{classInoNewTrackFitAlg_a4626ac58aa1bf624f82de09732a62de6}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!ExtrapCovMatrixall@{ExtrapCovMatrixall}}
+\index{ExtrapCovMatrixall@{ExtrapCovMatrixall}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{ExtrapCovMatrixall()}{ExtrapCovMatrixall()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Extrap\+Cov\+Matrixall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ae69d5184291a7b76a819e89460b81311}\label{classInoNewTrackFitAlg_ae69d5184291a7b76a819e89460b81311}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!FillGapsInTrack@{FillGapsInTrack}}
+\index{FillGapsInTrack@{FillGapsInTrack}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{FillGapsInTrack()}{FillGapsInTrack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Fill\+Gaps\+In\+Track (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_ae69d5184291a7b76a819e89460b81311_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_ae69d5184291a7b76a819e89460b81311_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ae69d5184291a7b76a819e89460b81311}\label{classInoNewTrackFitAlg_ae69d5184291a7b76a819e89460b81311}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!FillGapsInTrack@{FillGapsInTrack}}
+\index{FillGapsInTrack@{FillGapsInTrack}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{FillGapsInTrack()}{FillGapsInTrack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Fill\+Gaps\+In\+Track (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a23389b4c1d21a91e1b8bd3402927b8f7}\label{classInoNewTrackFitAlg_a23389b4c1d21a91e1b8bd3402927b8f7}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!GetEnergyLoss@{GetEnergyLoss}}
+\index{GetEnergyLoss@{GetEnergyLoss}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{GetEnergyLoss()}{GetEnergyLoss()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Ino\+New\+Track\+Fit\+Alg\+::\+Get\+Energy\+Loss (\begin{DoxyParamCaption}\item[{double $\ast$}]{istate,  }\item[{double}]{dz,  }\item[{double \&}]{axi,  }\item[{double \&}]{a\+T\+\_\+max,  }\item[{double \&}]{aI,  }\item[{T\+Geo\+Material $\ast$}]{material }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a23389b4c1d21a91e1b8bd3402927b8f7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a23389b4c1d21a91e1b8bd3402927b8f7}\label{classInoNewTrackFitAlg_a23389b4c1d21a91e1b8bd3402927b8f7}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!GetEnergyLoss@{GetEnergyLoss}}
+\index{GetEnergyLoss@{GetEnergyLoss}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{GetEnergyLoss()}{GetEnergyLoss()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double Ino\+New\+Track\+Fit\+Alg\+::\+Get\+Energy\+Loss (\begin{DoxyParamCaption}\item[{double $\ast$}]{istate,  }\item[{double}]{dz,  }\item[{double \&}]{axi,  }\item[{double \&}]{a\+T\+\_\+max,  }\item[{double \&}]{aI,  }\item[{T\+Geo\+Material $\ast$}]{material }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a870e32f2b60c8514fa85dd196021a618}\label{classInoNewTrackFitAlg_a870e32f2b60c8514fa85dd196021a618}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!GetFitData@{GetFitData}}
+\index{GetFitData@{GetFitData}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{GetFitData()}{GetFitData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Get\+Fit\+Data (\begin{DoxyParamCaption}\item[{int \&}]{Plane1,  }\item[{int \&}]{Plane2 }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a870e32f2b60c8514fa85dd196021a618_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a870e32f2b60c8514fa85dd196021a618_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a870e32f2b60c8514fa85dd196021a618}\label{classInoNewTrackFitAlg_a870e32f2b60c8514fa85dd196021a618}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!GetFitData@{GetFitData}}
+\index{GetFitData@{GetFitData}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{GetFitData()}{GetFitData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Get\+Fit\+Data (\begin{DoxyParamCaption}\item[{int \&}]{Plane1,  }\item[{int \&}]{Plane2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a50c6eb4b014e9aaf7720a6e337bf917c}\label{classInoNewTrackFitAlg_a50c6eb4b014e9aaf7720a6e337bf917c}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!GetInitialCovarianceMatrix@{GetInitialCovarianceMatrix}}
+\index{GetInitialCovarianceMatrix@{GetInitialCovarianceMatrix}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{GetInitialCovarianceMatrix()}{GetInitialCovarianceMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Get\+Initial\+Covariance\+Matrix (\begin{DoxyParamCaption}\item[{const bool}]{First\+Iteration }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a50c6eb4b014e9aaf7720a6e337bf917c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a50c6eb4b014e9aaf7720a6e337bf917c}\label{classInoNewTrackFitAlg_a50c6eb4b014e9aaf7720a6e337bf917c}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!GetInitialCovarianceMatrix@{GetInitialCovarianceMatrix}}
+\index{GetInitialCovarianceMatrix@{GetInitialCovarianceMatrix}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{GetInitialCovarianceMatrix()}{GetInitialCovarianceMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Get\+Initial\+Covariance\+Matrix (\begin{DoxyParamCaption}\item[{const bool}]{First\+Iteration }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ad4946111c6a261eb891ed008e1af771e}\label{classInoNewTrackFitAlg_ad4946111c6a261eb891ed008e1af771e}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!GetMultipleScattering@{GetMultipleScattering}}
+\index{GetMultipleScattering@{GetMultipleScattering}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{GetMultipleScattering()}{GetMultipleScattering()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Get\+Multiple\+Scattering (\begin{DoxyParamCaption}\item[{double $\ast$}]{mstate,  }\item[{double}]{Bx,  }\item[{double}]{By,  }\item[{double}]{dz,  }\item[{double}]{a\+T\+\_\+max,  }\item[{double}]{aI,  }\item[{T\+Geo\+Material $\ast$}]{material }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_ad4946111c6a261eb891ed008e1af771e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ad4946111c6a261eb891ed008e1af771e}\label{classInoNewTrackFitAlg_ad4946111c6a261eb891ed008e1af771e}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!GetMultipleScattering@{GetMultipleScattering}}
+\index{GetMultipleScattering@{GetMultipleScattering}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{GetMultipleScattering()}{GetMultipleScattering()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Get\+Multiple\+Scattering (\begin{DoxyParamCaption}\item[{double $\ast$}]{mstate,  }\item[{double}]{Bx,  }\item[{double}]{By,  }\item[{double}]{dz,  }\item[{double}]{a\+T\+\_\+max,  }\item[{double}]{aI,  }\item[{T\+Geo\+Material $\ast$}]{material }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ac4226957532c329cad92639d78e462ae}\label{classInoNewTrackFitAlg_ac4226957532c329cad92639d78e462ae}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!GetPropagator@{GetPropagator}}
+\index{GetPropagator@{GetPropagator}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{GetPropagator()}{GetPropagator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Get\+Propagator (\begin{DoxyParamCaption}\item[{double $\ast$}]{istate,  }\item[{double}]{Bx,  }\item[{double}]{By,  }\item[{double}]{d\+Bxbx,  }\item[{double}]{d\+Bxdy,  }\item[{double}]{d\+Bydx,  }\item[{double}]{d\+Bydy,  }\item[{double}]{dz,  }\item[{T\+Geo\+Material $\ast$}]{material }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_ac4226957532c329cad92639d78e462ae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_ac4226957532c329cad92639d78e462ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ac4226957532c329cad92639d78e462ae}\label{classInoNewTrackFitAlg_ac4226957532c329cad92639d78e462ae}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!GetPropagator@{GetPropagator}}
+\index{GetPropagator@{GetPropagator}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{GetPropagator()}{GetPropagator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Get\+Propagator (\begin{DoxyParamCaption}\item[{double $\ast$}]{istate,  }\item[{double}]{Bx,  }\item[{double}]{By,  }\item[{double}]{d\+Bxbx,  }\item[{double}]{d\+Bxdy,  }\item[{double}]{d\+Bydx,  }\item[{double}]{d\+Bydy,  }\item[{double}]{dz,  }\item[{T\+Geo\+Material $\ast$}]{material }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a0565da9319e41475a744f3a020632f4a}\label{classInoNewTrackFitAlg_a0565da9319e41475a744f3a020632f4a}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!GoBackwards@{GoBackwards}}
+\index{GoBackwards@{GoBackwards}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{GoBackwards()}{GoBackwards()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Go\+Backwards (\begin{DoxyParamCaption}\item[{const bool}]{first }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a0565da9319e41475a744f3a020632f4a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a0565da9319e41475a744f3a020632f4a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a0565da9319e41475a744f3a020632f4a}\label{classInoNewTrackFitAlg_a0565da9319e41475a744f3a020632f4a}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!GoBackwards@{GoBackwards}}
+\index{GoBackwards@{GoBackwards}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{GoBackwards()}{GoBackwards()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Go\+Backwards (\begin{DoxyParamCaption}\item[{const bool}]{first }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_aa6cad03ff3af40e93f26401685958867}\label{classInoNewTrackFitAlg_aa6cad03ff3af40e93f26401685958867}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!GoForwards@{GoForwards}}
+\index{GoForwards@{GoForwards}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{GoForwards()}{GoForwards()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Go\+Forwards (\begin{DoxyParamCaption}\item[{const bool}]{first }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_aa6cad03ff3af40e93f26401685958867_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_aa6cad03ff3af40e93f26401685958867_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_aa6cad03ff3af40e93f26401685958867}\label{classInoNewTrackFitAlg_aa6cad03ff3af40e93f26401685958867}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!GoForwards@{GoForwards}}
+\index{GoForwards@{GoForwards}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{GoForwards()}{GoForwards()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Go\+Forwards (\begin{DoxyParamCaption}\item[{const bool}]{first }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_af5e3450e5dcf9d8970ef1c66184ed9be}\label{classInoNewTrackFitAlg_af5e3450e5dcf9d8970ef1c66184ed9be}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!InitialFramework@{InitialFramework}}
+\index{InitialFramework@{InitialFramework}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{InitialFramework()}{InitialFramework()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Initial\+Framework (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_af5e3450e5dcf9d8970ef1c66184ed9be_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_af5e3450e5dcf9d8970ef1c66184ed9be_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_af5e3450e5dcf9d8970ef1c66184ed9be}\label{classInoNewTrackFitAlg_af5e3450e5dcf9d8970ef1c66184ed9be}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!InitialFramework@{InitialFramework}}
+\index{InitialFramework@{InitialFramework}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{InitialFramework()}{InitialFramework()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Initial\+Framework (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ab1ce94c065a4e50b3d929305f36db35c}\label{classInoNewTrackFitAlg_ab1ce94c065a4e50b3d929305f36db35c}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!KalmanFilterStateVector@{KalmanFilterStateVector}}
+\index{KalmanFilterStateVector@{KalmanFilterStateVector}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{KalmanFilterStateVector()}{KalmanFilterStateVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Kalman\+Filter\+State\+Vector (\begin{DoxyParamCaption}\item[{double $\ast$}]{x\+\_\+\+\_\+minus,  }\item[{const int}]{Plane,  }\item[{const bool}]{Go\+Forward,  }\item[{double $\ast$}]{xk }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_ab1ce94c065a4e50b3d929305f36db35c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ab1ce94c065a4e50b3d929305f36db35c}\label{classInoNewTrackFitAlg_ab1ce94c065a4e50b3d929305f36db35c}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!KalmanFilterStateVector@{KalmanFilterStateVector}}
+\index{KalmanFilterStateVector@{KalmanFilterStateVector}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{KalmanFilterStateVector()}{KalmanFilterStateVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Kalman\+Filter\+State\+Vector (\begin{DoxyParamCaption}\item[{double $\ast$}]{x\+\_\+\+\_\+minus,  }\item[{const int}]{Plane,  }\item[{const bool}]{Go\+Forward,  }\item[{double $\ast$}]{xk }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ac6b5c494c728652afad59e25c4ad98bb}\label{classInoNewTrackFitAlg_ac6b5c494c728652afad59e25c4ad98bb}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!MoveArrays@{MoveArrays}}
+\index{MoveArrays@{MoveArrays}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{MoveArrays()}{MoveArrays()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Move\+Arrays (\begin{DoxyParamCaption}\item[{const int}]{New\+Plane,  }\item[{const bool}]{Go\+Forward }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_ac6b5c494c728652afad59e25c4ad98bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ac6b5c494c728652afad59e25c4ad98bb}\label{classInoNewTrackFitAlg_ac6b5c494c728652afad59e25c4ad98bb}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!MoveArrays@{MoveArrays}}
+\index{MoveArrays@{MoveArrays}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{MoveArrays()}{MoveArrays()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Move\+Arrays (\begin{DoxyParamCaption}\item[{const int}]{New\+Plane,  }\item[{const bool}]{Go\+Forward }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a9aba46cc3eafb4a3c85d05d609a1142a}\label{classInoNewTrackFitAlg_a9aba46cc3eafb4a3c85d05d609a1142a}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!PredictedStateCov@{PredictedStateCov}}
+\index{PredictedStateCov@{PredictedStateCov}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{PredictedStateCov()}{PredictedStateCov()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Predicted\+State\+Cov (\begin{DoxyParamCaption}\item[{double $\ast$}]{State\+Vector,  }\item[{const int}]{Plane,  }\item[{int \&}]{New\+Plane,  }\item[{const bool}]{Go\+Forward,  }\item[{double $\ast$}]{ax\+\_\+\+\_\+minus,  }\item[{int}]{is\+Half = {\ttfamily 0},  }\item[{double $\ast$}]{dS = {\ttfamily 0},  }\item[{double $\ast$}]{Range = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a9aba46cc3eafb4a3c85d05d609a1142a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a9aba46cc3eafb4a3c85d05d609a1142a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a9aba46cc3eafb4a3c85d05d609a1142a}\label{classInoNewTrackFitAlg_a9aba46cc3eafb4a3c85d05d609a1142a}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!PredictedStateCov@{PredictedStateCov}}
+\index{PredictedStateCov@{PredictedStateCov}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{PredictedStateCov()}{PredictedStateCov()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Predicted\+State\+Cov (\begin{DoxyParamCaption}\item[{double $\ast$}]{State\+Vector,  }\item[{const int}]{Plane,  }\item[{int \&}]{New\+Plane,  }\item[{const bool}]{Go\+Forward,  }\item[{double $\ast$}]{ax\+\_\+\+\_\+minus,  }\item[{int}]{is\+Half = {\ttfamily 0},  }\item[{double $\ast$}]{dS = {\ttfamily 0},  }\item[{double $\ast$}]{Range = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a2351a4edc628aeda5c7aede3d520f1ba}\label{classInoNewTrackFitAlg_a2351a4edc628aeda5c7aede3d520f1ba}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!RemoveTrkHitsInShw@{RemoveTrkHitsInShw}}
+\index{RemoveTrkHitsInShw@{RemoveTrkHitsInShw}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{RemoveTrkHitsInShw()}{RemoveTrkHitsInShw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Remove\+Trk\+Hits\+In\+Shw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a2351a4edc628aeda5c7aede3d520f1ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a2351a4edc628aeda5c7aede3d520f1ba}\label{classInoNewTrackFitAlg_a2351a4edc628aeda5c7aede3d520f1ba}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!RemoveTrkHitsInShw@{RemoveTrkHitsInShw}}
+\index{RemoveTrkHitsInShw@{RemoveTrkHitsInShw}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{RemoveTrkHitsInShw()}{RemoveTrkHitsInShw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Remove\+Trk\+Hits\+In\+Shw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a29ad190335d6acb2e6cff77c528703dd}\label{classInoNewTrackFitAlg_a29ad190335d6acb2e6cff77c528703dd}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!ResetCovarianceMatrix@{ResetCovarianceMatrix}}
+\index{ResetCovarianceMatrix@{ResetCovarianceMatrix}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{ResetCovarianceMatrix()}{ResetCovarianceMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Reset\+Covariance\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a29ad190335d6acb2e6cff77c528703dd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a29ad190335d6acb2e6cff77c528703dd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a29ad190335d6acb2e6cff77c528703dd}\label{classInoNewTrackFitAlg_a29ad190335d6acb2e6cff77c528703dd}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!ResetCovarianceMatrix@{ResetCovarianceMatrix}}
+\index{ResetCovarianceMatrix@{ResetCovarianceMatrix}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{ResetCovarianceMatrix()}{ResetCovarianceMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Reset\+Covariance\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a5ff749daa81a509756e9354dfa2bde67}\label{classInoNewTrackFitAlg_a5ff749daa81a509756e9354dfa2bde67}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!RunAlg@{RunAlg}}
+\index{RunAlg@{RunAlg}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{RunAlg()}{RunAlg()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Run\+Alg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a5ff749daa81a509756e9354dfa2bde67_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a5ff749daa81a509756e9354dfa2bde67_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a32272aaad0e12b562abc3f285280cca3}\label{classInoNewTrackFitAlg_a32272aaad0e12b562abc3f285280cca3}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!RunAlg@{RunAlg}}
+\index{RunAlg@{RunAlg}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{RunAlg()}{RunAlg()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Ino\+New\+Track\+Fit\+Alg\+::\+Run\+Alg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a6962742d54bfc627978be083bb87acfa}\label{classInoNewTrackFitAlg_a6962742d54bfc627978be083bb87acfa}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!RunTheFitter@{RunTheFitter}}
+\index{RunTheFitter@{RunTheFitter}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{RunTheFitter()}{RunTheFitter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Run\+The\+Fitter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classInoNewTrackFitAlg_a6962742d54bfc627978be083bb87acfa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a6962742d54bfc627978be083bb87acfa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a6962742d54bfc627978be083bb87acfa}\label{classInoNewTrackFitAlg_a6962742d54bfc627978be083bb87acfa}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!RunTheFitter@{RunTheFitter}}
+\index{RunTheFitter@{RunTheFitter}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{RunTheFitter()}{RunTheFitter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Run\+The\+Fitter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a1ef977db9ab4f15fb15cab005a74cd15}\label{classInoNewTrackFitAlg_a1ef977db9ab4f15fb15cab005a74cd15}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!SetT@{SetT}}
+\index{SetT@{SetT}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{SetT()}{SetT()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+SetT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a1ef977db9ab4f15fb15cab005a74cd15_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a1ef977db9ab4f15fb15cab005a74cd15}\label{classInoNewTrackFitAlg_a1ef977db9ab4f15fb15cab005a74cd15}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!SetT@{SetT}}
+\index{SetT@{SetT}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{SetT()}{SetT()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+SetT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a8f4e2a38210defa4ca2d0cc543d783df}\label{classInoNewTrackFitAlg_a8f4e2a38210defa4ca2d0cc543d783df}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!SetTrackProperties@{SetTrackProperties}}
+\index{SetTrackProperties@{SetTrackProperties}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{SetTrackProperties()}{SetTrackProperties()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Set\+Track\+Properties (\begin{DoxyParamCaption}\item[{double $\ast$}]{Input,  }\item[{double $\ast$}]{input2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a07a70b80df97f1fd89f4c2703a1756a0}\label{classInoNewTrackFitAlg_a07a70b80df97f1fd89f4c2703a1756a0}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!SetTrackProperties@{SetTrackProperties}}
+\index{SetTrackProperties@{SetTrackProperties}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{SetTrackProperties()}{SetTrackProperties()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Set\+Track\+Properties (\begin{DoxyParamCaption}\item[{double $\ast$}]{Input,  }\item[{double $\ast$}]{input2,  }\item[{double $\ast$}]{input3 }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a07a70b80df97f1fd89f4c2703a1756a0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a37d6ce4d4bd32e71fecd174a65a1bc78}\label{classInoNewTrackFitAlg_a37d6ce4d4bd32e71fecd174a65a1bc78}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!ShowerStrips@{ShowerStrips}}
+\index{ShowerStrips@{ShowerStrips}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{ShowerStrips()}{ShowerStrips()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Shower\+Strips (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a37d6ce4d4bd32e71fecd174a65a1bc78}\label{classInoNewTrackFitAlg_a37d6ce4d4bd32e71fecd174a65a1bc78}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!ShowerStrips@{ShowerStrips}}
+\index{ShowerStrips@{ShowerStrips}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{ShowerStrips()}{ShowerStrips()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Shower\+Strips (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a9e39873a367ca46ec843562f18fd38bd}\label{classInoNewTrackFitAlg_a9e39873a367ca46ec843562f18fd38bd}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!ShowerSwim@{ShowerSwim}}
+\index{ShowerSwim@{ShowerSwim}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{ShowerSwim()}{ShowerSwim()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Shower\+Swim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a9e39873a367ca46ec843562f18fd38bd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a9e39873a367ca46ec843562f18fd38bd}\label{classInoNewTrackFitAlg_a9e39873a367ca46ec843562f18fd38bd}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!ShowerSwim@{ShowerSwim}}
+\index{ShowerSwim@{ShowerSwim}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{ShowerSwim()}{ShowerSwim()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Shower\+Swim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a5b496bd31cf1a27b03ceb070e0cb0238}\label{classInoNewTrackFitAlg_a5b496bd31cf1a27b03ceb070e0cb0238}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!StoreFilteredData@{StoreFilteredData}}
+\index{StoreFilteredData@{StoreFilteredData}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{StoreFilteredData()}{StoreFilteredData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Store\+Filtered\+Data (\begin{DoxyParamCaption}\item[{const int}]{New\+Plane }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a5b496bd31cf1a27b03ceb070e0cb0238_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a5b496bd31cf1a27b03ceb070e0cb0238}\label{classInoNewTrackFitAlg_a5b496bd31cf1a27b03ceb070e0cb0238}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!StoreFilteredData@{StoreFilteredData}}
+\index{StoreFilteredData@{StoreFilteredData}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{StoreFilteredData()}{StoreFilteredData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Store\+Filtered\+Data (\begin{DoxyParamCaption}\item[{const int}]{New\+Plane }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a9a8379ac5050c9522c19f2c5756f4646}\label{classInoNewTrackFitAlg_a9a8379ac5050c9522c19f2c5756f4646}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!StoreFilteredData\_sr@{StoreFilteredData\_sr}}
+\index{StoreFilteredData\_sr@{StoreFilteredData\_sr}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{StoreFilteredData\_sr()}{StoreFilteredData\_sr()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Store\+Filtered\+Data\+\_\+sr (\begin{DoxyParamCaption}\item[{const int}]{New\+Plane,  }\item[{double $\ast$}]{prediction,  }\item[{bool}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a9a8379ac5050c9522c19f2c5756f4646}\label{classInoNewTrackFitAlg_a9a8379ac5050c9522c19f2c5756f4646}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!StoreFilteredData\_sr@{StoreFilteredData\_sr}}
+\index{StoreFilteredData\_sr@{StoreFilteredData\_sr}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{StoreFilteredData\_sr()}{StoreFilteredData\_sr()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Store\+Filtered\+Data\+\_\+sr (\begin{DoxyParamCaption}\item[{const int}]{New\+Plane,  }\item[{double $\ast$}]{,  }\item[{bool}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a6190d2a34acdd3e743e78dbe1f765680}\label{classInoNewTrackFitAlg_a6190d2a34acdd3e743e78dbe1f765680}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!Swim@{Swim}}
+\index{Swim@{Swim}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{Swim()}{Swim()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Swim (\begin{DoxyParamCaption}\item[{double $\ast$}]{State\+Vector,  }\item[{double $\ast$}]{Output,  }\item[{const double}]{zbeg,  }\item[{const int}]{New\+Plane,  }\item[{const bool}]{Go\+Forward,  }\item[{double $\ast$}]{dS = {\ttfamily 0},  }\item[{double $\ast$}]{Range = {\ttfamily 0},  }\item[{double $\ast$}]{dE = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a6190d2a34acdd3e743e78dbe1f765680_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a6190d2a34acdd3e743e78dbe1f765680}\label{classInoNewTrackFitAlg_a6190d2a34acdd3e743e78dbe1f765680}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!Swim@{Swim}}
+\index{Swim@{Swim}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{Swim()}{Swim()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Swim (\begin{DoxyParamCaption}\item[{double $\ast$}]{State\+Vector,  }\item[{double $\ast$}]{Output,  }\item[{const double}]{zbeg,  }\item[{const int}]{New\+Plane,  }\item[{const bool}]{Go\+Forward,  }\item[{double $\ast$}]{dS = {\ttfamily 0},  }\item[{double $\ast$}]{Range = {\ttfamily 0},  }\item[{double $\ast$}]{dE = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a3bfcadc166db6d8e1120e7753e69398f}\label{classInoNewTrackFitAlg_a3bfcadc166db6d8e1120e7753e69398f}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!Swim@{Swim}}
+\index{Swim@{Swim}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{Swim()}{Swim()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Swim (\begin{DoxyParamCaption}\item[{double $\ast$}]{State\+Vector,  }\item[{double $\ast$}]{Output,  }\item[{const int}]{Plane,  }\item[{const double}]{zend,  }\item[{const bool}]{Go\+Forward,  }\item[{double $\ast$}]{dS = {\ttfamily 0},  }\item[{double $\ast$}]{Range = {\ttfamily 0},  }\item[{double $\ast$}]{dE = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a3bfcadc166db6d8e1120e7753e69398f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a3bfcadc166db6d8e1120e7753e69398f}\label{classInoNewTrackFitAlg_a3bfcadc166db6d8e1120e7753e69398f}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!Swim@{Swim}}
+\index{Swim@{Swim}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{Swim()}{Swim()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Swim (\begin{DoxyParamCaption}\item[{double $\ast$}]{State\+Vector,  }\item[{double $\ast$}]{Output,  }\item[{const int}]{Plane,  }\item[{const double}]{zend,  }\item[{const bool}]{Go\+Forward,  }\item[{double $\ast$}]{dS = {\ttfamily 0},  }\item[{double $\ast$}]{Range = {\ttfamily 0},  }\item[{double $\ast$}]{dE = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a8bd9bb7628a329444b76bda195eb632b}\label{classInoNewTrackFitAlg_a8bd9bb7628a329444b76bda195eb632b}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!Swim@{Swim}}
+\index{Swim@{Swim}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{Swim()}{Swim()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Swim (\begin{DoxyParamCaption}\item[{double $\ast$}]{State\+Vector,  }\item[{double $\ast$}]{Output,  }\item[{const int}]{Plane,  }\item[{const int}]{New\+Plane,  }\item[{const bool}]{Go\+Forward,  }\item[{double $\ast$}]{dS = {\ttfamily 0},  }\item[{double $\ast$}]{Range = {\ttfamily 0},  }\item[{double $\ast$}]{dE = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a8bd9bb7628a329444b76bda195eb632b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a8bd9bb7628a329444b76bda195eb632b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a8bd9bb7628a329444b76bda195eb632b}\label{classInoNewTrackFitAlg_a8bd9bb7628a329444b76bda195eb632b}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!Swim@{Swim}}
+\index{Swim@{Swim}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{Swim()}{Swim()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Swim (\begin{DoxyParamCaption}\item[{double $\ast$}]{State\+Vector,  }\item[{double $\ast$}]{Output,  }\item[{const int}]{Plane,  }\item[{const int}]{New\+Plane,  }\item[{const bool}]{Go\+Forward,  }\item[{double $\ast$}]{dS = {\ttfamily 0},  }\item[{double $\ast$}]{Range = {\ttfamily 0},  }\item[{double $\ast$}]{dE = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a0f0d70db6018ba097e78fb15689aeeb2}\label{classInoNewTrackFitAlg_a0f0d70db6018ba097e78fb15689aeeb2}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!Swim\_new@{Swim\_new}}
+\index{Swim\_new@{Swim\_new}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{Swim\_new()}{Swim\_new()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Swim\+\_\+new (\begin{DoxyParamCaption}\item[{double $\ast$}]{State\+Vector,  }\item[{double $\ast$}]{Output,  }\item[{const int}]{Plane,  }\item[{int \&}]{New\+Plane,  }\item[{const bool}]{Go\+Forward,  }\item[{double $\ast$}]{dS = {\ttfamily 0},  }\item[{double $\ast$}]{Range = {\ttfamily 0},  }\item[{double $\ast$}]{dE = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a0f0d70db6018ba097e78fb15689aeeb2}\label{classInoNewTrackFitAlg_a0f0d70db6018ba097e78fb15689aeeb2}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!Swim\_new@{Swim\_new}}
+\index{Swim\_new@{Swim\_new}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{Swim\_new()}{Swim\_new()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Ino\+New\+Track\+Fit\+Alg\+::\+Swim\+\_\+new (\begin{DoxyParamCaption}\item[{double $\ast$}]{State\+Vector,  }\item[{double $\ast$}]{Output,  }\item[{const int}]{Plane,  }\item[{int \&}]{New\+Plane,  }\item[{const bool}]{Go\+Forward,  }\item[{double $\ast$}]{dS = {\ttfamily 0},  }\item[{double $\ast$}]{Range = {\ttfamily 0},  }\item[{double $\ast$}]{dE = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a314b8411a715584c84c5bcf2061d09ac}\label{classInoNewTrackFitAlg_a314b8411a715584c84c5bcf2061d09ac}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!TimingFit@{TimingFit}}
+\index{TimingFit@{TimingFit}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{TimingFit()}{TimingFit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Timing\+Fit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a314b8411a715584c84c5bcf2061d09ac_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_a314b8411a715584c84c5bcf2061d09ac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a314b8411a715584c84c5bcf2061d09ac}\label{classInoNewTrackFitAlg_a314b8411a715584c84c5bcf2061d09ac}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!TimingFit@{TimingFit}}
+\index{TimingFit@{TimingFit}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{TimingFit()}{TimingFit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Timing\+Fit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a12104cf22e5fee03c6507aabb7853bd5}\label{classInoNewTrackFitAlg_a12104cf22e5fee03c6507aabb7853bd5}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!Trace@{Trace}}
+\index{Trace@{Trace}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{Trace()}{Trace()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Trace (\begin{DoxyParamCaption}\item[{const char $\ast$}]{c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a3f8841686000d6abed9d4eb1e8087723}\label{classInoNewTrackFitAlg_a3f8841686000d6abed9d4eb1e8087723}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!Trace@{Trace}}
+\index{Trace@{Trace}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{Trace()}{Trace()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Ino\+New\+Track\+Fit\+Alg\+::\+Trace (\begin{DoxyParamCaption}\item[{const char $\ast$}]{c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ad8d8a3291f90fb70472781bb619de88b}\label{classInoNewTrackFitAlg_ad8d8a3291f90fb70472781bb619de88b}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!TrackElementMerging@{TrackElementMerging}}
+\index{TrackElementMerging@{TrackElementMerging}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{TrackElementMerging()}{TrackElementMerging()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Track\+Element\+Merging (\begin{DoxyParamCaption}\item[{double $\ast$}]{Tr1,  }\item[{double}]{TargetZ,  }\item[{double $\ast$}]{Tr2 }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_ad8d8a3291f90fb70472781bb619de88b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ad8d8a3291f90fb70472781bb619de88b}\label{classInoNewTrackFitAlg_ad8d8a3291f90fb70472781bb619de88b}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!TrackElementMerging@{TrackElementMerging}}
+\index{TrackElementMerging@{TrackElementMerging}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{TrackElementMerging()}{TrackElementMerging()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Track\+Element\+Merging (\begin{DoxyParamCaption}\item[{double $\ast$}]{Tr1,  }\item[{double}]{TargetZ,  }\item[{double $\ast$}]{Tr2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_abbb20a97adb8ea7eb8b2f851e08e6585}\label{classInoNewTrackFitAlg_abbb20a97adb8ea7eb8b2f851e08e6585}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!UpdateCovMatrix@{UpdateCovMatrix}}
+\index{UpdateCovMatrix@{UpdateCovMatrix}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{UpdateCovMatrix()}{UpdateCovMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Update\+Cov\+Matrix (\begin{DoxyParamCaption}\item[{const int}]{New\+Plane }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoNewTrackFitAlg_abbb20a97adb8ea7eb8b2f851e08e6585_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_abbb20a97adb8ea7eb8b2f851e08e6585}\label{classInoNewTrackFitAlg_abbb20a97adb8ea7eb8b2f851e08e6585}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!UpdateCovMatrix@{UpdateCovMatrix}}
+\index{UpdateCovMatrix@{UpdateCovMatrix}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{UpdateCovMatrix()}{UpdateCovMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ino\+New\+Track\+Fit\+Alg\+::\+Update\+Cov\+Matrix (\begin{DoxyParamCaption}\item[{const int}]{New\+Plane }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classInoNewTrackFitAlg_a0a501bb7ddeeef956427827b54a9211d}\label{classInoNewTrackFitAlg_a0a501bb7ddeeef956427827b54a9211d}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!doubleLa@{doubleLa}}
+\index{doubleLa@{doubleLa}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{doubleLa}{doubleLa}}
+{\footnotesize\ttfamily static const unsigned int Ino\+New\+Track\+Fit\+Alg\+::double\+La =10\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classInoNewTrackFitAlg_ab8ee50d6d7de80f11e37b8b67ab15815}\label{classInoNewTrackFitAlg_ab8ee50d6d7de80f11e37b8b67ab15815}} 
+\index{InoNewTrackFitAlg@{InoNewTrackFitAlg}!shiftLa@{shiftLa}}
+\index{shiftLa@{shiftLa}!InoNewTrackFitAlg@{InoNewTrackFitAlg}}
+\doxysubsubsection{\texorpdfstring{shiftLa}{shiftLa}}
+{\footnotesize\ttfamily static const unsigned int Ino\+New\+Track\+Fit\+Alg\+::shift\+La =250\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{InoNewTrackFitAlg_8h}{Ino\+New\+Track\+Fit\+Alg.\+h}}\item 
+src/\mbox{\hyperlink{InoNewTrackFitAlg_8cc}{Ino\+New\+Track\+Fit\+Alg.\+cc}}\end{DoxyCompactItemize}

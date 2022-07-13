@@ -1,0 +1,497 @@
+\hypertarget{classInoTrackFinder}{}\doxysection{Ino\+Track\+Finder Class Reference}
+\label{classInoTrackFinder}\index{InoTrackFinder@{InoTrackFinder}}
+
+
+{\ttfamily \#include $<$Ino\+Track\+Finder.\+h$>$}
+
+
+
+Collaboration diagram for Ino\+Track\+Finder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInoTrackFinder_aade7375096d493a45824088fe0d916f5}{Ino\+Track\+Finder}} ()
+\item 
+\mbox{\hyperlink{classInoTrackFinder_a3f70b5b5750d7258df310b9554737457}{$\sim$\+Ino\+Track\+Finder}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_afe2f5d801658cc1b89b87c50cc51d1ba}{Run\+Alg}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_ad8e6f69dfaa6e9562e6795a1b35e0656}{Trace}} (const char $\ast$c) const
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_ade6339f4da36aede68c3204bfc91229c}{Run\+The\+Finder}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_abefbcab521d6b2a631fd4ac0c6b721a7}{Form\+The\+Hits}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_a3a2d5af630cd516dc7bf748795bae00e}{Form\+The\+Clusters}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_aa3ad55d7812cbbd453a8e7e6f2f6cb32}{I\+D\+Trk\+And\+Shw\+Clusters}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_a4d2ee65452180c68d86bf3609c695688}{Form\+Triplets}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_a8a7c75cfe19f69086b29646d747c13d8}{Find\+All\+Associations}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_a1b8c4083989cb5c6f7c735e9da66f14d}{Find\+Preferred\+Joins}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_ad3df4fba0b3c5994c98a6c7d1a8252f6}{Find\+Matched\+Joins}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_a86c824fc8ecb86e55aa7b99b72c55a0d}{First\+Comparison}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_a37e986c8e775a8d3557ee0f59b1630c7}{Form\+Tracks}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_a1998711e743a43a3f5b2c9d2db0586d4}{Join\+Tracks}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_a5c0cbea8813288089312f37649b36266}{Form\+Final\+Tracks}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_a44ceea80d63af4ecd77da39902e0cc28}{Look\+For\+Hits\+Across\+Gap}} (\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$Trk)
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_aacd2eff442b223e3f4f71849aa63f2a6}{Join\+Curved\+Track}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_a374dffc0ff1e8947d0db13c9faf14059}{Extend\+Track}} (\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$Trk)
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_add8e65836901cea3cb3a1d0de91a463f}{Fill\+Gaps\+In\+Track}} (\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$Trk)
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_a250521c46fbdf120fbcc4147a068622a}{Clean\+And\+Filled}} ()
+\item 
+void \mbox{\hyperlink{classInoTrackFinder_a57afee28578d4bb5720f507b6256144d}{Clear\+Up}} ()
+\item 
+double \mbox{\hyperlink{classInoTrackFinder_a9bd54accdf88bb40c79e279821de5e9e}{cal\+\_\+slope2}} (double x, double $\ast$par)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInoCluster__Manager}{Ino\+Cluster\+\_\+\+Manager}} $\ast$ \mbox{\hyperlink{classInoTrackFinder_a513d7b13083fe3bce394951a1e48c144}{ino\+Cluster\+\_\+pointer}}
+\item 
+\mbox{\hyperlink{classMultiSimAnalysisDigi}{Multi\+Sim\+Analysis\+Digi}} $\ast$ \mbox{\hyperlink{classInoTrackFinder_ac34e6d8ea0b50518a5933457605b6da6}{p\+Analysis}}
+\item 
+\mbox{\hyperlink{classmicalDetectorParameterDef}{mical\+Detector\+Parameter\+Def}} $\ast$ \mbox{\hyperlink{classInoTrackFinder_aa48ad1334c98a6e722588a039793dfcd}{paradef}}
+\item 
+\mbox{\hyperlink{classGeneralRecoInfo}{General\+Reco\+Info}} $\ast$ \mbox{\hyperlink{classInoTrackFinder_ac7d86d2f11a184be32bf24fee8275549}{grecoi}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInoTrackFinder_aade7375096d493a45824088fe0d916f5}\label{classInoTrackFinder_aade7375096d493a45824088fe0d916f5}} 
+\index{InoTrackFinder@{InoTrackFinder}!InoTrackFinder@{InoTrackFinder}}
+\index{InoTrackFinder@{InoTrackFinder}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{InoTrackFinder()}{InoTrackFinder()}}
+{\footnotesize\ttfamily Ino\+Track\+Finder\+::\+Ino\+Track\+Finder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_aade7375096d493a45824088fe0d916f5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_a3f70b5b5750d7258df310b9554737457}\label{classInoTrackFinder_a3f70b5b5750d7258df310b9554737457}} 
+\index{InoTrackFinder@{InoTrackFinder}!````~InoTrackFinder@{$\sim$InoTrackFinder}}
+\index{````~InoTrackFinder@{$\sim$InoTrackFinder}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{$\sim$InoTrackFinder()}{~InoTrackFinder()}}
+{\footnotesize\ttfamily Ino\+Track\+Finder\+::$\sim$\+Ino\+Track\+Finder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a3f70b5b5750d7258df310b9554737457_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInoTrackFinder_a9bd54accdf88bb40c79e279821de5e9e}\label{classInoTrackFinder_a9bd54accdf88bb40c79e279821de5e9e}} 
+\index{InoTrackFinder@{InoTrackFinder}!cal\_slope2@{cal\_slope2}}
+\index{cal\_slope2@{cal\_slope2}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{cal\_slope2()}{cal\_slope2()}}
+{\footnotesize\ttfamily double Ino\+Track\+Finder\+::cal\+\_\+slope2 (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double $\ast$}]{par }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a9bd54accdf88bb40c79e279821de5e9e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_a250521c46fbdf120fbcc4147a068622a}\label{classInoTrackFinder_a250521c46fbdf120fbcc4147a068622a}} 
+\index{InoTrackFinder@{InoTrackFinder}!CleanAndFilled@{CleanAndFilled}}
+\index{CleanAndFilled@{CleanAndFilled}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{CleanAndFilled()}{CleanAndFilled()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Clean\+And\+Filled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a250521c46fbdf120fbcc4147a068622a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a250521c46fbdf120fbcc4147a068622a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_a57afee28578d4bb5720f507b6256144d}\label{classInoTrackFinder_a57afee28578d4bb5720f507b6256144d}} 
+\index{InoTrackFinder@{InoTrackFinder}!ClearUp@{ClearUp}}
+\index{ClearUp@{ClearUp}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{ClearUp()}{ClearUp()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Clear\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a57afee28578d4bb5720f507b6256144d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_a374dffc0ff1e8947d0db13c9faf14059}\label{classInoTrackFinder_a374dffc0ff1e8947d0db13c9faf14059}} 
+\index{InoTrackFinder@{InoTrackFinder}!ExtendTrack@{ExtendTrack}}
+\index{ExtendTrack@{ExtendTrack}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{ExtendTrack()}{ExtendTrack()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Extend\+Track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$}]{Trk }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a374dffc0ff1e8947d0db13c9faf14059_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a374dffc0ff1e8947d0db13c9faf14059_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_add8e65836901cea3cb3a1d0de91a463f}\label{classInoTrackFinder_add8e65836901cea3cb3a1d0de91a463f}} 
+\index{InoTrackFinder@{InoTrackFinder}!FillGapsInTrack@{FillGapsInTrack}}
+\index{FillGapsInTrack@{FillGapsInTrack}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{FillGapsInTrack()}{FillGapsInTrack()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Fill\+Gaps\+In\+Track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$}]{Trk }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_add8e65836901cea3cb3a1d0de91a463f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_a8a7c75cfe19f69086b29646d747c13d8}\label{classInoTrackFinder_a8a7c75cfe19f69086b29646d747c13d8}} 
+\index{InoTrackFinder@{InoTrackFinder}!FindAllAssociations@{FindAllAssociations}}
+\index{FindAllAssociations@{FindAllAssociations}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{FindAllAssociations()}{FindAllAssociations()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Find\+All\+Associations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a8a7c75cfe19f69086b29646d747c13d8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a8a7c75cfe19f69086b29646d747c13d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_ad3df4fba0b3c5994c98a6c7d1a8252f6}\label{classInoTrackFinder_ad3df4fba0b3c5994c98a6c7d1a8252f6}} 
+\index{InoTrackFinder@{InoTrackFinder}!FindMatchedJoins@{FindMatchedJoins}}
+\index{FindMatchedJoins@{FindMatchedJoins}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{FindMatchedJoins()}{FindMatchedJoins()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Find\+Matched\+Joins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classInoTrackFinder_ad3df4fba0b3c5994c98a6c7d1a8252f6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_ad3df4fba0b3c5994c98a6c7d1a8252f6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_a1b8c4083989cb5c6f7c735e9da66f14d}\label{classInoTrackFinder_a1b8c4083989cb5c6f7c735e9da66f14d}} 
+\index{InoTrackFinder@{InoTrackFinder}!FindPreferredJoins@{FindPreferredJoins}}
+\index{FindPreferredJoins@{FindPreferredJoins}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{FindPreferredJoins()}{FindPreferredJoins()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Find\+Preferred\+Joins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a1b8c4083989cb5c6f7c735e9da66f14d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a1b8c4083989cb5c6f7c735e9da66f14d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_a86c824fc8ecb86e55aa7b99b72c55a0d}\label{classInoTrackFinder_a86c824fc8ecb86e55aa7b99b72c55a0d}} 
+\index{InoTrackFinder@{InoTrackFinder}!FirstComparison@{FirstComparison}}
+\index{FirstComparison@{FirstComparison}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{FirstComparison()}{FirstComparison()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+First\+Comparison (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a86c824fc8ecb86e55aa7b99b72c55a0d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a86c824fc8ecb86e55aa7b99b72c55a0d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_a5c0cbea8813288089312f37649b36266}\label{classInoTrackFinder_a5c0cbea8813288089312f37649b36266}} 
+\index{InoTrackFinder@{InoTrackFinder}!FormFinalTracks@{FormFinalTracks}}
+\index{FormFinalTracks@{FormFinalTracks}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{FormFinalTracks()}{FormFinalTracks()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Form\+Final\+Tracks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+G\+MA how many common hits are allowed ? Optimise thisHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classInoTrackFinder_a5c0cbea8813288089312f37649b36266_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a5c0cbea8813288089312f37649b36266_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_a3a2d5af630cd516dc7bf748795bae00e}\label{classInoTrackFinder_a3a2d5af630cd516dc7bf748795bae00e}} 
+\index{InoTrackFinder@{InoTrackFinder}!FormTheClusters@{FormTheClusters}}
+\index{FormTheClusters@{FormTheClusters}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{FormTheClusters()}{FormTheClusters()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Form\+The\+Clusters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a3a2d5af630cd516dc7bf748795bae00e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a3a2d5af630cd516dc7bf748795bae00e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_abefbcab521d6b2a631fd4ac0c6b721a7}\label{classInoTrackFinder_abefbcab521d6b2a631fd4ac0c6b721a7}} 
+\index{InoTrackFinder@{InoTrackFinder}!FormTheHits@{FormTheHits}}
+\index{FormTheHits@{FormTheHits}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{FormTheHits()}{FormTheHits()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Form\+The\+Hits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_abefbcab521d6b2a631fd4ac0c6b721a7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_abefbcab521d6b2a631fd4ac0c6b721a7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_a37e986c8e775a8d3557ee0f59b1630c7}\label{classInoTrackFinder_a37e986c8e775a8d3557ee0f59b1630c7}} 
+\index{InoTrackFinder@{InoTrackFinder}!FormTracks@{FormTracks}}
+\index{FormTracks@{FormTracks}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{FormTracks()}{FormTracks()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Form\+Tracks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a37e986c8e775a8d3557ee0f59b1630c7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a37e986c8e775a8d3557ee0f59b1630c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_a4d2ee65452180c68d86bf3609c695688}\label{classInoTrackFinder_a4d2ee65452180c68d86bf3609c695688}} 
+\index{InoTrackFinder@{InoTrackFinder}!FormTriplets@{FormTriplets}}
+\index{FormTriplets@{FormTriplets}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{FormTriplets()}{FormTriplets()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Form\+Triplets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a4d2ee65452180c68d86bf3609c695688_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a4d2ee65452180c68d86bf3609c695688_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_aa3ad55d7812cbbd453a8e7e6f2f6cb32}\label{classInoTrackFinder_aa3ad55d7812cbbd453a8e7e6f2f6cb32}} 
+\index{InoTrackFinder@{InoTrackFinder}!IDTrkAndShwClusters@{IDTrkAndShwClusters}}
+\index{IDTrkAndShwClusters@{IDTrkAndShwClusters}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{IDTrkAndShwClusters()}{IDTrkAndShwClusters()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+I\+D\+Trk\+And\+Shw\+Clusters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_aa3ad55d7812cbbd453a8e7e6f2f6cb32_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_aa3ad55d7812cbbd453a8e7e6f2f6cb32_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_aacd2eff442b223e3f4f71849aa63f2a6}\label{classInoTrackFinder_aacd2eff442b223e3f4f71849aa63f2a6}} 
+\index{InoTrackFinder@{InoTrackFinder}!JoinCurvedTrack@{JoinCurvedTrack}}
+\index{JoinCurvedTrack@{JoinCurvedTrack}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{JoinCurvedTrack()}{JoinCurvedTrack()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Join\+Curved\+Track (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_aacd2eff442b223e3f4f71849aa63f2a6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_a1998711e743a43a3f5b2c9d2db0586d4}\label{classInoTrackFinder_a1998711e743a43a3f5b2c9d2db0586d4}} 
+\index{InoTrackFinder@{InoTrackFinder}!JoinTracks@{JoinTracks}}
+\index{JoinTracks@{JoinTracks}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{JoinTracks()}{JoinTracks()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Join\+Tracks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classInoTrackFinder_a1998711e743a43a3f5b2c9d2db0586d4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a1998711e743a43a3f5b2c9d2db0586d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_a44ceea80d63af4ecd77da39902e0cc28}\label{classInoTrackFinder_a44ceea80d63af4ecd77da39902e0cc28}} 
+\index{InoTrackFinder@{InoTrackFinder}!LookForHitsAcrossGap@{LookForHitsAcrossGap}}
+\index{LookForHitsAcrossGap@{LookForHitsAcrossGap}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{LookForHitsAcrossGap()}{LookForHitsAcrossGap()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Look\+For\+Hits\+Across\+Gap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$}]{Trk }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_a44ceea80d63af4ecd77da39902e0cc28_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_afe2f5d801658cc1b89b87c50cc51d1ba}\label{classInoTrackFinder_afe2f5d801658cc1b89b87c50cc51d1ba}} 
+\index{InoTrackFinder@{InoTrackFinder}!RunAlg@{RunAlg}}
+\index{RunAlg@{RunAlg}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{RunAlg()}{RunAlg()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Run\+Alg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoTrackFinder_ade6339f4da36aede68c3204bfc91229c}\label{classInoTrackFinder_ade6339f4da36aede68c3204bfc91229c}} 
+\index{InoTrackFinder@{InoTrackFinder}!RunTheFinder@{RunTheFinder}}
+\index{RunTheFinder@{RunTheFinder}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{RunTheFinder()}{RunTheFinder()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Run\+The\+Finder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classInoTrackFinder_ade6339f4da36aede68c3204bfc91229c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrackFinder_ade6339f4da36aede68c3204bfc91229c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrackFinder_ad8e6f69dfaa6e9562e6795a1b35e0656}\label{classInoTrackFinder_ad8e6f69dfaa6e9562e6795a1b35e0656}} 
+\index{InoTrackFinder@{InoTrackFinder}!Trace@{Trace}}
+\index{Trace@{Trace}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{Trace()}{Trace()}}
+{\footnotesize\ttfamily void Ino\+Track\+Finder\+::\+Trace (\begin{DoxyParamCaption}\item[{const char $\ast$}]{c }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classInoTrackFinder_ac7d86d2f11a184be32bf24fee8275549}\label{classInoTrackFinder_ac7d86d2f11a184be32bf24fee8275549}} 
+\index{InoTrackFinder@{InoTrackFinder}!grecoi@{grecoi}}
+\index{grecoi@{grecoi}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{grecoi}{grecoi}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneralRecoInfo}{General\+Reco\+Info}}$\ast$ Ino\+Track\+Finder\+::grecoi}
+
+\mbox{\Hypertarget{classInoTrackFinder_a513d7b13083fe3bce394951a1e48c144}\label{classInoTrackFinder_a513d7b13083fe3bce394951a1e48c144}} 
+\index{InoTrackFinder@{InoTrackFinder}!inoCluster\_pointer@{inoCluster\_pointer}}
+\index{inoCluster\_pointer@{inoCluster\_pointer}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{inoCluster\_pointer}{inoCluster\_pointer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classInoCluster__Manager}{Ino\+Cluster\+\_\+\+Manager}}$\ast$ Ino\+Track\+Finder\+::ino\+Cluster\+\_\+pointer}
+
+\mbox{\Hypertarget{classInoTrackFinder_ac34e6d8ea0b50518a5933457605b6da6}\label{classInoTrackFinder_ac34e6d8ea0b50518a5933457605b6da6}} 
+\index{InoTrackFinder@{InoTrackFinder}!pAnalysis@{pAnalysis}}
+\index{pAnalysis@{pAnalysis}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{pAnalysis}{pAnalysis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMultiSimAnalysisDigi}{Multi\+Sim\+Analysis\+Digi}}$\ast$ Ino\+Track\+Finder\+::p\+Analysis}
+
+\mbox{\Hypertarget{classInoTrackFinder_aa48ad1334c98a6e722588a039793dfcd}\label{classInoTrackFinder_aa48ad1334c98a6e722588a039793dfcd}} 
+\index{InoTrackFinder@{InoTrackFinder}!paradef@{paradef}}
+\index{paradef@{paradef}!InoTrackFinder@{InoTrackFinder}}
+\doxysubsubsection{\texorpdfstring{paradef}{paradef}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmicalDetectorParameterDef}{mical\+Detector\+Parameter\+Def}}$\ast$ Ino\+Track\+Finder\+::paradef}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{InoTrackFinder_8h}{Ino\+Track\+Finder.\+h}}\item 
+src/\mbox{\hyperlink{InoTrackFinder_8cc}{Ino\+Track\+Finder.\+cc}}\end{DoxyCompactItemize}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>mICALDigiToReco: Main Page</title>
+<title>Reconstruction Code for mICAL: Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,8 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">mICALDigiToReco
+   <div id="projectname">Reconstruction Code for mICAL
    </div>
+   <div id="projectbrief">Stand-alone code to execute reconstruction for digitized output(either from data or simulation).</div>
   </td>
  </tr>
  </tbody>
@@ -60,11 +61,45 @@ $(function() {
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">mICALDigiToReco Documentation</div>  </div>
+<div class="title">Reconstruction Code for mICAL Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
+Introduction</h1>
+<h1><a class="anchor" id="input_para"></a>
+Various Input Parameters</h1>
+<p>argv[1]:input file name containing root files <br  />
+argv[2]:Input options: 0: SIM -&gt; DIGI, 1 : DIGI -&gt; RECO (MC), 2: DIGI-&gt;RECO (Data) <br  />
+argv[3]:Least Count of TDC- 0.1 <br  />
+argv[4]: Collated input file name *.root <br  />
+argv[5]: Print Level- 1000 <br  />
+argv[6]:CMVD Flag: 0: dont include CMVD files, 1: Use it <br  />
+argv[7]:Mag Field: 0: Use Straightline Fit; 1: Field is there <br  />
+argv[8]: Trackfit Flag: 0:(Old)<a class="el" href="classSwimSwimmer.html">SwimSwimmer</a>,1: (New)Kohlahal <br  />
+argv[9]:Gdml Option: 0:- One stack center &amp; No CMVD, 1:- Two Stacks &amp; No CMVD, 2: Two Stacks with CMVD <br  />
+</p>
+<h2><a class="anchor" id="step1"></a>
+System requirements</h2>
+<p>In order to compile this example, the build essentials must be installed.</p>
+<ul>
+<li>Debian derivates <div class="fragment"><div class="line">sudo apt install build-essential</div>
+</div><!-- fragment --></li>
+<li>RHEL derivates <div class="fragment"><div class="line">sudo dnf install make cmake gcc gcc-c++</div>
+</div><!-- fragment --></li>
+</ul>
+<h2><a class="anchor" id="step2"></a>
+Building the code</h2>
+<ol type="1">
+<li>Generate the build environment <div class="fragment"><div class="line">cmake -S &lt;path-to-source-directory&gt; -B &lt;path-to-build-directory&gt;</div>
+</div><!-- fragment --></li>
+<li>Start compilation <div class="fragment"><div class="line">cmake --build &lt;path-to-build-directory&gt;</div>
+</div><!-- fragment --></li>
+<li>The binary can now be found here<br  />
+<code>&lt;path-to-build-directory&gt;/DoxygenSample/DoxygenSample</code> </li>
+</ol>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

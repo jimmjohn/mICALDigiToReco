@@ -1,0 +1,10 @@
+<map id="micalFieldPropagator" name="micalFieldPropagator">
+<area shape="rect" id="node1" title=" " alt="" coords="248,260,408,287"/>
+<area shape="rect" id="node2" href="$classMultiSimAnalysisDigi.html" title=" " alt="" coords="99,171,261,197"/>
+<area shape="rect" id="node3" href="$classRPCEve.html" title=" " alt="" coords="5,81,77,108"/>
+<area shape="rect" id="node4" href="$classHitPos.html" title=" " alt="" coords="101,81,165,108"/>
+<area shape="rect" id="node5" title=" " alt="" coords="137,5,209,32"/>
+<area shape="rect" id="node7" href="$classHits.html" title=" " alt="" coords="189,81,237,108"/>
+<area shape="rect" id="node6" title=" " alt="" coords="261,81,397,108"/>
+<area shape="rect" id="node8" href="$classmicalDetectorParameterDef.html" title=" " alt="" coords="377,171,581,197"/>
+</map>

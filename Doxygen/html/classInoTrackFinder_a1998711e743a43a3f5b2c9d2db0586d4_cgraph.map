@@ -1,0 +1,42 @@
+<map id="InoTrackFinder::JoinTracks" name="InoTrackFinder::JoinTracks">
+<area shape="rect" id="node1" title=" " alt="" coords="5,943,195,969"/>
+<area shape="rect" id="node2" href="$classInoTrackSegment.html#a7476aa5458dfebcef642896d801a0042" title=" " alt="" coords="243,208,468,235"/>
+<area shape="rect" id="node7" href="$classInoCluster.html#a9e1b922563debf26145206cf828af487" title=" " alt="" coords="822,157,986,184"/>
+<area shape="rect" id="node9" href="$classInoTrackSegment.html#af8c36e4470898175cf25137775359921" title=" " alt="" coords="528,233,739,260"/>
+<area shape="rect" id="node10" href="$classInoTrackSegment.html#abcdf86bad83313278c73ef6cf66949ca" title=" " alt="" coords="799,588,1009,615"/>
+<area shape="rect" id="node11" href="$classInoTrackSegment.html#ac8d1d46e7ef3af51ffff2ce81f744cf6" title=" " alt="" coords="524,487,743,513"/>
+<area shape="rect" id="node15" href="$classInoTrackSegment.html#a3bf827c48558df4587fc6e3fc0d49b60" title=" " alt="" coords="522,385,745,412"/>
+<area shape="rect" id="node16" href="$classInoCluster.html#ad71567a2ab7f3b18f40e8f1df71bc694" title=" " alt="" coords="545,892,721,919"/>
+<area shape="rect" id="node17" href="$classInoCluster.html#a55bc4716689b763cd068d8cae7006a1d" title=" " alt="" coords="264,1297,447,1324"/>
+<area shape="rect" id="node18" href="$classInoTrackSegment.html#ad64810da301c1834c0232e49e042649a" title=" " alt="" coords="525,689,742,716"/>
+<area shape="rect" id="node21" href="$classInoTrackSegment.html#a50898a4079cdc98a4a0829c1c49b96ba" title=" " alt="" coords="523,841,744,868"/>
+<area shape="rect" id="node22" href="$classInoCluster.html#a81e21edfa471254ef1eaf2914495cc51" title=" " alt="" coords="546,943,721,969"/>
+<area shape="rect" id="node23" href="$classInoCluster.html#a1dc58e4f306d7b5d31ee4e42fd230496" title=" " alt="" coords="264,1348,447,1375"/>
+<area shape="rect" id="node24" href="$classInoTrackSegment.html#a5f11f97b713dbdcd0e346ea73ebfa405" title=" " alt="" coords="516,993,751,1020"/>
+<area shape="rect" id="node25" href="$classInoTrackSegment.html#a154f5ba8f8457edaffa4e786a0c11757" title=" " alt="" coords="522,1044,745,1071"/>
+<area shape="rect" id="node26" href="$classInoTrackSegment.html#a166ce3405d99503e6015fc451138ce67" title=" " alt="" coords="525,537,742,564"/>
+<area shape="rect" id="node27" href="$classInoTrackSegment.html#a60e216145452089b17cac4aa11317cb4" title=" " alt="" coords="523,436,744,463"/>
+<area shape="rect" id="node28" href="$classInoCluster.html#a83a250e634e15b8d74804ce6e71e71f4" title=" " alt="" coords="546,1095,721,1121"/>
+<area shape="rect" id="node29" href="$classInoCluster.html#a6b4abcbb923f8a2d79b9f3ec9540a4ad" title=" " alt="" coords="264,1399,447,1425"/>
+<area shape="rect" id="node30" href="$classInoTrackSegment.html#aac70d0fbb9dd24a5823d7346f97b903f" title=" " alt="" coords="525,740,741,767"/>
+<area shape="rect" id="node31" href="$classInoTrackSegment.html#af2daf5c83526eab541a8698deb7cb9c0" title=" " alt="" coords="523,791,743,817"/>
+<area shape="rect" id="node32" href="$classInoCluster.html#aa376e4f3afc3978247311d3ee1c16523" title=" " alt="" coords="546,1145,721,1172"/>
+<area shape="rect" id="node33" href="$classInoCluster.html#a5f02de51442230f0769ef8b9bcfdb27e" title=" " alt="" coords="265,1449,446,1476"/>
+<area shape="rect" id="node34" href="$classInoTrackSegment.html#a73649317ac12ff227fb96bbb8766b298" title=" " alt="" coords="516,1196,751,1223"/>
+<area shape="rect" id="node35" href="$classInoTrackSegment.html#a5bb7720731fdd0216c3e49cf86af07cf" title=" " alt="" coords="523,1247,744,1273"/>
+<area shape="rect" id="node36" href="$classInoTrackSegment.html#a3aee8534bd80d82c74aaebf6a7eef684" title=" " alt="" coords="261,1500,450,1527"/>
+<area shape="rect" id="node37" href="$classInoCluster.html#aa6858472cae6f38e68275f2d9b717050" title=" " alt="" coords="280,1551,431,1577"/>
+<area shape="rect" id="node38" href="$classInoCluster.html#a574b438d6aad55d79213b4d722e52dbf" title=" " alt="" coords="280,1601,431,1628"/>
+<area shape="rect" id="node39" href="$classInoTrackSegment.html#a44e6efd58746e5d1c350a0c9f7f82429" title=" " alt="" coords="260,740,451,767"/>
+<area shape="rect" id="node40" href="$classInoTrackSegment.html#a5a9f6a95f17d6d29156ec3f7d79f19e0" title=" " alt="" coords="262,1652,449,1679"/>
+<area shape="rect" id="node3" href="$classInoTrackSegment.html#a44b7d47bdb8a589bf638cb8926c2e23e" title=" " alt="" coords="527,81,740,108"/>
+<area shape="rect" id="node4" href="$classInoTrackSegment.html#a312a8ad3754aef51b828e600e6e96116" title=" " alt="" coords="805,269,1003,310"/>
+<area shape="rect" id="node5" href="$classInoCluster.html#afb6ffe4d475744f9535ea1bce02c59bc" title=" " alt="" coords="815,56,993,83"/>
+<area shape="rect" id="node6" href="$classInoCluster.html#a70c3050850ef87668b27740c07292390" title=" " alt="" coords="816,107,992,133"/>
+<area shape="rect" id="node8" href="$classInoCluster.html#a646b4782e0f95f718afdf7e555c346f3" title=" " alt="" coords="829,5,979,32"/>
+<area shape="rect" id="node12" href="$classInoHit.html#ab201b879016de161371af13f090518d5" title=" " alt="" coords="842,487,966,513"/>
+<area shape="rect" id="node13" href="$classInoHit.html#aee808d9a4054982ee627591ad6a5c53c" title=" " alt="" coords="833,436,975,463"/>
+<area shape="rect" id="node14" href="$classInoHit.html#a93ac9f16c215e5b657c9a381075e7639" title=" " alt="" coords="842,664,966,691"/>
+<area shape="rect" id="node19" href="$classInoHit.html#a45eb1dc2ccfe007b7ae416d418d30608" title=" " alt="" coords="843,740,965,767"/>
+<area shape="rect" id="node20" href="$classInoHit.html#a3ea14c3e96be34718ca49911c2266981" title=" " alt="" coords="833,791,975,817"/>
+</map>

@@ -1,0 +1,185 @@
+\hypertarget{classmicalFieldPropagator}{}\doxysection{mical\+Field\+Propagator Class Reference}
+\label{classmicalFieldPropagator}\index{micalFieldPropagator@{micalFieldPropagator}}
+
+
+{\ttfamily \#include $<$mical\+Field\+Propagator.\+hh$>$}
+
+
+
+Collaboration diagram for mical\+Field\+Propagator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmicalFieldPropagator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmicalFieldPropagator_a604e48041ba9667af20f545eb733d0f5}{mical\+Field\+Propagator}} ()
+\item 
+\mbox{\hyperlink{classmicalFieldPropagator_a0851d18df7ca420e6b9fb2da697e5ce3}{$\sim$mical\+Field\+Propagator}} ()
+\item 
+void \mbox{\hyperlink{classmicalFieldPropagator_aa8659105bc42eb09c475ac0d4fc78df8}{Electro\+Magnetic\+Field}} (const double Point\mbox{[}3\mbox{]}, double \&B1, double \&B2, int ftype)
+\item 
+void \mbox{\hyperlink{classmicalFieldPropagator_a7f7b65bedf32859f97dd9b303e51af13}{Print\+Field\+Map}} ()
+\item 
+void \mbox{\hyperlink{classmicalFieldPropagator_a8e54d2652136d12c305df3ee46b9271b}{F2int}} (int $\ast$ag\+\_\+f2i, double \&bx\+\_\+f2i, double \&by\+\_\+f2i)
+\item 
+double \mbox{\hyperlink{classmicalFieldPropagator_a8fb8575ef522c98c918b7470b058a90e}{bilinear\+Interpolation}} (double $\ast$f\+\_\+bli, double $\ast$arg\+\_\+bli, int $\ast$ag\+\_\+bli)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmicalDetectorParameterDef}{mical\+Detector\+Parameter\+Def}} $\ast$ \mbox{\hyperlink{classmicalFieldPropagator_a9e9aa25171e6829b3a29a6b32b85562e}{paradef}}
+\item 
+\mbox{\hyperlink{classMultiSimAnalysisDigi}{Multi\+Sim\+Analysis\+Digi}} $\ast$ \mbox{\hyperlink{classmicalFieldPropagator_a707a2ad0ac8a12bac755d3c9c6a6f395}{p\+Analysis}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classmicalFieldPropagator}{mical\+Field\+Propagator}} $\ast$ \mbox{\hyperlink{classmicalFieldPropagator_a87a832268636c5267cad60139f623d91}{Fd\+Pointer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmicalFieldPropagator_adf184d8b25271733af6cbb783047e0d3}{temp}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmicalFieldPropagator_a604e48041ba9667af20f545eb733d0f5}\label{classmicalFieldPropagator_a604e48041ba9667af20f545eb733d0f5}} 
+\index{micalFieldPropagator@{micalFieldPropagator}!micalFieldPropagator@{micalFieldPropagator}}
+\index{micalFieldPropagator@{micalFieldPropagator}!micalFieldPropagator@{micalFieldPropagator}}
+\doxysubsubsection{\texorpdfstring{micalFieldPropagator()}{micalFieldPropagator()}}
+{\footnotesize\ttfamily mical\+Field\+Propagator\+::mical\+Field\+Propagator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmicalFieldPropagator_a604e48041ba9667af20f545eb733d0f5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmicalFieldPropagator_a604e48041ba9667af20f545eb733d0f5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmicalFieldPropagator_a0851d18df7ca420e6b9fb2da697e5ce3}\label{classmicalFieldPropagator_a0851d18df7ca420e6b9fb2da697e5ce3}} 
+\index{micalFieldPropagator@{micalFieldPropagator}!````~micalFieldPropagator@{$\sim$micalFieldPropagator}}
+\index{````~micalFieldPropagator@{$\sim$micalFieldPropagator}!micalFieldPropagator@{micalFieldPropagator}}
+\doxysubsubsection{\texorpdfstring{$\sim$micalFieldPropagator()}{~micalFieldPropagator()}}
+{\footnotesize\ttfamily mical\+Field\+Propagator\+::$\sim$mical\+Field\+Propagator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmicalFieldPropagator_a8fb8575ef522c98c918b7470b058a90e}\label{classmicalFieldPropagator_a8fb8575ef522c98c918b7470b058a90e}} 
+\index{micalFieldPropagator@{micalFieldPropagator}!bilinearInterpolation@{bilinearInterpolation}}
+\index{bilinearInterpolation@{bilinearInterpolation}!micalFieldPropagator@{micalFieldPropagator}}
+\doxysubsubsection{\texorpdfstring{bilinearInterpolation()}{bilinearInterpolation()}}
+{\footnotesize\ttfamily double mical\+Field\+Propagator\+::bilinear\+Interpolation (\begin{DoxyParamCaption}\item[{double $\ast$}]{f\+\_\+bli,  }\item[{double $\ast$}]{arg\+\_\+bli,  }\item[{int $\ast$}]{ag\+\_\+bli }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmicalFieldPropagator_a8fb8575ef522c98c918b7470b058a90e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmicalFieldPropagator_aa8659105bc42eb09c475ac0d4fc78df8}\label{classmicalFieldPropagator_aa8659105bc42eb09c475ac0d4fc78df8}} 
+\index{micalFieldPropagator@{micalFieldPropagator}!ElectroMagneticField@{ElectroMagneticField}}
+\index{ElectroMagneticField@{ElectroMagneticField}!micalFieldPropagator@{micalFieldPropagator}}
+\doxysubsubsection{\texorpdfstring{ElectroMagneticField()}{ElectroMagneticField()}}
+{\footnotesize\ttfamily void mical\+Field\+Propagator\+::\+Electro\+Magnetic\+Field (\begin{DoxyParamCaption}\item[{const double}]{Point\mbox{[}3\mbox{]},  }\item[{double \&}]{B1,  }\item[{double \&}]{B2,  }\item[{int}]{ftype }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmicalFieldPropagator_aa8659105bc42eb09c475ac0d4fc78df8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmicalFieldPropagator_aa8659105bc42eb09c475ac0d4fc78df8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmicalFieldPropagator_a8e54d2652136d12c305df3ee46b9271b}\label{classmicalFieldPropagator_a8e54d2652136d12c305df3ee46b9271b}} 
+\index{micalFieldPropagator@{micalFieldPropagator}!F2int@{F2int}}
+\index{F2int@{F2int}!micalFieldPropagator@{micalFieldPropagator}}
+\doxysubsubsection{\texorpdfstring{F2int()}{F2int()}}
+{\footnotesize\ttfamily void mical\+Field\+Propagator\+::\+F2int (\begin{DoxyParamCaption}\item[{int $\ast$}]{ag\+\_\+f2i,  }\item[{double \&}]{bx\+\_\+f2i,  }\item[{double \&}]{by\+\_\+f2i }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmicalFieldPropagator_a8e54d2652136d12c305df3ee46b9271b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmicalFieldPropagator_a8e54d2652136d12c305df3ee46b9271b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmicalFieldPropagator_a7f7b65bedf32859f97dd9b303e51af13}\label{classmicalFieldPropagator_a7f7b65bedf32859f97dd9b303e51af13}} 
+\index{micalFieldPropagator@{micalFieldPropagator}!PrintFieldMap@{PrintFieldMap}}
+\index{PrintFieldMap@{PrintFieldMap}!micalFieldPropagator@{micalFieldPropagator}}
+\doxysubsubsection{\texorpdfstring{PrintFieldMap()}{PrintFieldMap()}}
+{\footnotesize\ttfamily void mical\+Field\+Propagator\+::\+Print\+Field\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmicalFieldPropagator_a7f7b65bedf32859f97dd9b303e51af13_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmicalFieldPropagator_a7f7b65bedf32859f97dd9b303e51af13_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmicalFieldPropagator_a87a832268636c5267cad60139f623d91}\label{classmicalFieldPropagator_a87a832268636c5267cad60139f623d91}} 
+\index{micalFieldPropagator@{micalFieldPropagator}!FdPointer@{FdPointer}}
+\index{FdPointer@{FdPointer}!micalFieldPropagator@{micalFieldPropagator}}
+\doxysubsubsection{\texorpdfstring{FdPointer}{FdPointer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmicalFieldPropagator}{mical\+Field\+Propagator}} $\ast$ mical\+Field\+Propagator\+::\+Fd\+Pointer\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classmicalFieldPropagator_a707a2ad0ac8a12bac755d3c9c6a6f395}\label{classmicalFieldPropagator_a707a2ad0ac8a12bac755d3c9c6a6f395}} 
+\index{micalFieldPropagator@{micalFieldPropagator}!pAnalysis@{pAnalysis}}
+\index{pAnalysis@{pAnalysis}!micalFieldPropagator@{micalFieldPropagator}}
+\doxysubsubsection{\texorpdfstring{pAnalysis}{pAnalysis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMultiSimAnalysisDigi}{Multi\+Sim\+Analysis\+Digi}}$\ast$ mical\+Field\+Propagator\+::p\+Analysis}
+
+\mbox{\Hypertarget{classmicalFieldPropagator_a9e9aa25171e6829b3a29a6b32b85562e}\label{classmicalFieldPropagator_a9e9aa25171e6829b3a29a6b32b85562e}} 
+\index{micalFieldPropagator@{micalFieldPropagator}!paradef@{paradef}}
+\index{paradef@{paradef}!micalFieldPropagator@{micalFieldPropagator}}
+\doxysubsubsection{\texorpdfstring{paradef}{paradef}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmicalDetectorParameterDef}{mical\+Detector\+Parameter\+Def}}$\ast$ mical\+Field\+Propagator\+::paradef}
+
+\mbox{\Hypertarget{classmicalFieldPropagator_adf184d8b25271733af6cbb783047e0d3}\label{classmicalFieldPropagator_adf184d8b25271733af6cbb783047e0d3}} 
+\index{micalFieldPropagator@{micalFieldPropagator}!temp@{temp}}
+\index{temp@{temp}!micalFieldPropagator@{micalFieldPropagator}}
+\doxysubsubsection{\texorpdfstring{temp}{temp}}
+{\footnotesize\ttfamily int mical\+Field\+Propagator\+::temp\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{micalFieldPropagator_8hh}{mical\+Field\+Propagator.\+hh}}\item 
+src/\mbox{\hyperlink{micalFieldPropagator_8cc}{mical\+Field\+Propagator.\+cc}}\end{DoxyCompactItemize}

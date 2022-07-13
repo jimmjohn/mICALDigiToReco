@@ -1,0 +1,10 @@
+<map id="inc/HitPos.h" name="inc/HitPos.h">
+<area shape="rect" id="node1" title=" " alt="" coords="359,5,458,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,89,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="113,80,232,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="256,80,353,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="377,80,440,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="464,80,524,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="549,80,615,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="639,80,714,107"/>
+</map>

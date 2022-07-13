@@ -1,0 +1,574 @@
+\hypertarget{classInoTrack}{}\doxysection{Ino\+Track Class Reference}
+\label{classInoTrack}\index{InoTrack@{InoTrack}}
+
+
+{\ttfamily \#include $<$Ino\+Track.\+h$>$}
+
+
+
+Collaboration diagram for Ino\+Track\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classInoTrack__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInoTrack_a12dfbb8b6a5ddb0c7da78101a71e1639}{Ino\+Track}} ()
+\item 
+\mbox{\hyperlink{classInoTrack_a88ed4fe362a155346d6e5faa94fbcfb4}{Ino\+Track}} (\mbox{\hyperlink{classInoTrackSegment}{Ino\+Track\+Segment}} $\ast$segment)
+\item 
+\mbox{\hyperlink{classInoTrack_ac32fb90199bc265d40bc1af6e14e1a5d}{$\sim$\+Ino\+Track}} ()
+\item 
+\mbox{\hyperlink{classInoTrackSegment}{Ino\+Track\+Segment}} $\ast$ \mbox{\hyperlink{classInoTrack_a4e6d338a181194191fce9e1eec1a515a}{Get\+Ino\+Track\+Segment}} () const
+\item 
+int \mbox{\hyperlink{classInoTrack_ae766d0649cec4f0b8fcffc2a0e94972c}{Get\+Beg\+Z\+Plane}} () const
+\item 
+int \mbox{\hyperlink{classInoTrack_ab3d882e995868be2bbaa76221ecd9e42}{Get\+End\+Z\+Plane}} () const
+\item 
+void \mbox{\hyperlink{classInoTrack_a28e486bb2390db03dc515616469983c6}{Add\+Cluster}} (\mbox{\hyperlink{classInoCluster}{Ino\+Cluster}} $\ast$clust)
+\item 
+void \mbox{\hyperlink{classInoTrack_a6bbc2cd520b88ed7bd7354c66cb21440}{Add\+Track}} (\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$trk)
+\item 
+bool \mbox{\hyperlink{classInoTrack_a858177b4b4d899768dcf43161e76cd61}{Contains\+Clust}} (\mbox{\hyperlink{classInoCluster}{Ino\+Cluster}} $\ast$clust) const
+\item 
+\mbox{\hyperlink{classInoCluster}{Ino\+Cluster}} $\ast$ \mbox{\hyperlink{classInoTrack_af4d97947cf0aca8229ef03d66799e8e0}{Get\+Cluster}} (unsigned int i) const
+\item 
+void \mbox{\hyperlink{classInoTrack_aab2ab78c8794130315280f385c11cde1}{Insert\+Cluster}} (vector$<$ \mbox{\hyperlink{classInoCluster}{Ino\+Cluster}} $\ast$ $>$\+::iterator it, \mbox{\hyperlink{classInoCluster}{Ino\+Cluster}} $\ast$cls)
+\item 
+vector$<$ \mbox{\hyperlink{classInoCluster}{Ino\+Cluster}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classInoTrack_af22a97274abcb88df2504f2b594ff75d}{begin}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classInoCluster}{Ino\+Cluster}} $\ast$ $>$\+::iterator \mbox{\hyperlink{classInoTrack_aa01f56a07cd15626e0cb30f88e2a6e79}{end}} ()
+\item 
+double \mbox{\hyperlink{classInoTrack_a79774a1388eb1be8b92e49c8d1fa74fe}{Get\+Beg\+X\+Pos}} ()
+\item 
+double \mbox{\hyperlink{classInoTrack_acf37f3cb3717a4dc5c25eeed69e4f2fd}{Get\+End\+X\+Pos}} ()
+\item 
+double \mbox{\hyperlink{classInoTrack_a48071f218b95279963c59dd28727bd4a}{Get\+Beg\+Y\+Pos}} ()
+\item 
+double \mbox{\hyperlink{classInoTrack_a61ea7d8f0ba3acda6e92c9291fafc157}{Get\+End\+Y\+Pos}} ()
+\item 
+double \mbox{\hyperlink{classInoTrack_a5ab57fa37f823dd290a9e1d097f7805a}{Get\+X\+Dir}} (int Plane1, int Plane2)
+\item 
+double \mbox{\hyperlink{classInoTrack_a7915fbc4ca37cd03667c29c421f53ea8}{Get\+Beg\+X\+Dir}} ()
+\item 
+double \mbox{\hyperlink{classInoTrack_a36576bf685947fa9b7f4b554edc3b505}{Get\+End\+X\+Dir}} ()
+\item 
+double \mbox{\hyperlink{classInoTrack_ae1b23e3608e00bb439cd1cf18c586023}{Get\+Y\+Dir}} (int Plane1, int Plane2)
+\item 
+double \mbox{\hyperlink{classInoTrack_ae6e4fc4bd20f6ae18c89685490afaf5b}{Get\+Beg\+Y\+Dir}} ()
+\item 
+double \mbox{\hyperlink{classInoTrack_a4f16aef26a699649eead37094922791c}{Get\+End\+Y\+Dir}} ()
+\item 
+double \mbox{\hyperlink{classInoTrack_a7e99c4f376798de96c299a3899d45158}{Get\+Beg\+Z\+Pos}} () const
+\item 
+double \mbox{\hyperlink{classInoTrack_a71367bfe09d9cf0f1b78c72fd948ddc9}{Get\+End\+Z\+Pos}} () const
+\item 
+unsigned int \mbox{\hyperlink{classInoTrack_a6962008978dca6beb8acae180a6064f0}{Get\+Entries}} () const
+\item 
+int \mbox{\hyperlink{classInoTrack_a3329a62d58180fca3da65f120e99f701}{Get\+U\+ID}} () const
+\item 
+void \mbox{\hyperlink{classInoTrack_a97755d8f23ad5c85ac549d8a52c80a07}{Set\+U\+ID}} (int U\+I\+D\+Num)
+\item 
+int \mbox{\hyperlink{classInoTrack_aa05deaa481435d4307ee6eb5cc4d262a}{Get\+Used}} () const
+\item 
+void \mbox{\hyperlink{classInoTrack_aebbaeec52dfe35876900d575288e5a31}{Set\+Used}} (int U\+I\+D\+Num)
+\item 
+int \mbox{\hyperlink{classInoTrack_ad88f7da1a909bd5a86eff1b0e1f947fb}{Get\+Track\+Merge\+Var}} () const
+\item 
+void \mbox{\hyperlink{classInoTrack_aa7283e163a1d9d75c0637c20cb6ec96d}{Set\+Track\+Merge\+Var}} (int ixi)
+\item 
+void \mbox{\hyperlink{classInoTrack_a07c9a73600b3e4b8395cbe007d78c125}{Set\+Straight}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{classInoCluster}{Ino\+Cluster}} $\ast$ $>$ \mbox{\hyperlink{classInoTrack_a57f9579c59c6aed09b9c3cfc7483f7b5}{Clusts\+In\+Track}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classInoTrack_a12d8dd0f8b4b7f2cbb27282463c6d21f}{Inot\+Track\+Cand}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInoTrack_a12dfbb8b6a5ddb0c7da78101a71e1639}\label{classInoTrack_a12dfbb8b6a5ddb0c7da78101a71e1639}} 
+\index{InoTrack@{InoTrack}!InoTrack@{InoTrack}}
+\index{InoTrack@{InoTrack}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{InoTrack()}{InoTrack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Ino\+Track\+::\+Ino\+Track (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoTrack_a88ed4fe362a155346d6e5faa94fbcfb4}\label{classInoTrack_a88ed4fe362a155346d6e5faa94fbcfb4}} 
+\index{InoTrack@{InoTrack}!InoTrack@{InoTrack}}
+\index{InoTrack@{InoTrack}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{InoTrack()}{InoTrack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Ino\+Track\+::\+Ino\+Track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInoTrackSegment}{Ino\+Track\+Segment}} $\ast$}]{segment }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInoTrack_ac32fb90199bc265d40bc1af6e14e1a5d}\label{classInoTrack_ac32fb90199bc265d40bc1af6e14e1a5d}} 
+\index{InoTrack@{InoTrack}!````~InoTrack@{$\sim$InoTrack}}
+\index{````~InoTrack@{$\sim$InoTrack}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{$\sim$InoTrack()}{~InoTrack()}}
+{\footnotesize\ttfamily Ino\+Track\+::$\sim$\+Ino\+Track (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInoTrack_a28e486bb2390db03dc515616469983c6}\label{classInoTrack_a28e486bb2390db03dc515616469983c6}} 
+\index{InoTrack@{InoTrack}!AddCluster@{AddCluster}}
+\index{AddCluster@{AddCluster}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{AddCluster()}{AddCluster()}}
+{\footnotesize\ttfamily void Ino\+Track\+::\+Add\+Cluster (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInoCluster}{Ino\+Cluster}} $\ast$}]{clust }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a28e486bb2390db03dc515616469983c6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a28e486bb2390db03dc515616469983c6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_a6bbc2cd520b88ed7bd7354c66cb21440}\label{classInoTrack_a6bbc2cd520b88ed7bd7354c66cb21440}} 
+\index{InoTrack@{InoTrack}!AddTrack@{AddTrack}}
+\index{AddTrack@{AddTrack}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{AddTrack()}{AddTrack()}}
+{\footnotesize\ttfamily void Ino\+Track\+::\+Add\+Track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInoTrack}{Ino\+Track}} $\ast$}]{trk }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a6bbc2cd520b88ed7bd7354c66cb21440_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_af22a97274abcb88df2504f2b594ff75d}\label{classInoTrack_af22a97274abcb88df2504f2b594ff75d}} 
+\index{InoTrack@{InoTrack}!begin@{begin}}
+\index{begin@{begin}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classInoCluster}{Ino\+Cluster}}$\ast$$>$\+::iterator Ino\+Track\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_af22a97274abcb88df2504f2b594ff75d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_a858177b4b4d899768dcf43161e76cd61}\label{classInoTrack_a858177b4b4d899768dcf43161e76cd61}} 
+\index{InoTrack@{InoTrack}!ContainsClust@{ContainsClust}}
+\index{ContainsClust@{ContainsClust}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{ContainsClust()}{ContainsClust()}}
+{\footnotesize\ttfamily bool Ino\+Track\+::\+Contains\+Clust (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInoCluster}{Ino\+Cluster}} $\ast$}]{clust }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a858177b4b4d899768dcf43161e76cd61_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_aa01f56a07cd15626e0cb30f88e2a6e79}\label{classInoTrack_aa01f56a07cd15626e0cb30f88e2a6e79}} 
+\index{InoTrack@{InoTrack}!end@{end}}
+\index{end@{end}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classInoCluster}{Ino\+Cluster}}$\ast$$>$\+::iterator Ino\+Track\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_aa01f56a07cd15626e0cb30f88e2a6e79_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_a7915fbc4ca37cd03667c29c421f53ea8}\label{classInoTrack_a7915fbc4ca37cd03667c29c421f53ea8}} 
+\index{InoTrack@{InoTrack}!GetBegXDir@{GetBegXDir}}
+\index{GetBegXDir@{GetBegXDir}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetBegXDir()}{GetBegXDir()}}
+{\footnotesize\ttfamily double Ino\+Track\+::\+Get\+Beg\+X\+Dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a7915fbc4ca37cd03667c29c421f53ea8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a7915fbc4ca37cd03667c29c421f53ea8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_a79774a1388eb1be8b92e49c8d1fa74fe}\label{classInoTrack_a79774a1388eb1be8b92e49c8d1fa74fe}} 
+\index{InoTrack@{InoTrack}!GetBegXPos@{GetBegXPos}}
+\index{GetBegXPos@{GetBegXPos}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetBegXPos()}{GetBegXPos()}}
+{\footnotesize\ttfamily double Ino\+Track\+::\+Get\+Beg\+X\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a79774a1388eb1be8b92e49c8d1fa74fe_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a79774a1388eb1be8b92e49c8d1fa74fe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_ae6e4fc4bd20f6ae18c89685490afaf5b}\label{classInoTrack_ae6e4fc4bd20f6ae18c89685490afaf5b}} 
+\index{InoTrack@{InoTrack}!GetBegYDir@{GetBegYDir}}
+\index{GetBegYDir@{GetBegYDir}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetBegYDir()}{GetBegYDir()}}
+{\footnotesize\ttfamily double Ino\+Track\+::\+Get\+Beg\+Y\+Dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_ae6e4fc4bd20f6ae18c89685490afaf5b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_ae6e4fc4bd20f6ae18c89685490afaf5b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_a48071f218b95279963c59dd28727bd4a}\label{classInoTrack_a48071f218b95279963c59dd28727bd4a}} 
+\index{InoTrack@{InoTrack}!GetBegYPos@{GetBegYPos}}
+\index{GetBegYPos@{GetBegYPos}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetBegYPos()}{GetBegYPos()}}
+{\footnotesize\ttfamily double Ino\+Track\+::\+Get\+Beg\+Y\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a48071f218b95279963c59dd28727bd4a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a48071f218b95279963c59dd28727bd4a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_ae766d0649cec4f0b8fcffc2a0e94972c}\label{classInoTrack_ae766d0649cec4f0b8fcffc2a0e94972c}} 
+\index{InoTrack@{InoTrack}!GetBegZPlane@{GetBegZPlane}}
+\index{GetBegZPlane@{GetBegZPlane}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetBegZPlane()}{GetBegZPlane()}}
+{\footnotesize\ttfamily int Ino\+Track\+::\+Get\+Beg\+Z\+Plane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_ae766d0649cec4f0b8fcffc2a0e94972c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_a7e99c4f376798de96c299a3899d45158}\label{classInoTrack_a7e99c4f376798de96c299a3899d45158}} 
+\index{InoTrack@{InoTrack}!GetBegZPos@{GetBegZPos}}
+\index{GetBegZPos@{GetBegZPos}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetBegZPos()}{GetBegZPos()}}
+{\footnotesize\ttfamily double Ino\+Track\+::\+Get\+Beg\+Z\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a7e99c4f376798de96c299a3899d45158_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_af4d97947cf0aca8229ef03d66799e8e0}\label{classInoTrack_af4d97947cf0aca8229ef03d66799e8e0}} 
+\index{InoTrack@{InoTrack}!GetCluster@{GetCluster}}
+\index{GetCluster@{GetCluster}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetCluster()}{GetCluster()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classInoCluster}{Ino\+Cluster}} $\ast$ Ino\+Track\+::\+Get\+Cluster (\begin{DoxyParamCaption}\item[{unsigned int}]{i }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_af4d97947cf0aca8229ef03d66799e8e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_a36576bf685947fa9b7f4b554edc3b505}\label{classInoTrack_a36576bf685947fa9b7f4b554edc3b505}} 
+\index{InoTrack@{InoTrack}!GetEndXDir@{GetEndXDir}}
+\index{GetEndXDir@{GetEndXDir}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetEndXDir()}{GetEndXDir()}}
+{\footnotesize\ttfamily double Ino\+Track\+::\+Get\+End\+X\+Dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a36576bf685947fa9b7f4b554edc3b505_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a36576bf685947fa9b7f4b554edc3b505_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_acf37f3cb3717a4dc5c25eeed69e4f2fd}\label{classInoTrack_acf37f3cb3717a4dc5c25eeed69e4f2fd}} 
+\index{InoTrack@{InoTrack}!GetEndXPos@{GetEndXPos}}
+\index{GetEndXPos@{GetEndXPos}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetEndXPos()}{GetEndXPos()}}
+{\footnotesize\ttfamily double Ino\+Track\+::\+Get\+End\+X\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_acf37f3cb3717a4dc5c25eeed69e4f2fd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_acf37f3cb3717a4dc5c25eeed69e4f2fd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_a4f16aef26a699649eead37094922791c}\label{classInoTrack_a4f16aef26a699649eead37094922791c}} 
+\index{InoTrack@{InoTrack}!GetEndYDir@{GetEndYDir}}
+\index{GetEndYDir@{GetEndYDir}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetEndYDir()}{GetEndYDir()}}
+{\footnotesize\ttfamily double Ino\+Track\+::\+Get\+End\+Y\+Dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a4f16aef26a699649eead37094922791c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a4f16aef26a699649eead37094922791c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_a61ea7d8f0ba3acda6e92c9291fafc157}\label{classInoTrack_a61ea7d8f0ba3acda6e92c9291fafc157}} 
+\index{InoTrack@{InoTrack}!GetEndYPos@{GetEndYPos}}
+\index{GetEndYPos@{GetEndYPos}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetEndYPos()}{GetEndYPos()}}
+{\footnotesize\ttfamily double Ino\+Track\+::\+Get\+End\+Y\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a61ea7d8f0ba3acda6e92c9291fafc157_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a61ea7d8f0ba3acda6e92c9291fafc157_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_ab3d882e995868be2bbaa76221ecd9e42}\label{classInoTrack_ab3d882e995868be2bbaa76221ecd9e42}} 
+\index{InoTrack@{InoTrack}!GetEndZPlane@{GetEndZPlane}}
+\index{GetEndZPlane@{GetEndZPlane}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetEndZPlane()}{GetEndZPlane()}}
+{\footnotesize\ttfamily int Ino\+Track\+::\+Get\+End\+Z\+Plane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_ab3d882e995868be2bbaa76221ecd9e42_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_a71367bfe09d9cf0f1b78c72fd948ddc9}\label{classInoTrack_a71367bfe09d9cf0f1b78c72fd948ddc9}} 
+\index{InoTrack@{InoTrack}!GetEndZPos@{GetEndZPos}}
+\index{GetEndZPos@{GetEndZPos}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetEndZPos()}{GetEndZPos()}}
+{\footnotesize\ttfamily double Ino\+Track\+::\+Get\+End\+Z\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a71367bfe09d9cf0f1b78c72fd948ddc9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_a6962008978dca6beb8acae180a6064f0}\label{classInoTrack_a6962008978dca6beb8acae180a6064f0}} 
+\index{InoTrack@{InoTrack}!GetEntries@{GetEntries}}
+\index{GetEntries@{GetEntries}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetEntries()}{GetEntries()}}
+{\footnotesize\ttfamily unsigned int Ino\+Track\+::\+Get\+Entries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a6962008978dca6beb8acae180a6064f0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_a4e6d338a181194191fce9e1eec1a515a}\label{classInoTrack_a4e6d338a181194191fce9e1eec1a515a}} 
+\index{InoTrack@{InoTrack}!GetInoTrackSegment@{GetInoTrackSegment}}
+\index{GetInoTrackSegment@{GetInoTrackSegment}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetInoTrackSegment()}{GetInoTrackSegment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classInoTrackSegment}{Ino\+Track\+Segment}}$\ast$ Ino\+Track\+::\+Get\+Ino\+Track\+Segment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classInoTrack_ad88f7da1a909bd5a86eff1b0e1f947fb}\label{classInoTrack_ad88f7da1a909bd5a86eff1b0e1f947fb}} 
+\index{InoTrack@{InoTrack}!GetTrackMergeVar@{GetTrackMergeVar}}
+\index{GetTrackMergeVar@{GetTrackMergeVar}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetTrackMergeVar()}{GetTrackMergeVar()}}
+{\footnotesize\ttfamily int Ino\+Track\+::\+Get\+Track\+Merge\+Var (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classInoTrack_a3329a62d58180fca3da65f120e99f701}\label{classInoTrack_a3329a62d58180fca3da65f120e99f701}} 
+\index{InoTrack@{InoTrack}!GetUID@{GetUID}}
+\index{GetUID@{GetUID}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetUID()}{GetUID()}}
+{\footnotesize\ttfamily int Ino\+Track\+::\+Get\+U\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classInoTrack_aa05deaa481435d4307ee6eb5cc4d262a}\label{classInoTrack_aa05deaa481435d4307ee6eb5cc4d262a}} 
+\index{InoTrack@{InoTrack}!GetUsed@{GetUsed}}
+\index{GetUsed@{GetUsed}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetUsed()}{GetUsed()}}
+{\footnotesize\ttfamily int Ino\+Track\+::\+Get\+Used (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classInoTrack_a5ab57fa37f823dd290a9e1d097f7805a}\label{classInoTrack_a5ab57fa37f823dd290a9e1d097f7805a}} 
+\index{InoTrack@{InoTrack}!GetXDir@{GetXDir}}
+\index{GetXDir@{GetXDir}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetXDir()}{GetXDir()}}
+{\footnotesize\ttfamily double Ino\+Track\+::\+Get\+X\+Dir (\begin{DoxyParamCaption}\item[{int}]{Plane1,  }\item[{int}]{Plane2 }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classInoTrack_a5ab57fa37f823dd290a9e1d097f7805a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a5ab57fa37f823dd290a9e1d097f7805a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_ae1b23e3608e00bb439cd1cf18c586023}\label{classInoTrack_ae1b23e3608e00bb439cd1cf18c586023}} 
+\index{InoTrack@{InoTrack}!GetYDir@{GetYDir}}
+\index{GetYDir@{GetYDir}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{GetYDir()}{GetYDir()}}
+{\footnotesize\ttfamily double Ino\+Track\+::\+Get\+Y\+Dir (\begin{DoxyParamCaption}\item[{int}]{Plane1,  }\item[{int}]{Plane2 }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classInoTrack_ae1b23e3608e00bb439cd1cf18c586023_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_ae1b23e3608e00bb439cd1cf18c586023_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_aab2ab78c8794130315280f385c11cde1}\label{classInoTrack_aab2ab78c8794130315280f385c11cde1}} 
+\index{InoTrack@{InoTrack}!InsertCluster@{InsertCluster}}
+\index{InsertCluster@{InsertCluster}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{InsertCluster()}{InsertCluster()}}
+{\footnotesize\ttfamily void Ino\+Track\+::\+Insert\+Cluster (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classInoCluster}{Ino\+Cluster}} $\ast$ $>$\+::iterator}]{it,  }\item[{\mbox{\hyperlink{classInoCluster}{Ino\+Cluster}} $\ast$}]{cls }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_aab2ab78c8794130315280f385c11cde1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_aab2ab78c8794130315280f385c11cde1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_a07c9a73600b3e4b8395cbe007d78c125}\label{classInoTrack_a07c9a73600b3e4b8395cbe007d78c125}} 
+\index{InoTrack@{InoTrack}!SetStraight@{SetStraight}}
+\index{SetStraight@{SetStraight}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{SetStraight()}{SetStraight()}}
+{\footnotesize\ttfamily void Ino\+Track\+::\+Set\+Straight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a07c9a73600b3e4b8395cbe007d78c125_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classInoTrack_a07c9a73600b3e4b8395cbe007d78c125_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInoTrack_aa7283e163a1d9d75c0637c20cb6ec96d}\label{classInoTrack_aa7283e163a1d9d75c0637c20cb6ec96d}} 
+\index{InoTrack@{InoTrack}!SetTrackMergeVar@{SetTrackMergeVar}}
+\index{SetTrackMergeVar@{SetTrackMergeVar}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{SetTrackMergeVar()}{SetTrackMergeVar()}}
+{\footnotesize\ttfamily void Ino\+Track\+::\+Set\+Track\+Merge\+Var (\begin{DoxyParamCaption}\item[{int}]{ixi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classInoTrack_a97755d8f23ad5c85ac549d8a52c80a07}\label{classInoTrack_a97755d8f23ad5c85ac549d8a52c80a07}} 
+\index{InoTrack@{InoTrack}!SetUID@{SetUID}}
+\index{SetUID@{SetUID}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{SetUID()}{SetUID()}}
+{\footnotesize\ttfamily void Ino\+Track\+::\+Set\+U\+ID (\begin{DoxyParamCaption}\item[{int}]{U\+I\+D\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classInoTrack_aebbaeec52dfe35876900d575288e5a31}\label{classInoTrack_aebbaeec52dfe35876900d575288e5a31}} 
+\index{InoTrack@{InoTrack}!SetUsed@{SetUsed}}
+\index{SetUsed@{SetUsed}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{SetUsed()}{SetUsed()}}
+{\footnotesize\ttfamily void Ino\+Track\+::\+Set\+Used (\begin{DoxyParamCaption}\item[{int}]{U\+I\+D\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classInoTrack_a12d8dd0f8b4b7f2cbb27282463c6d21f}\label{classInoTrack_a12d8dd0f8b4b7f2cbb27282463c6d21f}} 
+\index{InoTrack@{InoTrack}!InotTrackCand@{InotTrackCand}}
+\index{InotTrackCand@{InotTrackCand}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{InotTrackCand}{InotTrackCand}}
+{\footnotesize\ttfamily friend class Inot\+Track\+Cand\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classInoTrack_a57f9579c59c6aed09b9c3cfc7483f7b5}\label{classInoTrack_a57f9579c59c6aed09b9c3cfc7483f7b5}} 
+\index{InoTrack@{InoTrack}!ClustsInTrack@{ClustsInTrack}}
+\index{ClustsInTrack@{ClustsInTrack}!InoTrack@{InoTrack}}
+\doxysubsubsection{\texorpdfstring{ClustsInTrack}{ClustsInTrack}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classInoCluster}{Ino\+Cluster}}$\ast$$>$ Ino\+Track\+::\+Clusts\+In\+Track}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{InoTrack_8h}{Ino\+Track.\+h}}\item 
+src/\mbox{\hyperlink{InoTrack_8cc}{Ino\+Track.\+cc}}\end{DoxyCompactItemize}

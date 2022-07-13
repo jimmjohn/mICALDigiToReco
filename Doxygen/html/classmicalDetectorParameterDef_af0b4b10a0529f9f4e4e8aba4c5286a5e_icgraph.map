@@ -1,0 +1,8 @@
+<map id="micalDetectorParameterDef::GetINOroomPos" name="micalDetectorParameterDef::GetINOroomPos">
+<area shape="rect" id="node1" title=" " alt="" coords="445,100,649,141"/>
+<area shape="rect" id="node2" href="$classInoNewTrackFitAlg.html#a46be32354ad39b079b0e1da02c8cf8be" title=" " alt="" coords="234,5,385,47"/>
+<area shape="rect" id="node4" href="$classInoOldTrackFitAlg.html#a5e5923d31cce77a5f03197ca45170973" title=" " alt="" coords="238,71,381,112"/>
+<area shape="rect" id="node5" href="$classInoRecoAlg.html#a517de28eea24d7f069800cae87dd3b5c" title=" " alt="" coords="221,137,397,163"/>
+<area shape="rect" id="node6" href="$classmicalFieldPropagator.html#a604e48041ba9667af20f545eb733d0f5" title=" " alt="" coords="225,188,393,229"/>
+<area shape="rect" id="node3" href="$classParameterMessenger.html#abdf35ebba13c0ec88f9a32821b5f5de4" title=" " alt="" coords="5,97,173,139"/>
+</map>
