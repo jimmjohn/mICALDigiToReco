@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -25,6 +34,21 @@
    </div>
    <div id="projectbrief">Stand-alone code to execute reconstruction for digitized output(either from data or simulation).</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -36,16 +60,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('classInoNewTrackFitAlg.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +91,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -407,21 +437,6 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classInoNewTrackFitAlg_a4284d897d5b3b49215d9a39520b4d1cc_icgraph.png" border="0" usemap="#classInoNewTrackFitAlg_a4284d897d5b3b49215d9a39520b4d1cc_icgraph" alt=""/></div>
-<map name="classInoNewTrackFitAlg_a4284d897d5b3b49215d9a39520b4d1cc_icgraph" id="classInoNewTrackFitAlg_a4284d897d5b3b49215d9a39520b4d1cc_icgraph">
-<area shape="rect" title=" " alt="" coords="941,39,1092,80"/>
-<area shape="rect" href="classInoNewTrackFitAlg.html#a0565da9319e41475a744f3a020632f4a" title=" " alt="" coords="743,5,893,47"/>
-<area shape="rect" href="classInoNewTrackFitAlg.html#aa6cad03ff3af40e93f26401685958867" title=" " alt="" coords="743,71,893,112"/>
-<area shape="rect" href="classInoNewTrackFitAlg.html#a6962742d54bfc627978be083bb87acfa" title=" " alt="" coords="544,39,695,80"/>
-<area shape="rect" href="classParameterMessenger.html#abdf35ebba13c0ec88f9a32821b5f5de4" title=" " alt="" coords="119,9,287,51"/>
-<area shape="rect" href="classInoNewTrackFitAlg.html#a5ff749daa81a509756e9354dfa2bde67" title=" " alt="" coords="345,68,496,109"/>
-<area shape="rect" href="classInoRecoAlg.html#a476791025778789565a955e2e06d6016" title=" " alt="" coords="108,75,297,116"/>
-<area shape="rect" href="anal__ical_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main Function." alt="" coords="5,82,60,109"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -450,6 +465,21 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classInoNewTrackFitAlg_a4284d897d5b3b49215d9a39520b4d1cc_icgraph.png" border="0" usemap="#classInoNewTrackFitAlg_a4284d897d5b3b49215d9a39520b4d1cc_icgraph" alt=""/></div>
+<map name="classInoNewTrackFitAlg_a4284d897d5b3b49215d9a39520b4d1cc_icgraph" id="classInoNewTrackFitAlg_a4284d897d5b3b49215d9a39520b4d1cc_icgraph">
+<area shape="rect" title=" " alt="" coords="941,39,1092,80"/>
+<area shape="rect" href="classInoNewTrackFitAlg.html#a0565da9319e41475a744f3a020632f4a" title=" " alt="" coords="743,5,893,47"/>
+<area shape="rect" href="classInoNewTrackFitAlg.html#aa6cad03ff3af40e93f26401685958867" title=" " alt="" coords="743,71,893,112"/>
+<area shape="rect" href="classInoNewTrackFitAlg.html#a6962742d54bfc627978be083bb87acfa" title=" " alt="" coords="544,39,695,80"/>
+<area shape="rect" href="classParameterMessenger.html#abdf35ebba13c0ec88f9a32821b5f5de4" title=" " alt="" coords="119,9,287,51"/>
+<area shape="rect" href="classInoNewTrackFitAlg.html#a5ff749daa81a509756e9354dfa2bde67" title=" " alt="" coords="345,68,496,109"/>
+<area shape="rect" href="classInoRecoAlg.html#a476791025778789565a955e2e06d6016" title=" " alt="" coords="108,75,297,116"/>
+<area shape="rect" href="anal__ical_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main Function." alt="" coords="5,82,60,109"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -528,17 +558,6 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classInoNewTrackFitAlg_af2e7a0b004eccb236a70eb11ecf1b816_cgraph.png" border="0" usemap="#classInoNewTrackFitAlg_af2e7a0b004eccb236a70eb11ecf1b816_cgraph" alt=""/></div>
-<map name="classInoNewTrackFitAlg_af2e7a0b004eccb236a70eb11ecf1b816_cgraph" id="classInoNewTrackFitAlg_af2e7a0b004eccb236a70eb11ecf1b816_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,156,47"/>
-<area shape="rect" href="classmicalFieldPropagator.html#aa8659105bc42eb09c475ac0d4fc78df8" title=" " alt="" coords="204,5,371,47"/>
-<area shape="rect" href="classmicalFieldPropagator.html#a8e54d2652136d12c305df3ee46b9271b" title=" " alt="" coords="419,5,579,47"/>
-<area shape="rect" href="classmicalFieldPropagator.html#a8fb8575ef522c98c918b7470b058a90e" title=" " alt="" coords="627,5,789,47"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -567,11 +586,62 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classInoNewTrackFitAlg_af2e7a0b004eccb236a70eb11ecf1b816_cgraph.png" border="0" usemap="#classInoNewTrackFitAlg_af2e7a0b004eccb236a70eb11ecf1b816_cgraph" alt=""/></div>
+<map name="classInoNewTrackFitAlg_af2e7a0b004eccb236a70eb11ecf1b816_cgraph" id="classInoNewTrackFitAlg_af2e7a0b004eccb236a70eb11ecf1b816_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,156,47"/>
+<area shape="rect" href="classmicalFieldPropagator.html#aa8659105bc42eb09c475ac0d4fc78df8" title=" " alt="" coords="204,5,371,47"/>
+<area shape="rect" href="classmicalFieldPropagator.html#a8e54d2652136d12c305df3ee46b9271b" title=" " alt="" coords="419,5,579,47"/>
+<area shape="rect" href="classmicalFieldPropagator.html#a8fb8575ef522c98c918b7470b058a90e" title=" " alt="" coords="627,5,789,47"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="ac75d3e52b3fb3e3427d4e85fc8349c72"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac75d3e52b3fb3e3427d4e85fc8349c72">&#9670;&nbsp;</a></span>CheckFCPCUpOrDn() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InoNewTrackFitAlg::CheckFCPCUpOrDn </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>x_k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>DirExtraPol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MaxMinPlane</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>GoDir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac75d3e52b3fb3e3427d4e85fc8349c72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac75d3e52b3fb3e3427d4e85fc8349c72">&#9670;&nbsp;</a></span>CheckFCPCUpOrDn() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -653,35 +723,29 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ac75d3e52b3fb3e3427d4e85fc8349c72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac75d3e52b3fb3e3427d4e85fc8349c72">&#9670;&nbsp;</a></span>CheckFCPCUpOrDn() <span class="overload">[2/2]</span></h2>
+<a id="a28c217fae8468c2c3f6a2c77706149ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c217fae8468c2c3f6a2c77706149ed">&#9670;&nbsp;</a></span>DirectionFromFinderHits() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int InoNewTrackFitAlg::CheckFCPCUpOrDn </td>
+          <td class="memname">bool InoNewTrackFitAlg::DirectionFromFinderHits </td>
           <td>(</td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>x_k</em>, </td>
+          <td class="paramtype"><a class="el" href="classInoTrack.html">InoTrack</a> *&#160;</td>
+          <td class="paramname"><em>trk</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>DirExtraPol</em>, </td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>FinderPathLength</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>MaxMinPlane</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>GoDir</em>&#160;</td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>FinderDistance</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -694,7 +758,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a28c217fae8468c2c3f6a2c77706149ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28c217fae8468c2c3f6a2c77706149ed">&#9670;&nbsp;</a></span>DirectionFromFinderHits() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c217fae8468c2c3f6a2c77706149ed">&#9670;&nbsp;</a></span>DirectionFromFinderHits() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -736,14 +800,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a28c217fae8468c2c3f6a2c77706149ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28c217fae8468c2c3f6a2c77706149ed">&#9670;&nbsp;</a></span>DirectionFromFinderHits() <span class="overload">[2/2]</span></h2>
+<a id="ad1534364d1ddd989d26fea15ab7128dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1534364d1ddd989d26fea15ab7128dc">&#9670;&nbsp;</a></span>DirectionFromFinderHitsOldFunc() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool InoNewTrackFitAlg::DirectionFromFinderHits </td>
+          <td class="memname">bool InoNewTrackFitAlg::DirectionFromFinderHitsOldFunc </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classInoTrack.html">InoTrack</a> *&#160;</td>
           <td class="paramname"><em>trk</em>, </td>
@@ -771,7 +835,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="ad1534364d1ddd989d26fea15ab7128dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1534364d1ddd989d26fea15ab7128dc">&#9670;&nbsp;</a></span>DirectionFromFinderHitsOldFunc() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1534364d1ddd989d26fea15ab7128dc">&#9670;&nbsp;</a></span>DirectionFromFinderHitsOldFunc() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -813,34 +877,17 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ad1534364d1ddd989d26fea15ab7128dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1534364d1ddd989d26fea15ab7128dc">&#9670;&nbsp;</a></span>DirectionFromFinderHitsOldFunc() <span class="overload">[2/2]</span></h2>
+<a id="a28b7ade3ca7ee32210f2600dcf00f187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b7ade3ca7ee32210f2600dcf00f187">&#9670;&nbsp;</a></span>ExtrapCovMatrix() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool InoNewTrackFitAlg::DirectionFromFinderHitsOldFunc </td>
+          <td class="memname">void InoNewTrackFitAlg::ExtrapCovMatrix </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classInoTrack.html">InoTrack</a> *&#160;</td>
-          <td class="paramname"><em>trk</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>FinderPathLength</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>FinderDistance</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -848,7 +895,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a28b7ade3ca7ee32210f2600dcf00f187"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28b7ade3ca7ee32210f2600dcf00f187">&#9670;&nbsp;</a></span>ExtrapCovMatrix() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b7ade3ca7ee32210f2600dcf00f187">&#9670;&nbsp;</a></span>ExtrapCovMatrix() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -881,14 +928,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a28b7ade3ca7ee32210f2600dcf00f187"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28b7ade3ca7ee32210f2600dcf00f187">&#9670;&nbsp;</a></span>ExtrapCovMatrix() <span class="overload">[2/2]</span></h2>
+<a id="a4626ac58aa1bf624f82de09732a62de6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4626ac58aa1bf624f82de09732a62de6">&#9670;&nbsp;</a></span>ExtrapCovMatrixall() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::ExtrapCovMatrix </td>
+          <td class="memname">void InoNewTrackFitAlg::ExtrapCovMatrixall </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -899,7 +946,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a4626ac58aa1bf624f82de09732a62de6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4626ac58aa1bf624f82de09732a62de6">&#9670;&nbsp;</a></span>ExtrapCovMatrixall() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4626ac58aa1bf624f82de09732a62de6">&#9670;&nbsp;</a></span>ExtrapCovMatrixall() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -924,14 +971,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a4626ac58aa1bf624f82de09732a62de6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4626ac58aa1bf624f82de09732a62de6">&#9670;&nbsp;</a></span>ExtrapCovMatrixall() <span class="overload">[2/2]</span></h2>
+<a id="ae69d5184291a7b76a819e89460b81311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae69d5184291a7b76a819e89460b81311">&#9670;&nbsp;</a></span>FillGapsInTrack() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::ExtrapCovMatrixall </td>
+          <td class="memname">void InoNewTrackFitAlg::FillGapsInTrack </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -942,7 +989,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="ae69d5184291a7b76a819e89460b81311"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae69d5184291a7b76a819e89460b81311">&#9670;&nbsp;</a></span>FillGapsInTrack() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae69d5184291a7b76a819e89460b81311">&#9670;&nbsp;</a></span>FillGapsInTrack() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -999,17 +1046,52 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ae69d5184291a7b76a819e89460b81311"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae69d5184291a7b76a819e89460b81311">&#9670;&nbsp;</a></span>FillGapsInTrack() <span class="overload">[2/2]</span></h2>
+<a id="a23389b4c1d21a91e1b8bd3402927b8f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23389b4c1d21a91e1b8bd3402927b8f7">&#9670;&nbsp;</a></span>GetEnergyLoss() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::FillGapsInTrack </td>
+          <td class="memname">double InoNewTrackFitAlg::GetEnergyLoss </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>istate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>axi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>aT_max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>aI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TGeoMaterial *&#160;</td>
+          <td class="paramname"><em>material</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1017,7 +1099,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a23389b4c1d21a91e1b8bd3402927b8f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23389b4c1d21a91e1b8bd3402927b8f7">&#9670;&nbsp;</a></span>GetEnergyLoss() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a23389b4c1d21a91e1b8bd3402927b8f7">&#9670;&nbsp;</a></span>GetEnergyLoss() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1086,47 +1168,23 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a23389b4c1d21a91e1b8bd3402927b8f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23389b4c1d21a91e1b8bd3402927b8f7">&#9670;&nbsp;</a></span>GetEnergyLoss() <span class="overload">[2/2]</span></h2>
+<a id="a870e32f2b60c8514fa85dd196021a618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a870e32f2b60c8514fa85dd196021a618">&#9670;&nbsp;</a></span>GetFitData() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double InoNewTrackFitAlg::GetEnergyLoss </td>
+          <td class="memname">void InoNewTrackFitAlg::GetFitData </td>
           <td>(</td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>istate</em>, </td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>Plane1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dz</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>axi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>aT_max</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>aI</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">TGeoMaterial *&#160;</td>
-          <td class="paramname"><em>material</em>&#160;</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>Plane2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1139,7 +1197,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a870e32f2b60c8514fa85dd196021a618"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a870e32f2b60c8514fa85dd196021a618">&#9670;&nbsp;</a></span>GetFitData() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a870e32f2b60c8514fa85dd196021a618">&#9670;&nbsp;</a></span>GetFitData() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1188,28 +1246,18 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a870e32f2b60c8514fa85dd196021a618"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a870e32f2b60c8514fa85dd196021a618">&#9670;&nbsp;</a></span>GetFitData() <span class="overload">[2/2]</span></h2>
+<a id="a50c6eb4b014e9aaf7720a6e337bf917c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50c6eb4b014e9aaf7720a6e337bf917c">&#9670;&nbsp;</a></span>GetInitialCovarianceMatrix() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::GetFitData </td>
+          <td class="memname">void InoNewTrackFitAlg::GetInitialCovarianceMatrix </td>
           <td>(</td>
-          <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>Plane1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>FirstIteration</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>Plane2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1217,7 +1265,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a50c6eb4b014e9aaf7720a6e337bf917c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50c6eb4b014e9aaf7720a6e337bf917c">&#9670;&nbsp;</a></span>GetInitialCovarianceMatrix() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a50c6eb4b014e9aaf7720a6e337bf917c">&#9670;&nbsp;</a></span>GetInitialCovarianceMatrix() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1248,18 +1296,58 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a50c6eb4b014e9aaf7720a6e337bf917c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50c6eb4b014e9aaf7720a6e337bf917c">&#9670;&nbsp;</a></span>GetInitialCovarianceMatrix() <span class="overload">[2/2]</span></h2>
+<a id="ad4946111c6a261eb891ed008e1af771e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4946111c6a261eb891ed008e1af771e">&#9670;&nbsp;</a></span>GetMultipleScattering() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::GetInitialCovarianceMatrix </td>
+          <td class="memname">void InoNewTrackFitAlg::GetMultipleScattering </td>
           <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>FirstIteration</em></td><td>)</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>mstate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>Bx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>By</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>aT_max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>aI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TGeoMaterial *&#160;</td>
+          <td class="paramname"><em>material</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1267,7 +1355,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="ad4946111c6a261eb891ed008e1af771e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4946111c6a261eb891ed008e1af771e">&#9670;&nbsp;</a></span>GetMultipleScattering() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4946111c6a261eb891ed008e1af771e">&#9670;&nbsp;</a></span>GetMultipleScattering() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1341,17 +1429,17 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ad4946111c6a261eb891ed008e1af771e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4946111c6a261eb891ed008e1af771e">&#9670;&nbsp;</a></span>GetMultipleScattering() <span class="overload">[2/2]</span></h2>
+<a id="ac4226957532c329cad92639d78e462ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4226957532c329cad92639d78e462ae">&#9670;&nbsp;</a></span>GetPropagator() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::GetMultipleScattering </td>
+          <td class="memname">void InoNewTrackFitAlg::GetPropagator </td>
           <td>(</td>
           <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>mstate</em>, </td>
+          <td class="paramname"><em>istate</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1369,19 +1457,31 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dBxbx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dBxdy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dBydx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dBydy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>dz</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>aT_max</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>aI</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1400,7 +1500,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="ac4226957532c329cad92639d78e462ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4226957532c329cad92639d78e462ae">&#9670;&nbsp;</a></span>GetPropagator() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4226957532c329cad92639d78e462ae">&#9670;&nbsp;</a></span>GetPropagator() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1499,70 +1599,18 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ac4226957532c329cad92639d78e462ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4226957532c329cad92639d78e462ae">&#9670;&nbsp;</a></span>GetPropagator() <span class="overload">[2/2]</span></h2>
+<a id="a0565da9319e41475a744f3a020632f4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0565da9319e41475a744f3a020632f4a">&#9670;&nbsp;</a></span>GoBackwards() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::GetPropagator </td>
+          <td class="memname">void InoNewTrackFitAlg::GoBackwards </td>
           <td>(</td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>istate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>first</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>Bx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>By</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dBxbx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dBxdy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dBydx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dBydy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dz</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">TGeoMaterial *&#160;</td>
-          <td class="paramname"><em>material</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1570,7 +1618,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a0565da9319e41475a744f3a020632f4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0565da9319e41475a744f3a020632f4a">&#9670;&nbsp;</a></span>GoBackwards() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0565da9319e41475a744f3a020632f4a">&#9670;&nbsp;</a></span>GoBackwards() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1627,14 +1675,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a0565da9319e41475a744f3a020632f4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0565da9319e41475a744f3a020632f4a">&#9670;&nbsp;</a></span>GoBackwards() <span class="overload">[2/2]</span></h2>
+<a id="aa6cad03ff3af40e93f26401685958867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6cad03ff3af40e93f26401685958867">&#9670;&nbsp;</a></span>GoForwards() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::GoBackwards </td>
+          <td class="memname">void InoNewTrackFitAlg::GoForwards </td>
           <td>(</td>
           <td class="paramtype">const bool&#160;</td>
           <td class="paramname"><em>first</em></td><td>)</td>
@@ -1646,7 +1694,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="aa6cad03ff3af40e93f26401685958867"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6cad03ff3af40e93f26401685958867">&#9670;&nbsp;</a></span>GoForwards() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6cad03ff3af40e93f26401685958867">&#9670;&nbsp;</a></span>GoForwards() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1703,17 +1751,16 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aa6cad03ff3af40e93f26401685958867"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6cad03ff3af40e93f26401685958867">&#9670;&nbsp;</a></span>GoForwards() <span class="overload">[2/2]</span></h2>
+<a id="af5e3450e5dcf9d8970ef1c66184ed9be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5e3450e5dcf9d8970ef1c66184ed9be">&#9670;&nbsp;</a></span>InitialFramework() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::GoForwards </td>
+          <td class="memname">void InoNewTrackFitAlg::InitialFramework </td>
           <td>(</td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>first</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1722,7 +1769,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="af5e3450e5dcf9d8970ef1c66184ed9be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5e3450e5dcf9d8970ef1c66184ed9be">&#9670;&nbsp;</a></span>InitialFramework() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af5e3450e5dcf9d8970ef1c66184ed9be">&#9670;&nbsp;</a></span>InitialFramework() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1766,17 +1813,40 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="af5e3450e5dcf9d8970ef1c66184ed9be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5e3450e5dcf9d8970ef1c66184ed9be">&#9670;&nbsp;</a></span>InitialFramework() <span class="overload">[2/2]</span></h2>
+<a id="ab1ce94c065a4e50b3d929305f36db35c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1ce94c065a4e50b3d929305f36db35c">&#9670;&nbsp;</a></span>KalmanFilterStateVector() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::InitialFramework </td>
+          <td class="memname">void InoNewTrackFitAlg::KalmanFilterStateVector </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>x__minus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>Plane</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>GoForward</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>xk</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1784,7 +1854,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="ab1ce94c065a4e50b3d929305f36db35c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1ce94c065a4e50b3d929305f36db35c">&#9670;&nbsp;</a></span>KalmanFilterStateVector() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1ce94c065a4e50b3d929305f36db35c">&#9670;&nbsp;</a></span>KalmanFilterStateVector() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1838,35 +1908,23 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ab1ce94c065a4e50b3d929305f36db35c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1ce94c065a4e50b3d929305f36db35c">&#9670;&nbsp;</a></span>KalmanFilterStateVector() <span class="overload">[2/2]</span></h2>
+<a id="ac6b5c494c728652afad59e25c4ad98bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6b5c494c728652afad59e25c4ad98bb">&#9670;&nbsp;</a></span>MoveArrays() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::KalmanFilterStateVector </td>
+          <td class="memname">void InoNewTrackFitAlg::MoveArrays </td>
           <td>(</td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>x__minus</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>Plane</em>, </td>
+          <td class="paramname"><em>NewPlane</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>GoForward</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>xk</em>&#160;</td>
+          <td class="paramname"><em>GoForward</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1879,7 +1937,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="ac6b5c494c728652afad59e25c4ad98bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6b5c494c728652afad59e25c4ad98bb">&#9670;&nbsp;</a></span>MoveArrays() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6b5c494c728652afad59e25c4ad98bb">&#9670;&nbsp;</a></span>MoveArrays() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1921,23 +1979,59 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ac6b5c494c728652afad59e25c4ad98bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6b5c494c728652afad59e25c4ad98bb">&#9670;&nbsp;</a></span>MoveArrays() <span class="overload">[2/2]</span></h2>
+<a id="a9aba46cc3eafb4a3c85d05d609a1142a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aba46cc3eafb4a3c85d05d609a1142a">&#9670;&nbsp;</a></span>PredictedStateCov() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::MoveArrays </td>
+          <td class="memname">bool InoNewTrackFitAlg::PredictedStateCov </td>
           <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>StateVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>Plane</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
           <td class="paramname"><em>NewPlane</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>GoForward</em>&#160;</td>
+          <td class="paramname"><em>GoForward</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>ax__minus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>isHalf</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>dS</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>Range</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1950,7 +2044,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a9aba46cc3eafb4a3c85d05d609a1142a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9aba46cc3eafb4a3c85d05d609a1142a">&#9670;&nbsp;</a></span>PredictedStateCov() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aba46cc3eafb4a3c85d05d609a1142a">&#9670;&nbsp;</a></span>PredictedStateCov() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2049,64 +2143,17 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a9aba46cc3eafb4a3c85d05d609a1142a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9aba46cc3eafb4a3c85d05d609a1142a">&#9670;&nbsp;</a></span>PredictedStateCov() <span class="overload">[2/2]</span></h2>
+<a id="a2351a4edc628aeda5c7aede3d520f1ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2351a4edc628aeda5c7aede3d520f1ba">&#9670;&nbsp;</a></span>RemoveTrkHitsInShw() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool InoNewTrackFitAlg::PredictedStateCov </td>
+          <td class="memname">void InoNewTrackFitAlg::RemoveTrkHitsInShw </td>
           <td>(</td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>StateVector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>Plane</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>NewPlane</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>GoForward</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>ax__minus</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>isHalf</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>dS</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>Range</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2114,7 +2161,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a2351a4edc628aeda5c7aede3d520f1ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2351a4edc628aeda5c7aede3d520f1ba">&#9670;&nbsp;</a></span>RemoveTrkHitsInShw() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2351a4edc628aeda5c7aede3d520f1ba">&#9670;&nbsp;</a></span>RemoveTrkHitsInShw() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2143,14 +2190,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a2351a4edc628aeda5c7aede3d520f1ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2351a4edc628aeda5c7aede3d520f1ba">&#9670;&nbsp;</a></span>RemoveTrkHitsInShw() <span class="overload">[2/2]</span></h2>
+<a id="a29ad190335d6acb2e6cff77c528703dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ad190335d6acb2e6cff77c528703dd">&#9670;&nbsp;</a></span>ResetCovarianceMatrix() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::RemoveTrkHitsInShw </td>
+          <td class="memname">void InoNewTrackFitAlg::ResetCovarianceMatrix </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2161,7 +2208,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a29ad190335d6acb2e6cff77c528703dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29ad190335d6acb2e6cff77c528703dd">&#9670;&nbsp;</a></span>ResetCovarianceMatrix() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ad190335d6acb2e6cff77c528703dd">&#9670;&nbsp;</a></span>ResetCovarianceMatrix() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2199,25 +2246,33 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a29ad190335d6acb2e6cff77c528703dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29ad190335d6acb2e6cff77c528703dd">&#9670;&nbsp;</a></span>ResetCovarianceMatrix() <span class="overload">[2/2]</span></h2>
+<a id="a32272aaad0e12b562abc3f285280cca3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32272aaad0e12b562abc3f285280cca3">&#9670;&nbsp;</a></span>RunAlg() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::ResetCovarianceMatrix </td>
+          <td class="memname">virtual void InoNewTrackFitAlg::RunAlg </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <a id="a5ff749daa81a509756e9354dfa2bde67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ff749daa81a509756e9354dfa2bde67">&#9670;&nbsp;</a></span>RunAlg() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff749daa81a509756e9354dfa2bde67">&#9670;&nbsp;</a></span>RunAlg() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2309,33 +2364,25 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a32272aaad0e12b562abc3f285280cca3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32272aaad0e12b562abc3f285280cca3">&#9670;&nbsp;</a></span>RunAlg() <span class="overload">[2/2]</span></h2>
+<a id="a6962742d54bfc627978be083bb87acfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6962742d54bfc627978be083bb87acfa">&#9670;&nbsp;</a></span>RunTheFitter() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void InoNewTrackFitAlg::RunAlg </td>
+          <td class="memname">void InoNewTrackFitAlg::RunTheFitter </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <a id="a6962742d54bfc627978be083bb87acfa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6962742d54bfc627978be083bb87acfa">&#9670;&nbsp;</a></span>RunTheFitter() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6962742d54bfc627978be083bb87acfa">&#9670;&nbsp;</a></span>RunTheFitter() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2420,14 +2467,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a6962742d54bfc627978be083bb87acfa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6962742d54bfc627978be083bb87acfa">&#9670;&nbsp;</a></span>RunTheFitter() <span class="overload">[2/2]</span></h2>
+<a id="a1ef977db9ab4f15fb15cab005a74cd15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ef977db9ab4f15fb15cab005a74cd15">&#9670;&nbsp;</a></span>SetT() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::RunTheFitter </td>
+          <td class="memname">void InoNewTrackFitAlg::SetT </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2438,7 +2485,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a1ef977db9ab4f15fb15cab005a74cd15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ef977db9ab4f15fb15cab005a74cd15">&#9670;&nbsp;</a></span>SetT() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ef977db9ab4f15fb15cab005a74cd15">&#9670;&nbsp;</a></span>SetT() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2465,23 +2512,6 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="anal__ical_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main Function." alt="" coords="5,78,60,105"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="a1ef977db9ab4f15fb15cab005a74cd15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ef977db9ab4f15fb15cab005a74cd15">&#9670;&nbsp;</a></span>SetT() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InoNewTrackFitAlg::SetT </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -2608,19 +2638,6 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classInoNewTrackFitAlg_a9e39873a367ca46ec843562f18fd38bd_icgraph.png" border="0" usemap="#classInoNewTrackFitAlg_a9e39873a367ca46ec843562f18fd38bd_icgraph" alt=""/></div>
-<map name="classInoNewTrackFitAlg_a9e39873a367ca46ec843562f18fd38bd_icgraph" id="classInoNewTrackFitAlg_a9e39873a367ca46ec843562f18fd38bd_icgraph">
-<area shape="rect" title=" " alt="" coords="743,35,893,76"/>
-<area shape="rect" href="classInoNewTrackFitAlg.html#a6962742d54bfc627978be083bb87acfa" title=" " alt="" coords="544,35,695,76"/>
-<area shape="rect" href="classParameterMessenger.html#abdf35ebba13c0ec88f9a32821b5f5de4" title=" " alt="" coords="119,5,287,47"/>
-<area shape="rect" href="classInoNewTrackFitAlg.html#a5ff749daa81a509756e9354dfa2bde67" title=" " alt="" coords="345,64,496,105"/>
-<area shape="rect" href="classInoRecoAlg.html#a476791025778789565a955e2e06d6016" title=" " alt="" coords="108,71,297,112"/>
-<area shape="rect" href="anal__ical_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main Function." alt="" coords="5,78,60,105"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -2638,11 +2655,42 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classInoNewTrackFitAlg_a9e39873a367ca46ec843562f18fd38bd_icgraph.png" border="0" usemap="#classInoNewTrackFitAlg_a9e39873a367ca46ec843562f18fd38bd_icgraph" alt=""/></div>
+<map name="classInoNewTrackFitAlg_a9e39873a367ca46ec843562f18fd38bd_icgraph" id="classInoNewTrackFitAlg_a9e39873a367ca46ec843562f18fd38bd_icgraph">
+<area shape="rect" title=" " alt="" coords="743,35,893,76"/>
+<area shape="rect" href="classInoNewTrackFitAlg.html#a6962742d54bfc627978be083bb87acfa" title=" " alt="" coords="544,35,695,76"/>
+<area shape="rect" href="classParameterMessenger.html#abdf35ebba13c0ec88f9a32821b5f5de4" title=" " alt="" coords="119,5,287,47"/>
+<area shape="rect" href="classInoNewTrackFitAlg.html#a5ff749daa81a509756e9354dfa2bde67" title=" " alt="" coords="345,64,496,105"/>
+<area shape="rect" href="classInoRecoAlg.html#a476791025778789565a955e2e06d6016" title=" " alt="" coords="108,71,297,112"/>
+<area shape="rect" href="anal__ical_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main Function." alt="" coords="5,78,60,105"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="a5b496bd31cf1a27b03ceb070e0cb0238"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b496bd31cf1a27b03ceb070e0cb0238">&#9670;&nbsp;</a></span>StoreFilteredData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InoNewTrackFitAlg::StoreFilteredData </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>NewPlane</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b496bd31cf1a27b03ceb070e0cb0238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b496bd31cf1a27b03ceb070e0cb0238">&#9670;&nbsp;</a></span>StoreFilteredData() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2674,60 +2722,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a5b496bd31cf1a27b03ceb070e0cb0238"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b496bd31cf1a27b03ceb070e0cb0238">&#9670;&nbsp;</a></span>StoreFilteredData() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InoNewTrackFitAlg::StoreFilteredData </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>NewPlane</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a9a8379ac5050c9522c19f2c5756f4646"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9a8379ac5050c9522c19f2c5756f4646">&#9670;&nbsp;</a></span>StoreFilteredData_sr() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InoNewTrackFitAlg::StoreFilteredData_sr </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>NewPlane</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>prediction</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>str</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9a8379ac5050c9522c19f2c5756f4646"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a8379ac5050c9522c19f2c5756f4646">&#9670;&nbsp;</a></span>StoreFilteredData_sr() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2760,8 +2756,106 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a9a8379ac5050c9522c19f2c5756f4646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a8379ac5050c9522c19f2c5756f4646">&#9670;&nbsp;</a></span>StoreFilteredData_sr() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InoNewTrackFitAlg::StoreFilteredData_sr </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>NewPlane</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>prediction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6190d2a34acdd3e743e78dbe1f765680"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6190d2a34acdd3e743e78dbe1f765680">&#9670;&nbsp;</a></span>Swim() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InoNewTrackFitAlg::Swim </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>StateVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>Output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>zbeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>NewPlane</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>GoForward</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>dS</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>Range</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>dE</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6190d2a34acdd3e743e78dbe1f765680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6190d2a34acdd3e743e78dbe1f765680">&#9670;&nbsp;</a></span>Swim() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2851,8 +2945,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a6190d2a34acdd3e743e78dbe1f765680"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6190d2a34acdd3e743e78dbe1f765680">&#9670;&nbsp;</a></span>Swim() <span class="overload">[2/6]</span></h2>
+<a id="a3bfcadc166db6d8e1120e7753e69398f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bfcadc166db6d8e1120e7753e69398f">&#9670;&nbsp;</a></span>Swim() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2872,14 +2966,14 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>zbeg</em>, </td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>Plane</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>NewPlane</em>, </td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>zend</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2916,7 +3010,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a3bfcadc166db6d8e1120e7753e69398f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bfcadc166db6d8e1120e7753e69398f">&#9670;&nbsp;</a></span>Swim() <span class="overload">[3/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bfcadc166db6d8e1120e7753e69398f">&#9670;&nbsp;</a></span>Swim() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3008,8 +3102,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a3bfcadc166db6d8e1120e7753e69398f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bfcadc166db6d8e1120e7753e69398f">&#9670;&nbsp;</a></span>Swim() <span class="overload">[4/6]</span></h2>
+<a id="a8bd9bb7628a329444b76bda195eb632b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd9bb7628a329444b76bda195eb632b">&#9670;&nbsp;</a></span>Swim() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3035,8 +3129,8 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>zend</em>, </td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>NewPlane</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3073,7 +3167,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a8bd9bb7628a329444b76bda195eb632b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bd9bb7628a329444b76bda195eb632b">&#9670;&nbsp;</a></span>Swim() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd9bb7628a329444b76bda195eb632b">&#9670;&nbsp;</a></span>Swim() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3174,70 +3268,6 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="anal__ical_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main Function." alt="" coords="5,95,60,122"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="a8bd9bb7628a329444b76bda195eb632b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bd9bb7628a329444b76bda195eb632b">&#9670;&nbsp;</a></span>Swim() <span class="overload">[6/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool InoNewTrackFitAlg::Swim </td>
-          <td>(</td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>StateVector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>Output</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>Plane</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>NewPlane</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>GoForward</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>dS</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>Range</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>dE</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -3383,6 +3413,23 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a314b8411a715584c84c5bcf2061d09ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a314b8411a715584c84c5bcf2061d09ac">&#9670;&nbsp;</a></span>TimingFit() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InoNewTrackFitAlg::TimingFit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -3423,25 +3470,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a314b8411a715584c84c5bcf2061d09ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a314b8411a715584c84c5bcf2061d09ac">&#9670;&nbsp;</a></span>TimingFit() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InoNewTrackFitAlg::TimingFit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a12104cf22e5fee03c6507aabb7853bd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12104cf22e5fee03c6507aabb7853bd5">&#9670;&nbsp;</a></span>Trace() <span class="overload">[1/2]</span></h2>
+<a id="a3f8841686000d6abed9d4eb1e8087723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f8841686000d6abed9d4eb1e8087723">&#9670;&nbsp;</a></span>Trace() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3450,7 +3480,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void InoNewTrackFitAlg::Trace </td>
+          <td class="memname">virtual void InoNewTrackFitAlg::Trace </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>c</em></td><td>)</td>
@@ -3466,8 +3496,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a3f8841686000d6abed9d4eb1e8087723"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f8841686000d6abed9d4eb1e8087723">&#9670;&nbsp;</a></span>Trace() <span class="overload">[2/2]</span></h2>
+<a id="a12104cf22e5fee03c6507aabb7853bd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12104cf22e5fee03c6507aabb7853bd5">&#9670;&nbsp;</a></span>Trace() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3476,7 +3506,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void InoNewTrackFitAlg::Trace </td>
+          <td class="memname">void InoNewTrackFitAlg::Trace </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>c</em></td><td>)</td>
@@ -3523,18 +3553,6 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classInoNewTrackFitAlg_ad8d8a3291f90fb70472781bb619de88b_cgraph.png" border="0" usemap="#classInoNewTrackFitAlg_ad8d8a3291f90fb70472781bb619de88b_cgraph" alt=""/></div>
-<map name="classInoNewTrackFitAlg_ad8d8a3291f90fb70472781bb619de88b_cgraph" id="classInoNewTrackFitAlg_ad8d8a3291f90fb70472781bb619de88b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,39,168,80"/>
-<area shape="rect" href="classmicalFieldPropagator.html#aa8659105bc42eb09c475ac0d4fc78df8" title=" " alt="" coords="216,5,383,47"/>
-<area shape="rect" href="classInoNewTrackFitAlg.html#a23389b4c1d21a91e1b8bd3402927b8f7" title=" " alt="" coords="224,71,375,112"/>
-<area shape="rect" href="classmicalFieldPropagator.html#a8e54d2652136d12c305df3ee46b9271b" title=" " alt="" coords="431,5,591,47"/>
-<area shape="rect" href="classmicalFieldPropagator.html#a8fb8575ef522c98c918b7470b058a90e" title=" " alt="" coords="639,5,801,47"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -3569,11 +3587,41 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classInoNewTrackFitAlg_ad8d8a3291f90fb70472781bb619de88b_cgraph.png" border="0" usemap="#classInoNewTrackFitAlg_ad8d8a3291f90fb70472781bb619de88b_cgraph" alt=""/></div>
+<map name="classInoNewTrackFitAlg_ad8d8a3291f90fb70472781bb619de88b_cgraph" id="classInoNewTrackFitAlg_ad8d8a3291f90fb70472781bb619de88b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,168,80"/>
+<area shape="rect" href="classmicalFieldPropagator.html#aa8659105bc42eb09c475ac0d4fc78df8" title=" " alt="" coords="216,5,383,47"/>
+<area shape="rect" href="classInoNewTrackFitAlg.html#a23389b4c1d21a91e1b8bd3402927b8f7" title=" " alt="" coords="224,71,375,112"/>
+<area shape="rect" href="classmicalFieldPropagator.html#a8e54d2652136d12c305df3ee46b9271b" title=" " alt="" coords="431,5,591,47"/>
+<area shape="rect" href="classmicalFieldPropagator.html#a8fb8575ef522c98c918b7470b058a90e" title=" " alt="" coords="639,5,801,47"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="abbb20a97adb8ea7eb8b2f851e08e6585"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abbb20a97adb8ea7eb8b2f851e08e6585">&#9670;&nbsp;</a></span>UpdateCovMatrix() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InoNewTrackFitAlg::UpdateCovMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>NewPlane</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbb20a97adb8ea7eb8b2f851e08e6585"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbb20a97adb8ea7eb8b2f851e08e6585">&#9670;&nbsp;</a></span>UpdateCovMatrix() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3602,24 +3650,6 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="anal__ical_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main Function." alt="" coords="5,82,60,109"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="abbb20a97adb8ea7eb8b2f851e08e6585"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbb20a97adb8ea7eb8b2f851e08e6585">&#9670;&nbsp;</a></span>UpdateCovMatrix() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InoNewTrackFitAlg::UpdateCovMatrix </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>NewPlane</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -3673,11 +3703,15 @@ Here is the caller graph for this function:</div>
 <li>src/<a class="el" href="InoNewTrackFitAlg_8cc.html">InoNewTrackFitAlg.cc</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classInoNewTrackFitAlg.html">InoNewTrackFitAlg</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

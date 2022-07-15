@@ -15,38 +15,38 @@
 //GMA need start and end points for both forward and backward fit.
 //    Thus, need four inoVertex paramter for this, now we have only two
 InoTrackCand::InoTrackCand(const InoTrackCand &rhs) {
-  //GMA Initialise all parameters here 
-  fInShower=   rhs.fInShower;    
-  fUPos=       rhs.fUPos;      
-  fVPos=       rhs.fVPos;      
-  fdS=         rhs.fdS;                            
-  fRange=      rhs.fRange;                        
-  fXPosError=  rhs.fXPosError; 
-  fYPosError=  rhs.fYPosError; 
-  fTime[0]=    rhs.fTime[0];  
-  fTime[1]=    rhs.fTime[1];  
+  //GMA Initialise all parameters here
+  fInShower=   rhs.fInShower;
+  fUPos=       rhs.fUPos;
+  fVPos=       rhs.fVPos;
+  fdS=         rhs.fdS;
+  fRange=      rhs.fRange;
+  fXPosError=  rhs.fXPosError;
+  fYPosError=  rhs.fYPosError;
+  fTime[0]=    rhs.fTime[0];
+  fTime[1]=    rhs.fTime[1];
 
-  fTrack =                 rhs.fTrack;                 
-  fVtxTrace=		   rhs.fVtxTrace;              
-  fVtxTraceZ=		   rhs.fVtxTraceZ;             
-  fEndTrace=		   rhs.fEndTrace;              
-  fEndTraceZ=		   rhs.fEndTraceZ;             
-  fVtxDistToEdge=	   rhs.fVtxDistToEdge;         
-  fEndDistToEdge=	   rhs.fEndDistToEdge;         
-  fVtxnActiveUpstream=	   rhs.fVtxnActiveUpstream;    
-  fEndnActiveDownstream=   rhs.fEndnActiveDownstream;  
-  			                               
-  fNTrackStrip=            rhs.fNTrackStrip;             
-  fNTrackDigit=            rhs.fNTrackDigit;             
-  fNTimeFitDigit=          rhs.fNTimeFitDigit;           
-  fTimeFitChi2=		   rhs.fTimeFitChi2;           
-  fTimeForwardFitRMS=	   rhs.fTimeForwardFitRMS;     
-  fTimeForwardFitNDOF=	   rhs.fTimeForwardFitNDOF;    
-  fTimeBackwardFitRMS=	   rhs.fTimeBackwardFitRMS;    
-  fTimeBackwardFitNDOF=	   rhs.fTimeBackwardFitNDOF;   
-  			                               
-  fTimeSlope=		   rhs.fTimeSlope;             
-  fTimeOffset=		   rhs.fTimeOffset;           
+  fTrack =                 rhs.fTrack;
+  fVtxTrace=		   rhs.fVtxTrace;
+  fVtxTraceZ=		   rhs.fVtxTraceZ;
+  fEndTrace=		   rhs.fEndTrace;
+  fEndTraceZ=		   rhs.fEndTraceZ;
+  fVtxDistToEdge=	   rhs.fVtxDistToEdge;
+  fEndDistToEdge=	   rhs.fEndDistToEdge;
+  fVtxnActiveUpstream=	   rhs.fVtxnActiveUpstream;
+  fEndnActiveDownstream=   rhs.fEndnActiveDownstream;
+
+  fNTrackStrip=            rhs.fNTrackStrip;
+  fNTrackDigit=            rhs.fNTrackDigit;
+  fNTimeFitDigit=          rhs.fNTimeFitDigit;
+  fTimeFitChi2=		   rhs.fTimeFitChi2;
+  fTimeForwardFitRMS=	   rhs.fTimeForwardFitRMS;
+  fTimeForwardFitNDOF=	   rhs.fTimeForwardFitNDOF;
+  fTimeBackwardFitRMS=	   rhs.fTimeBackwardFitRMS;
+  fTimeBackwardFitNDOF=	   rhs.fTimeBackwardFitNDOF;
+
+  fTimeSlope=		   rhs.fTimeSlope;
+  fTimeOffset=		   rhs.fTimeOffset;
   fVertex =                rhs.fVertex;
   fTerm =                  rhs.fTerm;
   ClustsInTrack=           rhs.ClustsInTrack;
@@ -54,7 +54,7 @@ InoTrackCand::InoTrackCand(const InoTrackCand &rhs) {
 }
 
 InoTrackCand::InoTrackCand( ) {
-  //GMA Initialise all parameters here  
+  //GMA Initialise all parameters here
   /*
     fInShower=   0;
     fUPos=       0;
@@ -65,7 +65,7 @@ InoTrackCand::InoTrackCand( ) {
     fYPosError=  0;
     fTime[0]=    0;
     fTime[1]=    0;
-  */ 
+  */
 
   fTrack = 0;
   fVtxTrace=-999;
@@ -76,39 +76,39 @@ InoTrackCand::InoTrackCand( ) {
   fEndDistToEdge=-999;
   fVtxnActiveUpstream=-999;
   fEndnActiveDownstream=-999;
-  
-  fNTrackStrip=-999;            
-  fNTrackDigit=-999;            
-  fNTimeFitDigit=-999;          
+
+  fNTrackStrip=-999;
+  fNTrackDigit=-999;
+  fNTimeFitDigit=-999;
   fTimeFitChi2=-999;
   fTimeForwardFitRMS=-999;
   fTimeForwardFitNDOF=-999;
   fTimeBackwardFitRMS=-999;
   fTimeBackwardFitNDOF=-999;
-  
+
   fTimeSlope=-999;
   fTimeOffset=-999;
-  
+
   ClustsInTrack.clear();
   FCPC = 0;
 }
 /*
 InoTrackCand::InoTrackCand(InoTrack *trk, bool forward) :  fTrack(trk) {
   //  InoTrackCand();
-  //GMA Initialise all parameters here  
+  //GMA Initialise all parameters here
   fTrack = trk;
-  
+
   double dxdz=trk->GetBegXDir();
   double dydz=trk->GetBegYDir();
-  
+
   double phi = atan2(dydz, dxdz);
   double zdir= 1./pow (1+dxdz*dxdz+dydz*dydz,0.5);
 
-  double xdir = sin(acos(zdir))*cos(phi); 
+  double xdir = sin(acos(zdir))*cos(phi);
   double ydir = sin(acos(zdir))*sin(phi);
 
   TVector3 tmp3v(xdir, ydir, zdir);
-  
+
   fVertex = new InoVertex();
   fVertex->SetU(trk->GetBegXPos());
   fVertex->SetV(trk->GetBegYPos());
@@ -125,15 +125,15 @@ InoTrackCand::InoTrackCand(InoTrack *trk, bool forward) :  fTrack(trk) {
 
   dxdz=trk->GetEndXDir();
   dydz=trk->GetEndYDir();
-  
+
   phi = atan2(dydz, dxdz);
   zdir= 1./pow(1+dxdz*dxdz+dydz*dydz,0.5);
 
-  xdir = sin(acos(zdir))*cos(phi); 
+  xdir = sin(acos(zdir))*cos(phi);
   ydir = sin(acos(zdir))*sin(phi);
 
   TVector3  tmp3vm(xdir, ydir, zdir);
-  
+
   fTerm = new InoVertex();
   fTerm->SetU(trk->GetEndXPos());
   fTerm->SetV(trk->GetEndYPos());
@@ -142,16 +142,16 @@ InoTrackCand::InoTrackCand(InoTrack *trk, bool forward) :  fTrack(trk) {
 
   fTerm->SetDirCosine(tmp3vm);
 
-  mFinderMomentum = pow(pow(trk->GetEndXPos()-trk->GetBegXPos(), 2.) + 
-			pow(trk->GetEndYPos()-trk->GetBegYPos(), 2.) + 
+  mFinderMomentum = pow(pow(trk->GetEndXPos()-trk->GetBegXPos(), 2.) +
+			pow(trk->GetEndYPos()-trk->GetBegYPos(), 2.) +
 			pow(trk->GetEndZPos()-trk->GetBegZPos(), 2.) , 0.5);
 
-  
+
   ClustsInTrack.clear();
   int ncls = trk->GetEntries();
   for (unsigned ij=0; ij<trk->GetEntries(); ij++) {
     if (((forward && ij<=ncls/2.) || (!forward && ij>=ncls/2.)) && (!trk->ClustsInTrack[ij]->GetStraight())) continue;
-	
+
     ClustsInTrack.push_back(trk->ClustsInTrack[ij]);
   }
   FCPC = 0;
@@ -165,73 +165,73 @@ InoTrackCand::InoTrackCand(InoTrack *trk, bool forward) :  fTrack(trk) {
 
 InoTrackCand::InoTrackCand(InoTrack *trk, bool forward) :  fTrack(trk) {
   //  InoTrackCand();
-  //GMA Initialise all parameters here  
+  //GMA Initialise all parameters here
   fTrack = trk;
-  fVertex = new InoVertex(); 
+  fVertex = new InoVertex();
   fTerm = new InoVertex();
 
   double dxdz=trk->GetBegXDir();
   double dydz=trk->GetBegYDir();
-  
+
   double phi = atan2(dydz, dxdz);
   double zdir= 1./pow (1+dxdz*dxdz+dydz*dydz,0.5);
 
-  double xdir = sin(acos(zdir))*cos(phi); 
+  double xdir = sin(acos(zdir))*cos(phi);
   double ydir = sin(acos(zdir))*sin(phi);
 
   TVector3 tmp3v(xdir, ydir, zdir);
   if (forward) {
-    
+
     fVertex->SetU(trk->GetBegXPos());
     fVertex->SetV(trk->GetBegYPos());
     fVertex->SetZ(trk->GetBegZPos());
     fVertex->SetPlane(trk->GetBegZPlane());
-    
+
     fVertex->SetDirCosine(tmp3v);
   } else {
     fTerm->SetU(trk->GetBegXPos());
     fTerm->SetV(trk->GetBegYPos());
     fTerm->SetZ(trk->GetBegZPos());
     fTerm->SetPlane(trk->GetBegZPlane());
-    
+
     fTerm->SetDirCosine(-tmp3v);
   }
 
   dxdz=trk->GetEndXDir();
   dydz=trk->GetEndYDir();
-  
+
   phi = atan2(dydz, dxdz);
   zdir= 1./pow(1+dxdz*dxdz+dydz*dydz,0.5);
 
-  xdir = sin(acos(zdir))*cos(phi); 
+  xdir = sin(acos(zdir))*cos(phi);
   ydir = sin(acos(zdir))*sin(phi);
 
   TVector3  tmp3vm(xdir, ydir, zdir);
-  
-  if (forward) { 
+
+  if (forward) {
     fTerm->SetU(trk->GetEndXPos());
     fTerm->SetV(trk->GetEndYPos());
     fTerm->SetZ(trk->GetEndZPos());
     fTerm->SetPlane(trk->GetEndZPlane());
-    
+
     fTerm->SetDirCosine(tmp3vm);
   } else {
     fVertex->SetU(trk->GetEndXPos());
     fVertex->SetV(trk->GetEndYPos());
     fVertex->SetZ(trk->GetEndZPos());
     fVertex->SetPlane(trk->GetEndZPlane());
-    
+
     fVertex->SetDirCosine(-tmp3vm);
   }
-  mFinderMomentum = pow(pow(trk->GetEndXPos()-trk->GetBegXPos(), 2.) + 
-			pow(trk->GetEndYPos()-trk->GetBegYPos(), 2.) + 
+  mFinderMomentum = pow(pow(trk->GetEndXPos()-trk->GetBegXPos(), 2.) +
+			pow(trk->GetEndYPos()-trk->GetBegYPos(), 2.) +
 			pow(trk->GetEndZPos()-trk->GetBegZPos(), 2.) , 0.5);
-  
+
   ClustsInTrack.clear();
   int ncls = trk->GetEntries();
   for (unsigned ij=0; ij<trk->GetEntries(); ij++) {
     if (((forward && ij<=ncls/2.) || (!forward && ij>=ncls/2.)) && (!trk->ClustsInTrack[ij]->GetStraight())) continue;
-    
+
     ClustsInTrack.push_back(trk->ClustsInTrack[ij]);
   }
 }
@@ -279,12 +279,12 @@ void InoTrackCand::SetTrackPointYError(Int_t plane, Float_t tpos)
   fYPosError[plane] = tpos;
 }
 
-void InoTrackCand::SetU(Int_t plane, Float_t tpos) 
+void InoTrackCand::SetU(Int_t plane, Float_t tpos)
 {
   fUPos[plane] = tpos;
 }
 
-void InoTrackCand::SetV(Int_t plane, Float_t tpos) 
+void InoTrackCand::SetV(Int_t plane, Float_t tpos)
 {
   fVPos[plane] = tpos;
 }
@@ -491,7 +491,7 @@ Double_t InoTrackCand::GetScore() const {
   //GMA set plane in three categories
   // 0 : only X-axis hit
   // 1 : only Y-axis hit
-  // 2 : Both X and Y-axis hit 
+  // 2 : Both X and Y-axis hit
 
   Double_t score = 0.;
   score = (Double_t)(GetNDaughters());
@@ -746,12 +746,12 @@ void InoTrackCand::SetRoofPara(double * extra) {
 double InoTrackCand::GetRoofPara(int ix) {
 	return fRoofPara[ix];
 }
- 
+
 
 
 /*
 //_____________________________________________________________________
-Bool_t InoTrackCand::BelongsWithTrack(InoTrackCand * trk, 
+Bool_t InoTrackCand::BelongsWithTrack(InoTrackCand * trk,
                                           Double_t tolTPos2, Double_t tolZPos, Double_t tolTime){
 
   if(!trk)return false;
@@ -760,21 +760,21 @@ Bool_t InoTrackCand::BelongsWithTrack(InoTrackCand * trk,
   Int_t pSMPlaneFirst = ac.GetInt("SMPlaneFirst");
   VldContext vldc = *vldcptr;
   Double_t zGapSM=0;
-  UgliGeomHandle ugh(vldc); 
-  if(vldc.GetDetector() == Detector::kFar){  
+  UgliGeomHandle ugh(vldc);
+  if(vldc.GetDetector() == Detector::kFar){
     // calculate Z gap between SM for later use
     PlexPlaneId scintlastid(vldc.GetDetector(),pSMPlaneLast,kFALSE);
     PlexPlaneId scintfirstid(vldc.GetDetector(),pSMPlaneFirst,kFALSE);
     UgliScintPlnHandle scintlast = ugh.GetScintPlnHandle(scintlastid);
     UgliScintPlnHandle scintfirst = ugh.GetScintPlnHandle(scintfirstid);
-    
-    if (scintlast.IsValid() && scintfirst.IsValid()) {  
+
+    if (scintlast.IsValid() && scintfirst.IsValid()) {
       zGapSM=scintfirst.GetZ0()-scintlast.GetZ0()-0.0594;
-    } 
-  } 
+    }
+  }
   Double_t dz =this->GetVtxZ()-trk->GetVtxZ();
   Double_t du= this->GetVtxU()-trk->GetVtxU();
-  Double_t dv= this->GetVtxV()-trk->GetVtxV();  
+  Double_t dv= this->GetVtxV()-trk->GetVtxV();
   Double_t dt= this->GetVtxT()-trk->GetVtxT();
 
  //compensate dz for SM gap if necessary
@@ -786,30 +786,30 @@ Bool_t InoTrackCand::BelongsWithTrack(InoTrackCand * trk,
            trk->GetVtxPlane()<=pSMPlaneFirst) dz-=zGapSM;
 
   if (du*du+dv*dv<tolTPos2 &&
-      fabs(dz)<tolZPos && 
+      fabs(dz)<tolZPos &&
       fabs(dt)<tolTime) return true;
 
   return false;
 }
 //_____________________________________________________________________
-Bool_t InoTrackCand::BelongsWithShower(CandShowerHandle * shw, 
+Bool_t InoTrackCand::BelongsWithShower(CandShowerHandle * shw,
                                           Double_t tolTPos2, Double_t tolZPos, Double_t tolTime){
   if(!shw)return false;
-  
+
   Int_t pSMPlaneLast = ac.GetInt("SMPlaneLast");
   Int_t pSMPlaneFirst = ac.GetInt("SMPlaneFirst");
   Double_t zGapSM=0;
   VldContext vldc = *vldcptr;
-  UgliGeomHandle ugh(vldc); 
+  UgliGeomHandle ugh(vldc);
   // calculate Z gap between SM for later use
-  if(vldc.GetDetector() == Detector::kFar){     
+  if(vldc.GetDetector() == Detector::kFar){
     PlexPlaneId scintlastid(vldc.GetDetector(),pSMPlaneLast,kFALSE);
     PlexPlaneId scintfirstid(vldc.GetDetector(),pSMPlaneFirst,kFALSE);
-    UgliScintPlnHandle scintlast = ugh.GetScintPlnHandle(scintlastid);  
+    UgliScintPlnHandle scintlast = ugh.GetScintPlnHandle(scintlastid);
     UgliScintPlnHandle scintfirst = ugh.GetScintPlnHandle(scintfirstid);
-    if (scintlast.IsValid() && scintfirst.IsValid()) {  
+    if (scintlast.IsValid() && scintfirst.IsValid()) {
       zGapSM=scintfirst.GetZ0()-scintlast.GetZ0()-0.0594;
-    } 
+    }
   }
 
   Float_t tolTPos=TMath::Sqrt(tolTPos2);
@@ -850,11 +850,11 @@ Bool_t InoTrackCand::BelongsWithShower(CandShowerHandle * shw,
               trkU = (this->GetEndU() + dz*this->GetEndDirCosU()/this->GetEndDirCosZ());
             }
           }
-          if(shw->GetNStrips(iplane)>0 && 
-             trkU>=shw->GetMinU(iplane)-tolTPos && 
+          if(shw->GetNStrips(iplane)>0 &&
+             trkU>=shw->GetMinU(iplane)-tolTPos &&
              trkU<=shw->GetMaxU(iplane)+tolTPos) {
             MSG("RecoBase", Msg::kDebug)<< " u match! (details follow)" << endl;
-            matchu=true;  
+            matchu=true;
           }
         }
 
@@ -873,23 +873,23 @@ Bool_t InoTrackCand::BelongsWithShower(CandShowerHandle * shw,
             }
           }
 
-          if(shw->GetNStrips(iplane)>0 && 
-             trkV>=shw->GetMinV(iplane)-tolTPos && 
+          if(shw->GetNStrips(iplane)>0 &&
+             trkV>=shw->GetMinV(iplane)-tolTPos &&
              trkV<=shw->GetMaxV(iplane)+tolTPos) {
             MSG("RecoBase", Msg::kDebug)<< " v match! ((details follow)" << endl;
             matchv=true;
           }
         }
 
-        MSG("RecoBase",Msg::kDebug) << " plane  " << iplane 
-                                    << " trk u " << trkU 
-                                    << " min/max U " 
-                                    << shw->GetMinU(iplane) << "/" 
+        MSG("RecoBase",Msg::kDebug) << " plane  " << iplane
+                                    << " trk u " << trkU
+                                    << " min/max U "
+                                    << shw->GetMinU(iplane) << "/"
                                     << shw->GetMaxU(iplane)
-                                    << " trk v " << trkV 
-                                    << " min/max V " 
-                                    << shw->GetMinV(iplane) << "/" 
-                                    << shw->GetMaxV(iplane) << endl; 
+                                    << " trk v " << trkV
+                                    << " min/max V "
+                                    << shw->GetMinV(iplane) << "/"
+                                    << shw->GetMaxV(iplane) << endl;
 
         if(matchu && matchv) {
           MSG("RecoBase", Msg::kDebug)<< " 3D  match! " << endl;
@@ -902,7 +902,7 @@ Bool_t InoTrackCand::BelongsWithShower(CandShowerHandle * shw,
   if( shw->GetVtxZ()>min(this->GetVtxZ(),this->GetEndZ())-tolZPos  &&
       shw->GetVtxZ()<max(this->GetVtxZ(),this->GetEndZ())+tolZPos) {
     Double_t du= this->GetVtxU()-shw->GetVtxU();
-    Double_t dv= this->GetVtxV()-shw->GetVtxV();        
+    Double_t dv= this->GetVtxV()-shw->GetVtxV();
     dt= this->GetVtxT()-shw->GetVtxT();
     if(this->IsTPosValid(shw->GetVtxPlane())){
       du = shw->GetVtxU()-this->GetU(shw->GetVtxPlane());
@@ -911,12 +911,12 @@ Bool_t InoTrackCand::BelongsWithShower(CandShowerHandle * shw,
     }
     MSG("RecoBase",Msg::kDebug)
       << "    at plane " << shw->GetVtxPlane() << " dt2  " << du*du+dv*dv << "/" << tolTPos2 << " dt " << dt*1.e9 << "/" << tolTime*1e9 <<  "\n";
-    
-    if(dt<tolTime && 
-       du*du+dv*dv<tolTPos2) return true;   // check whether vertex within minimum distance from trk 
+
+    if(dt<tolTime &&
+       du*du+dv*dv<tolTPos2) return true;   // check whether vertex within minimum distance from trk
   }
 
-  // finally, check distance between vertices 
+  // finally, check distance between vertices
   Double_t trkZ=this->GetVtxZ();
   Double_t trkU=this->GetVtxU();
   Double_t trkV=this->GetVtxV();
@@ -938,7 +938,7 @@ Bool_t InoTrackCand::BelongsWithShower(CandShowerHandle * shw,
   }
 
   Double_t dz=trkZ-shw->GetVtxZ();
-  dt= trkT-shw->GetVtxT(); 
+  dt= trkT-shw->GetVtxT();
   //compensate dz for SM gap if necessary
   if (vldcptr->GetDetector()==Detector::kFar &&
       trkPlane<=pSMPlaneLast &&
@@ -946,19 +946,19 @@ Bool_t InoTrackCand::BelongsWithShower(CandShowerHandle * shw,
   else if (vldcptr->GetDetector()==Detector::kFar &&
            trkPlane>=pSMPlaneLast &&
            shw->GetVtxPlane()<=pSMPlaneFirst) dz-=zGapSM;
-  
+
   Double_t du = (trkU - dz*trkDirU/trkDirZ) - shw->GetVtxU();
   Double_t dv = (trkV - dz*trkDirV/trkDirZ) - shw->GetVtxV();
   MSG("RecoBase",Msg::kDebug)
     << "    dvertex shower/track " << du
     << " " << dv << " " << dz <<" "  << dt*1.e9 << "\n";
   if (du*du+dv*dv<tolTPos2 &&
-      fabs(dz)<tolZPos && 
+      fabs(dz)<tolZPos &&
       fabs(dt)<tolTime) return true;
 
   // now try shower End
   dz=trkZ-shw->GetEndZ();
-  dt= trkT-shw->GetVtxT(); 
+  dt= trkT-shw->GetVtxT();
   //compensate dz for SM gap if necessary
   if (vldcptr->GetDetector()==Detector::kFar &&
       trkPlane<=pSMPlaneLast &&
@@ -966,7 +966,7 @@ Bool_t InoTrackCand::BelongsWithShower(CandShowerHandle * shw,
   else if (vldcptr->GetDetector()==Detector::kFar &&
            trkPlane>=pSMPlaneLast &&
            shw->GetEndPlane()<=pSMPlaneFirst) dz-=zGapSM;
-  
+
   du = (trkU - dz*trkDirU/trkDirZ) - shw->GetEndU();
   dv = (trkV - dz*trkDirV/trkDirZ) - shw->GetEndV();
 
@@ -974,7 +974,7 @@ Bool_t InoTrackCand::BelongsWithShower(CandShowerHandle * shw,
     << "    dvertex shower/track " << du
     << " " << dv << " " << dz <<" "  << dt*1.e9 << "\n";
   if (du*du+dv*dv<tolTPos2 &&
-      fabs(dz)<tolZPos && 
+      fabs(dz)<tolZPos &&
       fabs(dt)<tolTime) return true;
 
   return false;
@@ -985,14 +985,14 @@ Bool_t InoTrackCand::BelongsWithShower(CandShowerHandle * shw,
 Bool_t InoTrackCand::IsUnphysical(Float_t trkFrac,Float_t asymCut,
                                      Float_t xtalkFrac,Float_t xtalkCut)
 {
-  // loop through track planes and calculate #gaps/#planes 
+  // loop through track planes and calculate #gaps/#planes
   // also consider balance of U/V hit planes
   // (for ND consider only area covered by partial plane)
 
   Float_t totTrkPlanes = 0;   // total number of hit planes in track
-  Float_t nTrkPlanesU  = 0;   // total number of valid planes 
+  Float_t nTrkPlanesU  = 0;   // total number of valid planes
   Float_t nTrkPlanesV  = 0;   // between beg/end in U and V
-  Float_t nHitPlanesU  = 0;   // total number of valid hit planes 
+  Float_t nHitPlanesU  = 0;   // total number of valid hit planes
   Float_t nHitPlanesV  = 0;   // between beg/end in U and V
   Float_t nXTalkPlanes = 0;   // total number of xtalk-like track planes
 
@@ -1008,7 +1008,7 @@ Bool_t InoTrackCand::IsUnphysical(Float_t trkFrac,Float_t asymCut,
     if(scintpln.IsValid()){
       MSG("RecoBase",Msg::kDebug) << "Valid plane (has scintillator)" << endl;
       //add up total number of valid track planes:
-      if(this->GetVldContext()->GetDetector()==Detector::kFar) {        
+      if(this->GetVldContext()->GetDetector()==Detector::kFar) {
         if(scintid.GetPlaneView()==PlaneView::kU) nTrkPlanesU += 1;
         else if(scintid.GetPlaneView()==PlaneView::kV) nTrkPlanesV += 1;
       }
@@ -1018,12 +1018,12 @@ Bool_t InoTrackCand::IsUnphysical(Float_t trkFrac,Float_t asymCut,
         Float_t u = this->GetVtxU();
         Float_t v = this->GetVtxV();
         if(this->IsTPosValid(ipln)) {
-          u = this->GetU(ipln); 
+          u = this->GetU(ipln);
           v = this->GetV(ipln);
         }
         else{
           Int_t count = 1;
-          while(!this->IsTPosValid(ipln+count) && 
+          while(!this->IsTPosValid(ipln+count) &&
                 ipln+count<this->GetEndPlane()) count +=1;
           PlexPlaneId scintid_upp(this->GetVldContext()->GetDetector(),
                                   ipln+count,kFALSE);
@@ -1032,7 +1032,7 @@ Bool_t InoTrackCand::IsUnphysical(Float_t trkFrac,Float_t asymCut,
           Float_t upp_v = this->GetV(ipln+count);
           Float_t upp_z = scintpln_upp.GetZ0();
           count = 1;
-          while(!this->IsTPosValid(ipln-count) && 
+          while(!this->IsTPosValid(ipln-count) &&
                 ipln-count>this->GetBegPlane()) count +=1;
           PlexPlaneId scintid_low(this->GetVldContext()->GetDetector(),
                                   ipln-count,kFALSE);
@@ -1043,7 +1043,7 @@ Bool_t InoTrackCand::IsUnphysical(Float_t trkFrac,Float_t asymCut,
           u = (z - low_z)*(upp_u - low_u)/(upp_z - low_z);
           v = (z - low_z)*(upp_v - low_v)/(upp_z - low_z);
         }
-        
+
         //define a region for the ND to do this test in:
         const Float_t part_u_min = -0.2 * Munits::m;
         const Float_t part_v_min = -2.4 * Munits::m;
@@ -1051,60 +1051,60 @@ Bool_t InoTrackCand::IsUnphysical(Float_t trkFrac,Float_t asymCut,
         const Float_t part_v_max = 0.2 * Munits::m;
         if( u<part_u_min || u>part_u_max || //partial planes
             v<part_v_min || v>part_v_max ) continue;
-        
+
         Float_t r2 = u*u+v*v;
         const Float_t coil_r     =  0.5 * Munits::m;
         const Float_t detect_r   =  2.8 * Munits::m;
         const Float_t coil_r2    = coil_r * coil_r;
-        const Float_t detect_r2  = detect_r * detect_r; 
-        if( r2<=coil_r2 || r2>=detect_r2 ) continue;  //coil hole + detector edge   
+        const Float_t detect_r2  = detect_r * detect_r;
+        if( r2<=coil_r2 || r2>=detect_r2 ) continue;  //coil hole + detector edge
 
         if(scintid.GetPlaneView()==PlaneView::kU) nTrkPlanesU += 1;
         else if(scintid.GetPlaneView()==PlaneView::kV) nTrkPlanesV += 1;
-        
+
       }
       if(this->IsTPosValid(ipln)) {
         //add upp number of valid planes that have hits:
         if(scintid.GetPlaneView()==PlaneView::kU) nHitPlanesU += 1;
         else if(scintid.GetPlaneView()==PlaneView::kV) nHitPlanesV += 1;
         //also count number of planes that have only xtalk-like hits
-        if(this->GetPlaneCharge(ipln,CalStripType::kPE)<xtalkCut) 
+        if(this->GetPlaneCharge(ipln,CalStripType::kPE)<xtalkCut)
           nXTalkPlanes+=1;
       }
     }
   }
 
-  MSG("RecoBase",Msg::kDebug) 
-    << endl << "Total Number of track planes:" 
+  MSG("RecoBase",Msg::kDebug)
+    << endl << "Total Number of track planes:"
     << ( this->GetEndPlane() - this->GetBegPlane() + 1) << endl
     << "Total Number of hit track planes:" << totTrkPlanes << endl
-    << "Number of (valid) track planes U: " << nTrkPlanesU 
+    << "Number of (valid) track planes U: " << nTrkPlanesU
     << " V: " << nTrkPlanesV << endl
-    << "Number of (valid) hit track planes U: " << nHitPlanesU 
+    << "Number of (valid) hit track planes U: " << nHitPlanesU
     << " V: " << nHitPlanesV << endl
-    << "Number of xtalk-like (valid) hit track planes:  " 
+    << "Number of xtalk-like (valid) hit track planes:  "
     << nXTalkPlanes << endl;
-  
+
   //if track hits are mainly in spectrometer in ND do not perform tests
   if(this->GetVldContext()->GetDetector()==Detector::kNear){
-    if(nHitPlanesU+nHitPlanesV<totTrkPlanes-nHitPlanesU-nHitPlanesV) 
+    if(nHitPlanesU+nHitPlanesV<totTrkPlanes-nHitPlanesU-nHitPlanesV)
       return false;
   }
 
   //check for nonsensical values:
-  if(nTrkPlanesU+nTrkPlanesV<=0) return true; 
+  if(nTrkPlanesU+nTrkPlanesV<=0) return true;
   if(nHitPlanesU+nHitPlanesV<=0) return true;
 
   //now check for gap planes, xtalk and asymmetry:
   if((nHitPlanesU+nHitPlanesV)/(nTrkPlanesU+nTrkPlanesV)<trkFrac) {
-    MSG("RecoBase",Msg::kDebug) 
+    MSG("RecoBase",Msg::kDebug)
       << "IsUnphysical because trkFrac = "
       << (nHitPlanesU+nHitPlanesV)/(nTrkPlanesU+nTrkPlanesV)
       << " and cut-off is = " << trkFrac << endl;
     return true;
   }
   if(nXTalkPlanes/(nHitPlanesU+nHitPlanesV)>xtalkFrac) {
-    MSG("RecoBase",Msg::kDebug) 
+    MSG("RecoBase",Msg::kDebug)
       << "IsUnphysical because xtalkFrac = "
       << nXTalkPlanes/(nHitPlanesU+nHitPlanesV)
       << " and cut-off is = " << xtalkFrac << endl;
@@ -1112,9 +1112,9 @@ Bool_t InoTrackCand::IsUnphysical(Float_t trkFrac,Float_t asymCut,
   }
   if(TMath::Abs(nHitPlanesU-nHitPlanesV)/
      TMath::Max(nHitPlanesU,nHitPlanesV)>asymCut) {
-    MSG("RecoBase",Msg::kDebug) 
+    MSG("RecoBase",Msg::kDebug)
       << "IsUnphysical because asym = "
-      << ( TMath::Abs(nHitPlanesU-nHitPlanesV) / 
+      << ( TMath::Abs(nHitPlanesU-nHitPlanesV) /
            TMath::Max(nHitPlanesU,nHitPlanesV) )
       << " and cut-off is = " << asymCut << endl;
     return true;
@@ -1207,7 +1207,7 @@ Int_t InoTrackCand::GetTimeBackwardFitNDOF() const
   return fTimeBackwardFitNDOF;
 }
 
-bool InoTrackCand::IsContained() 
+bool InoTrackCand::IsContained()
 {
 
   bool contained = (GetVtxTrace()>0.1 && GetEndTrace()>0.1 &&
@@ -1237,10 +1237,10 @@ Int_t InoTrackCand::GetNStrip(Int_t iuv) const
       InoHit* inohit = inoclust->GetHit(j);
       if (inohit->GetView()==2 || inohit->GetView()==iuv) {n++;}
     }
-    
+
   }
   return n;
- 
+
   /* 08/02/09
   if (iuv==2) { return fTrack->HitsInTrack.size(); }
   else {
@@ -1259,14 +1259,14 @@ Double_t InoTrackCand::GetPlanePulse(Int_t plane) const
 {
   for (unsigned i=0; i<ClustsInTrack.size(); i++) {
     InoCluster* inoclust = ClustsInTrack[i];
-    if (inoclust->GetZPlane()==plane) return inoclust->GetPulse(); 
+    if (inoclust->GetZPlane()==plane) return inoclust->GetPulse();
   }
   return -999;
 
   /* 08/02/09
   for (unsigned i=0; i<fTrack->HitsInTrack.size(); i++) {
     InoHit* inohit = fTrack->HitsInTrack[i];
-    if (inohit->GetZPlane()==plane) return inohit->GetPulse(); 
+    if (inohit->GetZPlane()==plane) return inohit->GetPulse();
   }
   return -999;
   */
@@ -1317,9 +1317,9 @@ Int_t InoTrackCand::GetNDigit(Int_t) const
 
 
 
-Int_t InoTrackCand::GetBegPlane(Int_t iuv) const 
+Int_t InoTrackCand::GetBegPlane(Int_t iuv) const
 {
-  if (iuv==2) { 
+  if (iuv==2) {
     return ClustsInTrack[0]->GetZPlane();
   } else {
     for (unsigned i=0; i<ClustsInTrack.size(); i++) {
@@ -1330,11 +1330,11 @@ Int_t InoTrackCand::GetBegPlane(Int_t iuv) const
   }
   return 5000;
 }
-						    
+
 Int_t InoTrackCand::GetEndPlane(Int_t iuv) const
 {
   int nsize = ClustsInTrack.size();
-  if (iuv==2) { 
+  if (iuv==2) {
     return ClustsInTrack[nsize-1]->GetZPlane();
   } else {
     for (int i=nsize-1; i>=0; i--) {
@@ -2122,4 +2122,3 @@ void InoTrackCand::CalibrateMIP(UInt_t encoded, Float_t ph)
   candreco->fMIP[encoded] = ph;
 }
 */
-

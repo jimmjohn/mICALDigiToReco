@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -25,6 +34,21 @@
    </div>
    <div id="projectbrief">Stand-alone code to execute reconstruction for digitized output(either from data or simulation).</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -36,16 +60,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('classRPCEve.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +91,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -1806,20 +1836,20 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ae6e692d61909530d9e5d9d34d9d3229a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a982ee61ff33c86259f7fb0d291308c04"><td class="memItemLeft" align="right" valign="top">TBranch *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRPCEve.html#a982ee61ff33c86259f7fb0d291308c04">b_ytdc_t_11_7</a></td></tr>
 <tr class="separator:a982ee61ff33c86259f7fb0d291308c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fcba7a189c4989ac62f1d1c123707d7"><td class="memItemLeft" align="right" valign="top">TTimeStamp *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRPCEve.html#a9fcba7a189c4989ac62f1d1c123707d7">EveTS</a> [<a class="el" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>]</td></tr>
-<tr class="separator:a9fcba7a189c4989ac62f1d1c123707d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4232a6e7f3de511326fb97018f1fc2df"><td class="memItemLeft" align="right" valign="top">TBits *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRPCEve.html#a4232a6e7f3de511326fb97018f1fc2df">xLayer</a> [<a class="el" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>]</td></tr>
-<tr class="separator:a4232a6e7f3de511326fb97018f1fc2df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77469fda8312010ca78950e0a55d6154"><td class="memItemLeft" align="right" valign="top">TBits *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRPCEve.html#a77469fda8312010ca78950e0a55d6154">yLayer</a> [<a class="el" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>]</td></tr>
-<tr class="separator:a77469fda8312010ca78950e0a55d6154"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79f7cbbad79238b1fdf3e7e7f1cdabf8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRPCEve.html#a79f7cbbad79238b1fdf3e7e7f1cdabf8">vxtdc_l</a> [<a class="el" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="el" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>]</td></tr>
-<tr class="separator:a79f7cbbad79238b1fdf3e7e7f1cdabf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53c42e8c66ac08f5b051f9954adfb94c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRPCEve.html#a53c42e8c66ac08f5b051f9954adfb94c">vytdc_l</a> [<a class="el" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="el" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>]</td></tr>
-<tr class="separator:a53c42e8c66ac08f5b051f9954adfb94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bc9e22b43910ec130b07d8bd74c9dc9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRPCEve.html#a4bc9e22b43910ec130b07d8bd74c9dc9">vxtdc_t</a> [<a class="el" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="el" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>]</td></tr>
-<tr class="separator:a4bc9e22b43910ec130b07d8bd74c9dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adda7f8bfc9c111708324ed0085896b54"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRPCEve.html#adda7f8bfc9c111708324ed0085896b54">vytdc_t</a> [<a class="el" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="el" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>]</td></tr>
-<tr class="separator:adda7f8bfc9c111708324ed0085896b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace7ac017bef2d6e41bf9f970408c2eb3"><td class="memItemLeft" align="right" valign="top">TTimeStamp *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRPCEve.html#ace7ac017bef2d6e41bf9f970408c2eb3">EveTS</a> [12]</td></tr>
+<tr class="separator:ace7ac017bef2d6e41bf9f970408c2eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ae323396588aeb41768cbfd2dce046"><td class="memItemLeft" align="right" valign="top">TBits *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRPCEve.html#ae0ae323396588aeb41768cbfd2dce046">xLayer</a> [12]</td></tr>
+<tr class="separator:ae0ae323396588aeb41768cbfd2dce046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f338e9f6eb5ec1c2e070b6b6d5e8e1f"><td class="memItemLeft" align="right" valign="top">TBits *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRPCEve.html#a3f338e9f6eb5ec1c2e070b6b6d5e8e1f">yLayer</a> [12]</td></tr>
+<tr class="separator:a3f338e9f6eb5ec1c2e070b6b6d5e8e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8072c07befa4e61a60b32df8a121cacd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRPCEve.html#a8072c07befa4e61a60b32df8a121cacd">vxtdc_l</a> [12][8]</td></tr>
+<tr class="separator:a8072c07befa4e61a60b32df8a121cacd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a583203b333f9c3e07507af5e375a13d2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRPCEve.html#a583203b333f9c3e07507af5e375a13d2">vytdc_l</a> [12][8]</td></tr>
+<tr class="separator:a583203b333f9c3e07507af5e375a13d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4713b3c7112be79165179454f19dcdae"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRPCEve.html#a4713b3c7112be79165179454f19dcdae">vxtdc_t</a> [12][8]</td></tr>
+<tr class="separator:a4713b3c7112be79165179454f19dcdae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb0195088b120c77a99f1b70272af246"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRPCEve.html#adb0195088b120c77a99f1b70272af246">vytdc_t</a> [12][8]</td></tr>
+<tr class="separator:adb0195088b120c77a99f1b70272af246"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0cc21983de1279fe835e96658e6e55df"></a>
@@ -8219,14 +8249,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a9fcba7a189c4989ac62f1d1c123707d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fcba7a189c4989ac62f1d1c123707d7">&#9670;&nbsp;</a></span>EveTS</h2>
+<a id="ace7ac017bef2d6e41bf9f970408c2eb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace7ac017bef2d6e41bf9f970408c2eb3">&#9670;&nbsp;</a></span>EveTS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">TTimeStamp* RPCEve::EveTS[<a class="el" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>]</td>
+          <td class="memname">TTimeStamp* RPCEve::EveTS[12]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -8319,70 +8349,70 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a79f7cbbad79238b1fdf3e7e7f1cdabf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79f7cbbad79238b1fdf3e7e7f1cdabf8">&#9670;&nbsp;</a></span>vxtdc_l</h2>
+<a id="a8072c07befa4e61a60b32df8a121cacd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8072c07befa4e61a60b32df8a121cacd">&#9670;&nbsp;</a></span>vxtdc_l</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;unsigned int&gt;* RPCEve::vxtdc_l[<a class="el" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="el" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>]</td>
+          <td class="memname">std::vector&lt;unsigned int&gt;* RPCEve::vxtdc_l[12][8]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a4bc9e22b43910ec130b07d8bd74c9dc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bc9e22b43910ec130b07d8bd74c9dc9">&#9670;&nbsp;</a></span>vxtdc_t</h2>
+<a id="a4713b3c7112be79165179454f19dcdae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4713b3c7112be79165179454f19dcdae">&#9670;&nbsp;</a></span>vxtdc_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;unsigned int&gt;* RPCEve::vxtdc_t[<a class="el" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="el" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>]</td>
+          <td class="memname">std::vector&lt;unsigned int&gt;* RPCEve::vxtdc_t[12][8]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a53c42e8c66ac08f5b051f9954adfb94c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53c42e8c66ac08f5b051f9954adfb94c">&#9670;&nbsp;</a></span>vytdc_l</h2>
+<a id="a583203b333f9c3e07507af5e375a13d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a583203b333f9c3e07507af5e375a13d2">&#9670;&nbsp;</a></span>vytdc_l</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;unsigned int&gt;* RPCEve::vytdc_l[<a class="el" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="el" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>]</td>
+          <td class="memname">std::vector&lt;unsigned int&gt;* RPCEve::vytdc_l[12][8]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="adda7f8bfc9c111708324ed0085896b54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adda7f8bfc9c111708324ed0085896b54">&#9670;&nbsp;</a></span>vytdc_t</h2>
+<a id="adb0195088b120c77a99f1b70272af246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb0195088b120c77a99f1b70272af246">&#9670;&nbsp;</a></span>vytdc_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;unsigned int&gt;* RPCEve::vytdc_t[<a class="el" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="el" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>]</td>
+          <td class="memname">std::vector&lt;unsigned int&gt;* RPCEve::vytdc_t[12][8]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a4232a6e7f3de511326fb97018f1fc2df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4232a6e7f3de511326fb97018f1fc2df">&#9670;&nbsp;</a></span>xLayer</h2>
+<a id="ae0ae323396588aeb41768cbfd2dce046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0ae323396588aeb41768cbfd2dce046">&#9670;&nbsp;</a></span>xLayer</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">TBits* RPCEve::xLayer[<a class="el" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>]</td>
+          <td class="memname">TBits* RPCEve::xLayer[12]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -11245,14 +11275,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a77469fda8312010ca78950e0a55d6154"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77469fda8312010ca78950e0a55d6154">&#9670;&nbsp;</a></span>yLayer</h2>
+<a id="a3f338e9f6eb5ec1c2e070b6b6d5e8e1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f338e9f6eb5ec1c2e070b6b6d5e8e1f">&#9670;&nbsp;</a></span>yLayer</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">TBits* RPCEve::yLayer[<a class="el" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>]</td>
+          <td class="memname">TBits* RPCEve::yLayer[12]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -14120,11 +14150,15 @@ Here is the caller graph for this function:</div>
 <li>src/<a class="el" href="RPCEve_8cc.html">RPCEve.cc</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classRPCEve.html">RPCEve</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

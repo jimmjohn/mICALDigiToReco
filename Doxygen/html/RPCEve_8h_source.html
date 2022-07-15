@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -25,6 +34,21 @@
    </div>
    <div id="projectbrief">Stand-alone code to execute reconstruction for digitized output(either from data or simulation).</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -36,16 +60,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('RPCEve_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +91,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">RPCEve.h</div>  </div>
@@ -963,14 +989,14 @@ $(function() {
 <div class="line"><a name="l00893"></a><span class="lineno"><a class="line" href="classRPCEve.html#ae6e692d61909530d9e5d9d34d9d3229a">  893</a></span>&#160;   TBranch        *<a class="code" href="classRPCEve.html#ae6e692d61909530d9e5d9d34d9d3229a">b_xtdc_t_11_7</a>;   </div>
 <div class="line"><a name="l00894"></a><span class="lineno"><a class="line" href="classRPCEve.html#a982ee61ff33c86259f7fb0d291308c04">  894</a></span>&#160;   TBranch        *<a class="code" href="classRPCEve.html#a982ee61ff33c86259f7fb0d291308c04">b_ytdc_t_11_7</a>;   </div>
 <div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160; </div>
-<div class="line"><a name="l00896"></a><span class="lineno"><a class="line" href="classRPCEve.html#a9fcba7a189c4989ac62f1d1c123707d7">  896</a></span>&#160;   TTimeStamp *<a class="code" href="classRPCEve.html#a9fcba7a189c4989ac62f1d1c123707d7">EveTS</a>[<a class="code" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>];</div>
-<div class="line"><a name="l00897"></a><span class="lineno"><a class="line" href="classRPCEve.html#a4232a6e7f3de511326fb97018f1fc2df">  897</a></span>&#160;   TBits *<a class="code" href="classRPCEve.html#a4232a6e7f3de511326fb97018f1fc2df">xLayer</a>[<a class="code" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>];</div>
-<div class="line"><a name="l00898"></a><span class="lineno"><a class="line" href="classRPCEve.html#a77469fda8312010ca78950e0a55d6154">  898</a></span>&#160;   TBits *<a class="code" href="classRPCEve.html#a77469fda8312010ca78950e0a55d6154">yLayer</a>[<a class="code" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>];</div>
-<div class="line"><a name="l00899"></a><span class="lineno"><a class="line" href="classRPCEve.html#a79f7cbbad79238b1fdf3e7e7f1cdabf8">  899</a></span>&#160;   std::vector&lt;unsigned int&gt; *<a class="code" href="classRPCEve.html#a79f7cbbad79238b1fdf3e7e7f1cdabf8">vxtdc_l</a>[<a class="code" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="code" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>];</div>
-<div class="line"><a name="l00900"></a><span class="lineno"><a class="line" href="classRPCEve.html#a53c42e8c66ac08f5b051f9954adfb94c">  900</a></span>&#160;   std::vector&lt;unsigned int&gt; *<a class="code" href="classRPCEve.html#a53c42e8c66ac08f5b051f9954adfb94c">vytdc_l</a>[<a class="code" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="code" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>];</div>
+<div class="line"><a name="l00896"></a><span class="lineno"><a class="line" href="classRPCEve.html#ace7ac017bef2d6e41bf9f970408c2eb3">  896</a></span>&#160;   TTimeStamp *<a class="code" href="classRPCEve.html#ace7ac017bef2d6e41bf9f970408c2eb3">EveTS</a>[<a class="code" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>];</div>
+<div class="line"><a name="l00897"></a><span class="lineno"><a class="line" href="classRPCEve.html#ae0ae323396588aeb41768cbfd2dce046">  897</a></span>&#160;   TBits *<a class="code" href="classRPCEve.html#ae0ae323396588aeb41768cbfd2dce046">xLayer</a>[<a class="code" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>];</div>
+<div class="line"><a name="l00898"></a><span class="lineno"><a class="line" href="classRPCEve.html#a3f338e9f6eb5ec1c2e070b6b6d5e8e1f">  898</a></span>&#160;   TBits *<a class="code" href="classRPCEve.html#a3f338e9f6eb5ec1c2e070b6b6d5e8e1f">yLayer</a>[<a class="code" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>];</div>
+<div class="line"><a name="l00899"></a><span class="lineno"><a class="line" href="classRPCEve.html#a8072c07befa4e61a60b32df8a121cacd">  899</a></span>&#160;   std::vector&lt;unsigned int&gt; *<a class="code" href="classRPCEve.html#a8072c07befa4e61a60b32df8a121cacd">vxtdc_l</a>[<a class="code" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="code" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>];</div>
+<div class="line"><a name="l00900"></a><span class="lineno"><a class="line" href="classRPCEve.html#a583203b333f9c3e07507af5e375a13d2">  900</a></span>&#160;   std::vector&lt;unsigned int&gt; *<a class="code" href="classRPCEve.html#a583203b333f9c3e07507af5e375a13d2">vytdc_l</a>[<a class="code" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="code" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>];</div>
 <div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160; </div>
-<div class="line"><a name="l00902"></a><span class="lineno"><a class="line" href="classRPCEve.html#a4bc9e22b43910ec130b07d8bd74c9dc9">  902</a></span>&#160;   std::vector&lt;unsigned int&gt; *<a class="code" href="classRPCEve.html#a4bc9e22b43910ec130b07d8bd74c9dc9">vxtdc_t</a>[<a class="code" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="code" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>];</div>
-<div class="line"><a name="l00903"></a><span class="lineno"><a class="line" href="classRPCEve.html#adda7f8bfc9c111708324ed0085896b54">  903</a></span>&#160;   std::vector&lt;unsigned int&gt; *<a class="code" href="classRPCEve.html#adda7f8bfc9c111708324ed0085896b54">vytdc_t</a>[<a class="code" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="code" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>];</div>
+<div class="line"><a name="l00902"></a><span class="lineno"><a class="line" href="classRPCEve.html#a4713b3c7112be79165179454f19dcdae">  902</a></span>&#160;   std::vector&lt;unsigned int&gt; *<a class="code" href="classRPCEve.html#a4713b3c7112be79165179454f19dcdae">vxtdc_t</a>[<a class="code" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="code" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>];</div>
+<div class="line"><a name="l00903"></a><span class="lineno"><a class="line" href="classRPCEve.html#adb0195088b120c77a99f1b70272af246">  903</a></span>&#160;   std::vector&lt;unsigned int&gt; *<a class="code" href="classRPCEve.html#adb0195088b120c77a99f1b70272af246">vytdc_t</a>[<a class="code" href="RPCEve_8h.html#a4fc34b120ed3bd1120c1eb36abbcd6af">NL</a>][<a class="code" href="RPCEve_8h.html#a1fa2460e32327ade49189c95740bc1b5">NC</a>];</div>
 <div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160; </div>
 <div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;   <a class="code" href="classRPCEve.html#a0cc21983de1279fe835e96658e6e55df">RPCEve</a>(TTree *tree=0);</div>
 <div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;   <span class="keyword">virtual</span> <a class="code" href="classRPCEve.html#a347a614f3c8ae22867bd678d87e98d08">~RPCEve</a>();</div>
@@ -1922,6 +1948,7 @@ $(function() {
 <div class="line"><a name="l01852"></a><span class="lineno"> 1852</span>&#160;}</div>
 <div class="line"><a name="l01853"></a><span class="lineno"> 1853</span>&#160;<span class="preprocessor">#endif // #ifdef RPCEve_cxx</span></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="aclassRPCEve_html_a59e6d09cb0c6ca9a945ec16469604feb"><div class="ttname"><a href="classRPCEve.html#a59e6d09cb0c6ca9a945ec16469604feb">RPCEve::b_ystriphitsL6</a></div><div class="ttdeci">TBranch * b_ystriphitsL6</div><div class="ttdef"><b>Definition:</b> RPCEve.h:496</div></div>
 <div class="ttc" id="aclassRPCEve_html_ad82cdee742987b83433d7afd304254a2"><div class="ttname"><a href="classRPCEve.html#ad82cdee742987b83433d7afd304254a2">RPCEve::ytdc_l_8_3</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * ytdc_l_8_3</div><div class="ttdef"><b>Definition:</b> RPCEve.h:348</div></div>
 <div class="ttc" id="aclassRPCEve_html_a33b0d7d45720ad3e961a077c9a1cbd61"><div class="ttname"><a href="classRPCEve.html#a33b0d7d45720ad3e961a077c9a1cbd61">RPCEve::b_xtdc_t_0_1</a></div><div class="ttdeci">TBranch * b_xtdc_t_0_1</div><div class="ttdef"><b>Definition:</b> RPCEve.h:517</div></div>
@@ -1943,7 +1970,6 @@ $(function() {
 <div class="ttc" id="aclassRPCEve_html_a7ed4a04823ccf08ac0e17a0fe5c55cff"><div class="ttname"><a href="classRPCEve.html#a7ed4a04823ccf08ac0e17a0fe5c55cff">RPCEve::b_xtdc_t_0_5</a></div><div class="ttdeci">TBranch * b_xtdc_t_0_5</div><div class="ttdef"><b>Definition:</b> RPCEve.h:533</div></div>
 <div class="ttc" id="aclassRPCEve_html_a9889067cbcd1d73c193708603b87f560"><div class="ttname"><a href="classRPCEve.html#a9889067cbcd1d73c193708603b87f560">RPCEve::b_xtdc_t_7_5</a></div><div class="ttdeci">TBranch * b_xtdc_t_7_5</div><div class="ttdef"><b>Definition:</b> RPCEve.h:757</div></div>
 <div class="ttc" id="aclassRPCEve_html_a39e31fcc709f0f4ad22d97ae981eef6d"><div class="ttname"><a href="classRPCEve.html#a39e31fcc709f0f4ad22d97ae981eef6d">RPCEve::b_xtdc_t_8_6</a></div><div class="ttdeci">TBranch * b_xtdc_t_8_6</div><div class="ttdef"><b>Definition:</b> RPCEve.h:793</div></div>
-<div class="ttc" id="aclassRPCEve_html_a4bc9e22b43910ec130b07d8bd74c9dc9"><div class="ttname"><a href="classRPCEve.html#a4bc9e22b43910ec130b07d8bd74c9dc9">RPCEve::vxtdc_t</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * vxtdc_t[NL][NC]</div><div class="ttdef"><b>Definition:</b> RPCEve.h:902</div></div>
 <div class="ttc" id="aclassRPCEve_html_a65d29f36e7be7986e032b8f5aeb30f02"><div class="ttname"><a href="classRPCEve.html#a65d29f36e7be7986e032b8f5aeb30f02">RPCEve::b_ytdc_l_2_7</a></div><div class="ttdeci">TBranch * b_ytdc_l_2_7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:604</div></div>
 <div class="ttc" id="aclassRPCEve_html_a163f0f0b7123434fa63fdc90edda3785"><div class="ttname"><a href="classRPCEve.html#a163f0f0b7123434fa63fdc90edda3785">RPCEve::b_xstriphitsL3</a></div><div class="ttdeci">TBranch * b_xstriphitsL3</div><div class="ttdef"><b>Definition:</b> RPCEve.h:489</div></div>
 <div class="ttc" id="aclassRPCEve_html_a9ffda137327682b8bdc74940311aee48"><div class="ttname"><a href="classRPCEve.html#a9ffda137327682b8bdc74940311aee48">RPCEve::b_ytdc_t_11_2</a></div><div class="ttdeci">TBranch * b_ytdc_t_11_2</div><div class="ttdef"><b>Definition:</b> RPCEve.h:874</div></div>
@@ -1978,6 +2004,7 @@ $(function() {
 <div class="ttc" id="aclassRPCEve_html_a0bde974f480c5d99b739df5772d14f6e"><div class="ttname"><a href="classRPCEve.html#a0bde974f480c5d99b739df5772d14f6e">RPCEve::b_xtdc_t_1_7</a></div><div class="ttdeci">TBranch * b_xtdc_t_1_7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:573</div></div>
 <div class="ttc" id="aclassRPCEve_html_adf7cc7c45f0dc0f791367bb3d399e34b"><div class="ttname"><a href="classRPCEve.html#adf7cc7c45f0dc0f791367bb3d399e34b">RPCEve::b_xtdc_l_0_3</a></div><div class="ttdeci">TBranch * b_xtdc_l_0_3</div><div class="ttdef"><b>Definition:</b> RPCEve.h:523</div></div>
 <div class="ttc" id="aclassRPCEve_html_ac1e3fdb2941548143eba77b8a8b32177"><div class="ttname"><a href="classRPCEve.html#ac1e3fdb2941548143eba77b8a8b32177">RPCEve::b_xtdc_t_1_4</a></div><div class="ttdeci">TBranch * b_xtdc_t_1_4</div><div class="ttdef"><b>Definition:</b> RPCEve.h:561</div></div>
+<div class="ttc" id="aclassRPCEve_html_a583203b333f9c3e07507af5e375a13d2"><div class="ttname"><a href="classRPCEve.html#a583203b333f9c3e07507af5e375a13d2">RPCEve::vytdc_l</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * vytdc_l[12][8]</div><div class="ttdef"><b>Definition:</b> RPCEve.h:900</div></div>
 <div class="ttc" id="aclassRPCEve_html_aca4d4182a9df1d94e23297b4027f6921"><div class="ttname"><a href="classRPCEve.html#aca4d4182a9df1d94e23297b4027f6921">RPCEve::b_xtdc_t_2_7</a></div><div class="ttdeci">TBranch * b_xtdc_t_2_7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:605</div></div>
 <div class="ttc" id="aclassRPCEve_html_a61aee880ec1b8d41854b1d7d788f543d"><div class="ttname"><a href="classRPCEve.html#a61aee880ec1b8d41854b1d7d788f543d">RPCEve::ytdc_l_0_6</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * ytdc_l_0_6</div><div class="ttdef"><b>Definition:</b> RPCEve.h:104</div></div>
 <div class="ttc" id="aclassRPCEve_html_a5802cd2a9d6edbee3887b329a1aae263"><div class="ttname"><a href="classRPCEve.html#a5802cd2a9d6edbee3887b329a1aae263">RPCEve::ytdc_t_1_7</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * ytdc_t_1_7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:142</div></div>
@@ -2006,7 +2033,6 @@ $(function() {
 <div class="ttc" id="aclassRPCEve_html_ad51087c0017c25f5547f34f4b26240d7"><div class="ttname"><a href="classRPCEve.html#ad51087c0017c25f5547f34f4b26240d7">RPCEve::ytdc_l_2_3</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * ytdc_l_2_3</div><div class="ttdef"><b>Definition:</b> RPCEve.h:156</div></div>
 <div class="ttc" id="aclassRPCEve_html_a8b8fc2971cc9e301cd2f734729bd25b1"><div class="ttname"><a href="classRPCEve.html#a8b8fc2971cc9e301cd2f734729bd25b1">RPCEve::b_ytdc_l_5_0</a></div><div class="ttdeci">TBranch * b_ytdc_l_5_0</div><div class="ttdef"><b>Definition:</b> RPCEve.h:672</div></div>
 <div class="ttc" id="aclassRPCEve_html_a9fdad89d3192692a0c80b6a56babb57a"><div class="ttname"><a href="classRPCEve.html#a9fdad89d3192692a0c80b6a56babb57a">RPCEve::Evetime_9</a></div><div class="ttdeci">TTimeStamp * Evetime_9</div><div class="ttdef"><b>Definition:</b> RPCEve.h:46</div></div>
-<div class="ttc" id="aclassRPCEve_html_a4232a6e7f3de511326fb97018f1fc2df"><div class="ttname"><a href="classRPCEve.html#a4232a6e7f3de511326fb97018f1fc2df">RPCEve::xLayer</a></div><div class="ttdeci">TBits * xLayer[NL]</div><div class="ttdef"><b>Definition:</b> RPCEve.h:897</div></div>
 <div class="ttc" id="aclassRPCEve_html_a9c7cb83bd04ba6598822bff53dc4c7c4"><div class="ttname"><a href="classRPCEve.html#a9c7cb83bd04ba6598822bff53dc4c7c4">RPCEve::b_ytdc_l_11_6</a></div><div class="ttdeci">TBranch * b_ytdc_l_11_6</div><div class="ttdef"><b>Definition:</b> RPCEve.h:888</div></div>
 <div class="ttc" id="aclassRPCEve_html_aa3aab4d37bbe40f19e052a90c808650d"><div class="ttname"><a href="classRPCEve.html#aa3aab4d37bbe40f19e052a90c808650d">RPCEve::xtdc_t_7_4</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * xtdc_t_7_4</div><div class="ttdef"><b>Definition:</b> RPCEve.h:321</div></div>
 <div class="ttc" id="aclassRPCEve_html_a5d9d3f563c997057d935718f49f7a756"><div class="ttname"><a href="classRPCEve.html#a5d9d3f563c997057d935718f49f7a756">RPCEve::b_xtdc_t_5_5</a></div><div class="ttdeci">TBranch * b_xtdc_t_5_5</div><div class="ttdef"><b>Definition:</b> RPCEve.h:693</div></div>
@@ -2069,6 +2095,7 @@ $(function() {
 <div class="ttc" id="aclassRPCEve_html_a7ebc854f8570988c615316722e8932ac"><div class="ttname"><a href="classRPCEve.html#a7ebc854f8570988c615316722e8932ac">RPCEve::ytdc_t_2_3</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * ytdc_t_2_3</div><div class="ttdef"><b>Definition:</b> RPCEve.h:158</div></div>
 <div class="ttc" id="aclassRPCEve_html_a75f688b655c219a94dd4ec298a0b6353"><div class="ttname"><a href="classRPCEve.html#a75f688b655c219a94dd4ec298a0b6353">RPCEve::b_xtdc_t_9_6</a></div><div class="ttdeci">TBranch * b_xtdc_t_9_6</div><div class="ttdef"><b>Definition:</b> RPCEve.h:825</div></div>
 <div class="ttc" id="aclassRPCEve_html_a61b104aff094814003b55c86afde76f2"><div class="ttname"><a href="classRPCEve.html#a61b104aff094814003b55c86afde76f2">RPCEve::b_ytdc_l_10_0</a></div><div class="ttdeci">TBranch * b_ytdc_l_10_0</div><div class="ttdef"><b>Definition:</b> RPCEve.h:832</div></div>
+<div class="ttc" id="aclassRPCEve_html_ae0ae323396588aeb41768cbfd2dce046"><div class="ttname"><a href="classRPCEve.html#ae0ae323396588aeb41768cbfd2dce046">RPCEve::xLayer</a></div><div class="ttdeci">TBits * xLayer[12]</div><div class="ttdef"><b>Definition:</b> RPCEve.h:897</div></div>
 <div class="ttc" id="aclassRPCEve_html_a6da0bec033e18f60d13d824552f5339f"><div class="ttname"><a href="classRPCEve.html#a6da0bec033e18f60d13d824552f5339f">RPCEve::ystriphitsL8</a></div><div class="ttdeci">TBits * ystriphitsL8</div><div class="ttdef"><b>Definition:</b> RPCEve.h:66</div></div>
 <div class="ttc" id="aclassRPCEve_html_abb21eaa3de5d0f5e54434f60aadefaf8"><div class="ttname"><a href="classRPCEve.html#abb21eaa3de5d0f5e54434f60aadefaf8">RPCEve::xtdc_t_7_7</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * xtdc_t_7_7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:333</div></div>
 <div class="ttc" id="aclassRPCEve_html_a96822f77307537b65955d204d1b92f01"><div class="ttname"><a href="classRPCEve.html#a96822f77307537b65955d204d1b92f01">RPCEve::b_xtdc_t_6_0</a></div><div class="ttdeci">TBranch * b_xtdc_t_6_0</div><div class="ttdef"><b>Definition:</b> RPCEve.h:705</div></div>
@@ -2231,7 +2258,6 @@ $(function() {
 <div class="ttc" id="aclassRPCEve_html_a9bf0332c0058b9972b1fc94604e63a9b"><div class="ttname"><a href="classRPCEve.html#a9bf0332c0058b9972b1fc94604e63a9b">RPCEve::xtdc_l_2_3</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * xtdc_l_2_3</div><div class="ttdef"><b>Definition:</b> RPCEve.h:155</div></div>
 <div class="ttc" id="aclassRPCEve_html_a4f54920295b3b326c0ba5fd22a234822"><div class="ttname"><a href="classRPCEve.html#a4f54920295b3b326c0ba5fd22a234822">RPCEve::b_ytdc_t_7_5</a></div><div class="ttdeci">TBranch * b_ytdc_t_7_5</div><div class="ttdef"><b>Definition:</b> RPCEve.h:758</div></div>
 <div class="ttc" id="aclassRPCEve_html_abd671d79c3650db76737e774ffa98f70"><div class="ttname"><a href="classRPCEve.html#abd671d79c3650db76737e774ffa98f70">RPCEve::xtdc_l_9_5</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * xtdc_l_9_5</div><div class="ttdef"><b>Definition:</b> RPCEve.h:387</div></div>
-<div class="ttc" id="aclassRPCEve_html_a9fcba7a189c4989ac62f1d1c123707d7"><div class="ttname"><a href="classRPCEve.html#a9fcba7a189c4989ac62f1d1c123707d7">RPCEve::EveTS</a></div><div class="ttdeci">TTimeStamp * EveTS[NL]</div><div class="ttdef"><b>Definition:</b> RPCEve.h:896</div></div>
 <div class="ttc" id="aclassRPCEve_html_a629e751044c6ff168eaaca9f24d7f6a9"><div class="ttname"><a href="classRPCEve.html#a629e751044c6ff168eaaca9f24d7f6a9">RPCEve::b_xtdc_l_6_7</a></div><div class="ttdeci">TBranch * b_xtdc_l_6_7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:731</div></div>
 <div class="ttc" id="aclassRPCEve_html_a692d72d1b65a504bbec472aebe19d699"><div class="ttname"><a href="classRPCEve.html#a692d72d1b65a504bbec472aebe19d699">RPCEve::b_ytdc_l_10_7</a></div><div class="ttdeci">TBranch * b_ytdc_l_10_7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:860</div></div>
 <div class="ttc" id="aclassRPCEve_html_abf752944b09955c5adcf5eee2cc5d7e7"><div class="ttname"><a href="classRPCEve.html#abf752944b09955c5adcf5eee2cc5d7e7">RPCEve::xstriphitsL10</a></div><div class="ttdeci">TBits * xstriphitsL10</div><div class="ttdef"><b>Definition:</b> RPCEve.h:69</div></div>
@@ -2299,7 +2325,6 @@ $(function() {
 <div class="ttc" id="aclassRPCEve_html_ad5772641a64a294a4f29c7485cbafc8f"><div class="ttname"><a href="classRPCEve.html#ad5772641a64a294a4f29c7485cbafc8f">RPCEve::Loop</a></div><div class="ttdeci">virtual void Loop()</div><div class="ttdef"><b>Definition:</b> RPCEve.cc:7</div></div>
 <div class="ttc" id="aclassRPCEve_html_a873dbaae8ff5f04da6f6b58ca94169e5"><div class="ttname"><a href="classRPCEve.html#a873dbaae8ff5f04da6f6b58ca94169e5">RPCEve::b_xtdc_t_6_5</a></div><div class="ttdeci">TBranch * b_xtdc_t_6_5</div><div class="ttdef"><b>Definition:</b> RPCEve.h:725</div></div>
 <div class="ttc" id="aclassRPCEve_html_a9e2231ac614a1e7ed369b831597c3332"><div class="ttname"><a href="classRPCEve.html#a9e2231ac614a1e7ed369b831597c3332">RPCEve::ytdc_l_0_2</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * ytdc_l_0_2</div><div class="ttdef"><b>Definition:</b> RPCEve.h:88</div></div>
-<div class="ttc" id="aclassRPCEve_html_a77469fda8312010ca78950e0a55d6154"><div class="ttname"><a href="classRPCEve.html#a77469fda8312010ca78950e0a55d6154">RPCEve::yLayer</a></div><div class="ttdeci">TBits * yLayer[NL]</div><div class="ttdef"><b>Definition:</b> RPCEve.h:898</div></div>
 <div class="ttc" id="aclassRPCEve_html_aadbbcc202b6e2c66292aae8775a0b29f"><div class="ttname"><a href="classRPCEve.html#aadbbcc202b6e2c66292aae8775a0b29f">RPCEve::b_xstriphitsL7</a></div><div class="ttdeci">TBranch * b_xstriphitsL7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:497</div></div>
 <div class="ttc" id="aclassRPCEve_html_a3edf703cd9269730fb1e42d2813c87b8"><div class="ttname"><a href="classRPCEve.html#a3edf703cd9269730fb1e42d2813c87b8">RPCEve::xtdc_t_10_1</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * xtdc_t_10_1</div><div class="ttdef"><b>Definition:</b> RPCEve.h:405</div></div>
 <div class="ttc" id="aclassRPCEve_html_a7df8744f7d7ec0ce6498bab78f0b1a53"><div class="ttname"><a href="classRPCEve.html#a7df8744f7d7ec0ce6498bab78f0b1a53">RPCEve::ytdc_t_11_0</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * ytdc_t_11_0</div><div class="ttdef"><b>Definition:</b> RPCEve.h:434</div></div>
@@ -2382,6 +2407,7 @@ $(function() {
 <div class="ttc" id="aclassRPCEve_html_aa5ec6e216285ab550c38478b9123ed1b"><div class="ttname"><a href="classRPCEve.html#aa5ec6e216285ab550c38478b9123ed1b">RPCEve::b_ytdc_l_3_7</a></div><div class="ttdeci">TBranch * b_ytdc_l_3_7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:636</div></div>
 <div class="ttc" id="aclassRPCEve_html_ac9b413379b2429e3042ea2c5180ff8dc"><div class="ttname"><a href="classRPCEve.html#ac9b413379b2429e3042ea2c5180ff8dc">RPCEve::b_ystriphitsL2</a></div><div class="ttdeci">TBranch * b_ystriphitsL2</div><div class="ttdef"><b>Definition:</b> RPCEve.h:488</div></div>
 <div class="ttc" id="aclassRPCEve_html_afb4b5303b509a6d78c0d7d9fadba03bd"><div class="ttname"><a href="classRPCEve.html#afb4b5303b509a6d78c0d7d9fadba03bd">RPCEve::b_ytdc_t_4_5</a></div><div class="ttdeci">TBranch * b_ytdc_t_4_5</div><div class="ttdef"><b>Definition:</b> RPCEve.h:662</div></div>
+<div class="ttc" id="aclassRPCEve_html_a4713b3c7112be79165179454f19dcdae"><div class="ttname"><a href="classRPCEve.html#a4713b3c7112be79165179454f19dcdae">RPCEve::vxtdc_t</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * vxtdc_t[12][8]</div><div class="ttdef"><b>Definition:</b> RPCEve.h:902</div></div>
 <div class="ttc" id="aclassRPCEve_html_ab4c30b62bef7cdbd411716e7c4660c44"><div class="ttname"><a href="classRPCEve.html#ab4c30b62bef7cdbd411716e7c4660c44">RPCEve::b_ytdc_l_0_3</a></div><div class="ttdeci">TBranch * b_ytdc_l_0_3</div><div class="ttdef"><b>Definition:</b> RPCEve.h:524</div></div>
 <div class="ttc" id="aclassRPCEve_html_a233404901ce01cca0aa91d6b213a1da2"><div class="ttname"><a href="classRPCEve.html#a233404901ce01cca0aa91d6b213a1da2">RPCEve::Evetime_2</a></div><div class="ttdeci">TTimeStamp * Evetime_2</div><div class="ttdef"><b>Definition:</b> RPCEve.h:39</div></div>
 <div class="ttc" id="aclassRPCEve_html_a0cc21983de1279fe835e96658e6e55df"><div class="ttname"><a href="classRPCEve.html#a0cc21983de1279fe835e96658e6e55df">RPCEve::RPCEve</a></div><div class="ttdeci">RPCEve(TTree *tree=0)</div></div>
@@ -2425,6 +2451,7 @@ $(function() {
 <div class="ttc" id="aclassRPCEve_html_a639e58f782250b16164167880209c16e"><div class="ttname"><a href="classRPCEve.html#a639e58f782250b16164167880209c16e">RPCEve::xtdc_t_11_2</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * xtdc_t_11_2</div><div class="ttdef"><b>Definition:</b> RPCEve.h:441</div></div>
 <div class="ttc" id="aclassRPCEve_html_ab68acdedf58bd8a8d99eb155d585f7fc"><div class="ttname"><a href="classRPCEve.html#ab68acdedf58bd8a8d99eb155d585f7fc">RPCEve::ytdc_l_5_7</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * ytdc_l_5_7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:268</div></div>
 <div class="ttc" id="aclassRPCEve_html_a57fb5d7c35a2d4114837bf3cef3e7f47"><div class="ttname"><a href="classRPCEve.html#a57fb5d7c35a2d4114837bf3cef3e7f47">RPCEve::GetEntry</a></div><div class="ttdeci">virtual Int_t GetEntry(Long64_t entry)</div></div>
+<div class="ttc" id="aclassRPCEve_html_ace7ac017bef2d6e41bf9f970408c2eb3"><div class="ttname"><a href="classRPCEve.html#ace7ac017bef2d6e41bf9f970408c2eb3">RPCEve::EveTS</a></div><div class="ttdeci">TTimeStamp * EveTS[12]</div><div class="ttdef"><b>Definition:</b> RPCEve.h:896</div></div>
 <div class="ttc" id="aclassRPCEve_html_ac14773e058b737a25e4a0fe69b6e1081"><div class="ttname"><a href="classRPCEve.html#ac14773e058b737a25e4a0fe69b6e1081">RPCEve::b_Evetime_11</a></div><div class="ttdeci">TBranch * b_Evetime_11</div><div class="ttdef"><b>Definition:</b> RPCEve.h:481</div></div>
 <div class="ttc" id="aclassRPCEve_html_a645659482e8a019561703f031f80f791"><div class="ttname"><a href="classRPCEve.html#a645659482e8a019561703f031f80f791">RPCEve::xtdc_l_7_7</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * xtdc_l_7_7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:331</div></div>
 <div class="ttc" id="aclassRPCEve_html_adab46f5bbd764b72a3f56dc48a91fe16"><div class="ttname"><a href="classRPCEve.html#adab46f5bbd764b72a3f56dc48a91fe16">RPCEve::b_xtdc_l_9_7</a></div><div class="ttdeci">TBranch * b_xtdc_l_9_7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:827</div></div>
@@ -2433,10 +2460,11 @@ $(function() {
 <div class="ttc" id="aclassRPCEve_html_a1abe23f5a48ce097d4e3d9de399b0aee"><div class="ttname"><a href="classRPCEve.html#a1abe23f5a48ce097d4e3d9de399b0aee">RPCEve::b_ytdc_t_0_7</a></div><div class="ttdeci">TBranch * b_ytdc_t_0_7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:542</div></div>
 <div class="ttc" id="aclassRPCEve_html_ae0b6c37c64a672d774510691e560901b"><div class="ttname"><a href="classRPCEve.html#ae0b6c37c64a672d774510691e560901b">RPCEve::b_ytdc_t_5_1</a></div><div class="ttdeci">TBranch * b_ytdc_t_5_1</div><div class="ttdef"><b>Definition:</b> RPCEve.h:678</div></div>
 <div class="ttc" id="aclassRPCEve_html_a562095aecdc10606ced7ea17262431cc"><div class="ttname"><a href="classRPCEve.html#a562095aecdc10606ced7ea17262431cc">RPCEve::b_xtdc_t_9_5</a></div><div class="ttdeci">TBranch * b_xtdc_t_9_5</div><div class="ttdef"><b>Definition:</b> RPCEve.h:821</div></div>
+<div class="ttc" id="aclassRPCEve_html_a3f338e9f6eb5ec1c2e070b6b6d5e8e1f"><div class="ttname"><a href="classRPCEve.html#a3f338e9f6eb5ec1c2e070b6b6d5e8e1f">RPCEve::yLayer</a></div><div class="ttdeci">TBits * yLayer[12]</div><div class="ttdef"><b>Definition:</b> RPCEve.h:898</div></div>
 <div class="ttc" id="aclassRPCEve_html_aaa60075a302ceb6b80d50564309af971"><div class="ttname"><a href="classRPCEve.html#aaa60075a302ceb6b80d50564309af971">RPCEve::b_ytdc_l_9_7</a></div><div class="ttdeci">TBranch * b_ytdc_l_9_7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:828</div></div>
 <div class="ttc" id="aclassRPCEve_html_ad17e0acb71a1ecee883f8ec2694edea0"><div class="ttname"><a href="classRPCEve.html#ad17e0acb71a1ecee883f8ec2694edea0">RPCEve::b_xtdc_l_3_4</a></div><div class="ttdeci">TBranch * b_xtdc_l_3_4</div><div class="ttdef"><b>Definition:</b> RPCEve.h:623</div></div>
+<div class="ttc" id="aclassRPCEve_html_adb0195088b120c77a99f1b70272af246"><div class="ttname"><a href="classRPCEve.html#adb0195088b120c77a99f1b70272af246">RPCEve::vytdc_t</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * vytdc_t[12][8]</div><div class="ttdef"><b>Definition:</b> RPCEve.h:903</div></div>
 <div class="ttc" id="aclassRPCEve_html_a005d80231d2dd8e9b4489f453233a386"><div class="ttname"><a href="classRPCEve.html#a005d80231d2dd8e9b4489f453233a386">RPCEve::xtdc_t_7_1</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * xtdc_t_7_1</div><div class="ttdef"><b>Definition:</b> RPCEve.h:309</div></div>
-<div class="ttc" id="aclassRPCEve_html_a53c42e8c66ac08f5b051f9954adfb94c"><div class="ttname"><a href="classRPCEve.html#a53c42e8c66ac08f5b051f9954adfb94c">RPCEve::vytdc_l</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * vytdc_l[NL][NC]</div><div class="ttdef"><b>Definition:</b> RPCEve.h:900</div></div>
 <div class="ttc" id="aclassRPCEve_html_a46fc3c7272da45ccf63d131ae8d1f650"><div class="ttname"><a href="classRPCEve.html#a46fc3c7272da45ccf63d131ae8d1f650">RPCEve::xtdc_t_5_0</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * xtdc_t_5_0</div><div class="ttdef"><b>Definition:</b> RPCEve.h:241</div></div>
 <div class="ttc" id="aclassRPCEve_html_ae99f36d3bfc0cd3b6457c7ae47e4813b"><div class="ttname"><a href="classRPCEve.html#ae99f36d3bfc0cd3b6457c7ae47e4813b">RPCEve::b_ytdc_l_10_6</a></div><div class="ttdeci">TBranch * b_ytdc_l_10_6</div><div class="ttdef"><b>Definition:</b> RPCEve.h:856</div></div>
 <div class="ttc" id="aclassRPCEve_html_a707879202df4bbc46433690d895f19f7"><div class="ttname"><a href="classRPCEve.html#a707879202df4bbc46433690d895f19f7">RPCEve::b_xtdc_t_4_6</a></div><div class="ttdeci">TBranch * b_xtdc_t_4_6</div><div class="ttdef"><b>Definition:</b> RPCEve.h:665</div></div>
@@ -2567,7 +2595,6 @@ $(function() {
 <div class="ttc" id="aclassRPCEve_html_a4bbccb9e2242bc8358f8e5b30cf8bac9"><div class="ttname"><a href="classRPCEve.html#a4bbccb9e2242bc8358f8e5b30cf8bac9">RPCEve::b_xtdc_l_10_2</a></div><div class="ttdeci">TBranch * b_xtdc_l_10_2</div><div class="ttdef"><b>Definition:</b> RPCEve.h:839</div></div>
 <div class="ttc" id="aclassRPCEve_html_aa60da4d597f047e6c2d700f8a5a0caf9"><div class="ttname"><a href="classRPCEve.html#aa60da4d597f047e6c2d700f8a5a0caf9">RPCEve::b_xtdc_l_4_4</a></div><div class="ttdeci">TBranch * b_xtdc_l_4_4</div><div class="ttdef"><b>Definition:</b> RPCEve.h:655</div></div>
 <div class="ttc" id="aclassRPCEve_html_a402673cd4941a133100e4ef3380530d9"><div class="ttname"><a href="classRPCEve.html#a402673cd4941a133100e4ef3380530d9">RPCEve::xtdc_t_6_7</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * xtdc_t_6_7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:301</div></div>
-<div class="ttc" id="aclassRPCEve_html_a79f7cbbad79238b1fdf3e7e7f1cdabf8"><div class="ttname"><a href="classRPCEve.html#a79f7cbbad79238b1fdf3e7e7f1cdabf8">RPCEve::vxtdc_l</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * vxtdc_l[NL][NC]</div><div class="ttdef"><b>Definition:</b> RPCEve.h:899</div></div>
 <div class="ttc" id="aclassRPCEve_html_acdfb7c88af817c10eff96ce5ccb83d35"><div class="ttname"><a href="classRPCEve.html#acdfb7c88af817c10eff96ce5ccb83d35">RPCEve::b_xtdc_t_11_0</a></div><div class="ttdeci">TBranch * b_xtdc_t_11_0</div><div class="ttdef"><b>Definition:</b> RPCEve.h:865</div></div>
 <div class="ttc" id="aclassRPCEve_html_ad6bb5e4760f5c7a4f64e501ef0f91fbe"><div class="ttname"><a href="classRPCEve.html#ad6bb5e4760f5c7a4f64e501ef0f91fbe">RPCEve::b_ytdc_t_8_2</a></div><div class="ttdeci">TBranch * b_ytdc_t_8_2</div><div class="ttdef"><b>Definition:</b> RPCEve.h:778</div></div>
 <div class="ttc" id="aclassRPCEve_html_a927f3401604a23372349cba29fc03fef"><div class="ttname"><a href="classRPCEve.html#a927f3401604a23372349cba29fc03fef">RPCEve::b_ytdc_t_6_4</a></div><div class="ttdeci">TBranch * b_ytdc_t_6_4</div><div class="ttdef"><b>Definition:</b> RPCEve.h:722</div></div>
@@ -2594,6 +2621,7 @@ $(function() {
 <div class="ttc" id="aclassRPCEve_html_a50efbea4d1f5babbe56691c0bd335d24"><div class="ttname"><a href="classRPCEve.html#a50efbea4d1f5babbe56691c0bd335d24">RPCEve::b_xtdc_t_9_4</a></div><div class="ttdeci">TBranch * b_xtdc_t_9_4</div><div class="ttdef"><b>Definition:</b> RPCEve.h:817</div></div>
 <div class="ttc" id="aclassRPCEve_html_a79c498f592e02b67ee77705f2c7167a9"><div class="ttname"><a href="classRPCEve.html#a79c498f592e02b67ee77705f2c7167a9">RPCEve::xtdc_t_6_3</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * xtdc_t_6_3</div><div class="ttdef"><b>Definition:</b> RPCEve.h:285</div></div>
 <div class="ttc" id="aclassRPCEve_html"><div class="ttname"><a href="classRPCEve.html">RPCEve</a></div><div class="ttdef"><b>Definition:</b> RPCEve.h:27</div></div>
+<div class="ttc" id="aclassRPCEve_html_a8072c07befa4e61a60b32df8a121cacd"><div class="ttname"><a href="classRPCEve.html#a8072c07befa4e61a60b32df8a121cacd">RPCEve::vxtdc_l</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * vxtdc_l[12][8]</div><div class="ttdef"><b>Definition:</b> RPCEve.h:899</div></div>
 <div class="ttc" id="aclassRPCEve_html_a240e5558028219babad2e983bbb288be"><div class="ttname"><a href="classRPCEve.html#a240e5558028219babad2e983bbb288be">RPCEve::b_trigCntDiff</a></div><div class="ttdeci">TBranch * b_trigCntDiff</div><div class="ttdef"><b>Definition:</b> RPCEve.h:510</div></div>
 <div class="ttc" id="aclassRPCEve_html_a49a1666aebcb18c652c54ac1409101ed"><div class="ttname"><a href="classRPCEve.html#a49a1666aebcb18c652c54ac1409101ed">RPCEve::ytdc_t_4_3</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * ytdc_t_4_3</div><div class="ttdef"><b>Definition:</b> RPCEve.h:222</div></div>
 <div class="ttc" id="aclassRPCEve_html_a30d7d4b09edec4920d5858bc7ff9fcf2"><div class="ttname"><a href="classRPCEve.html#a30d7d4b09edec4920d5858bc7ff9fcf2">RPCEve::Evetime_0</a></div><div class="ttdeci">TTimeStamp * Evetime_0</div><div class="ttdef"><b>Definition:</b> RPCEve.h:37</div></div>
@@ -2620,7 +2648,6 @@ $(function() {
 <div class="ttc" id="aclassRPCEve_html_a2fd5504f45304afffc8a983f2aa2b143"><div class="ttname"><a href="classRPCEve.html#a2fd5504f45304afffc8a983f2aa2b143">RPCEve::b_ytdc_l_9_6</a></div><div class="ttdeci">TBranch * b_ytdc_l_9_6</div><div class="ttdef"><b>Definition:</b> RPCEve.h:824</div></div>
 <div class="ttc" id="aclassRPCEve_html_a63634b7b69283561a74e9ced089c1ce2"><div class="ttname"><a href="classRPCEve.html#a63634b7b69283561a74e9ced089c1ce2">RPCEve::b_xtdc_l_1_7</a></div><div class="ttdeci">TBranch * b_xtdc_l_1_7</div><div class="ttdef"><b>Definition:</b> RPCEve.h:571</div></div>
 <div class="ttc" id="aclassRPCEve_html_a58c2d0d3499f868df41c06803bf320eb"><div class="ttname"><a href="classRPCEve.html#a58c2d0d3499f868df41c06803bf320eb">RPCEve::xtdc_t_9_3</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * xtdc_t_9_3</div><div class="ttdef"><b>Definition:</b> RPCEve.h:381</div></div>
-<div class="ttc" id="aclassRPCEve_html_adda7f8bfc9c111708324ed0085896b54"><div class="ttname"><a href="classRPCEve.html#adda7f8bfc9c111708324ed0085896b54">RPCEve::vytdc_t</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * vytdc_t[NL][NC]</div><div class="ttdef"><b>Definition:</b> RPCEve.h:903</div></div>
 <div class="ttc" id="aclassRPCEve_html_a410a8a1dc0440f1f8734fecfefcff33b"><div class="ttname"><a href="classRPCEve.html#a410a8a1dc0440f1f8734fecfefcff33b">RPCEve::b_xtdc_l_5_4</a></div><div class="ttdeci">TBranch * b_xtdc_l_5_4</div><div class="ttdef"><b>Definition:</b> RPCEve.h:687</div></div>
 <div class="ttc" id="aclassRPCEve_html_a23353e2cd066c2593617cd276fe3a2d6"><div class="ttname"><a href="classRPCEve.html#a23353e2cd066c2593617cd276fe3a2d6">RPCEve::b_ytdc_l_4_3</a></div><div class="ttdeci">TBranch * b_ytdc_l_4_3</div><div class="ttdef"><b>Definition:</b> RPCEve.h:652</div></div>
 <div class="ttc" id="aclassRPCEve_html_ae1a617bba86904183667060100269467"><div class="ttname"><a href="classRPCEve.html#ae1a617bba86904183667060100269467">RPCEve::xtdc_t_9_6</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * xtdc_t_9_6</div><div class="ttdef"><b>Definition:</b> RPCEve.h:393</div></div>
@@ -2796,10 +2823,13 @@ $(function() {
 <div class="ttc" id="aclassRPCEve_html_a7d0bdfa25dc824ef6f6068c3a8d14f9b"><div class="ttname"><a href="classRPCEve.html#a7d0bdfa25dc824ef6f6068c3a8d14f9b">RPCEve::xtdc_l_0_3</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * xtdc_l_0_3</div><div class="ttdef"><b>Definition:</b> RPCEve.h:91</div></div>
 <div class="ttc" id="aclassRPCEve_html_aa4dcbe99857da25551fae6a20dff3dd9"><div class="ttname"><a href="classRPCEve.html#aa4dcbe99857da25551fae6a20dff3dd9">RPCEve::ytdc_t_0_6</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; * ytdc_t_0_6</div><div class="ttdef"><b>Definition:</b> RPCEve.h:106</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="RPCEve_8h.html">RPCEve.h</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

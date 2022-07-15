@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -25,6 +34,21 @@
    </div>
    <div id="projectbrief">Stand-alone code to execute reconstruction for digitized output(either from data or simulation).</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -36,16 +60,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('classRPCEve.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +91,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">RPCEve Member List</div>  </div>
@@ -510,7 +540,7 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#a804abe60441d34e1fb000f3ef0dced14">Evetime_7</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classRPCEve.html#a774d65b6a2ff0f6bf51446a022fa9d8e">Evetime_8</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#a9fdad89d3192692a0c80b6a56babb57a">Evetime_9</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classRPCEve.html#a9fcba7a189c4989ac62f1d1c123707d7">EveTS</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRPCEve.html#ace7ac017bef2d6e41bf9f970408c2eb3">EveTS</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#a922d658c487a318b9488ef71655c6cb0">fChain</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classRPCEve.html#ae4dd9f21e50f37968af79629689db35f">fCurrent</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#a57fb5d7c35a2d4114837bf3cef3e7f47">GetEntry</a>(Long64_t entry)</td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
@@ -524,11 +554,11 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#abe45647bdc4bf0e50fba00d4d906c5c2">tdc_ref_l</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classRPCEve.html#a7e480987e844c313907ca37b477787fd">tdc_ref_t</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#ad0ed878febbe2668457ce87cc1d90249">trigCntDiff</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classRPCEve.html#a79f7cbbad79238b1fdf3e7e7f1cdabf8">vxtdc_l</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#a4bc9e22b43910ec130b07d8bd74c9dc9">vxtdc_t</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classRPCEve.html#a53c42e8c66ac08f5b051f9954adfb94c">vytdc_l</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#adda7f8bfc9c111708324ed0085896b54">vytdc_t</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classRPCEve.html#a4232a6e7f3de511326fb97018f1fc2df">xLayer</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRPCEve.html#a8072c07befa4e61a60b32df8a121cacd">vxtdc_l</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#a4713b3c7112be79165179454f19dcdae">vxtdc_t</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRPCEve.html#a583203b333f9c3e07507af5e375a13d2">vytdc_l</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#adb0195088b120c77a99f1b70272af246">vytdc_t</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRPCEve.html#ae0ae323396588aeb41768cbfd2dce046">xLayer</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#aabd7aaa45503ca347ad501f5ae84fb2c">xstriphitsL0</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classRPCEve.html#a7b5b95731f0e8e3f30ef15d5fbe6bd6a">xstriphitsL1</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#abf752944b09955c5adcf5eee2cc5d7e7">xstriphitsL10</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
@@ -733,7 +763,7 @@ $(function() {
   <tr><td class="entry"><a class="el" href="classRPCEve.html#aeae0b9a858f497fe4345e512cfd01a14">xtdc_t_9_5</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#ae1a617bba86904183667060100269467">xtdc_t_9_6</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classRPCEve.html#ac1538d54d584bb352463f9eea3ca1dc6">xtdc_t_9_7</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#a77469fda8312010ca78950e0a55d6154">yLayer</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#a3f338e9f6eb5ec1c2e070b6b6d5e8e1f">yLayer</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classRPCEve.html#a031e026d22128fe7cc7445041deb0ad0">ystriphitsL0</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#a4751f7567496731cb3ab43bf0fa1acf3">ystriphitsL1</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classRPCEve.html#ad68b8822b655f517742dba4e8505766a">ystriphitsL10</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
@@ -940,11 +970,14 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="classRPCEve.html#ade0af6c9468d5200dae411a9bbcf45e2">ytdc_t_9_7</a></td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classRPCEve.html#a347a614f3c8ae22867bd678d87e98d08">~RPCEve</a>()</td><td class="entry"><a class="el" href="classRPCEve.html">RPCEve</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

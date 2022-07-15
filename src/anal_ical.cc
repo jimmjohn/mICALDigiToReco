@@ -1,7 +1,7 @@
 // Reconstruction Code of DIGI output
 //argv[0]:
 //argv[1]:input file name containing root files
-//argv[2]:Input options: 0: SIM -> DIFI, 1 : DIGI -> RECO (MC), 2: DIGI->RECO (Data)
+//argv[2]:Input options: 0: SIM -> DIGI, 1 : DIGI -> RECO (MC), 2: DIGI->RECO (Data)
 //argv[3]:Least Count of TDC- 0.1
 //argv[4]: Collated input file name *.root
 //argv[5]: Print Level- 1000
@@ -50,7 +50,6 @@ int main(int argc, char** argv) {
    int TrackFitFlag =  atoi(argv[8]);
    int gdmlOption = atoi(argv[9]);
 
-
   // int InputOutput = 1;
   // double TimeToDigi = 0.1;
   // int printModulo =1000;
@@ -59,10 +58,7 @@ int main(int argc, char** argv) {
   // int TrackFitFlag = 1;
   // int gdmlOption = 0;
 
-
-
   int collatedIn;
-
 
   if(InputOutput==0) {
     collatedIn = atoi(argv[4]);
@@ -82,11 +78,11 @@ int main(int argc, char** argv) {
   detectorConfig->PrintParameters();
 
   cout<<"InputOutput: "<<detectorConfig->GetInputOutput();
-  cout<<"TimeToDigi: "<<detectorConfig->GetTimeToDigiConv();
-  cout<<"CollatedIn: "<< detectorConfig->GetCollatedIn();
-  cout<<"CMVD: "<<  detectorConfig->GetCMVD();
-  cout<<"Mag: "<< detectorConfig->GetMag();
-  cout<<"gdmlOption: "<< detectorConfig->GetgdmlOption();
+  cout<<"\nTimeToDigi: "<<detectorConfig->GetTimeToDigiConv();
+  cout<<"\nCollatedIn: "<< detectorConfig->GetCollatedIn();
+  cout<<"\nCMVD: "<<  detectorConfig->GetCMVD();
+  cout<<"\nMag: "<< detectorConfig->GetMag();
+  cout<<"\ngdmlOption: "<< detectorConfig->GetgdmlOption();
 
   micalDetectorParameterDef* paradef = new micalDetectorParameterDef;
   InoGeometry_Manager* geoManager;
@@ -150,12 +146,12 @@ int main(int argc, char** argv) {
     if(InputOutput) {
 
       if(InputOutput>1) {
-	sprintf(outfile,"./recodata/%s_data",ffoutname);
+	sprintf(outfile,"./recodata/%s_data",ffoutname);   //Data DIGI->RECO
       } else {
-	sprintf(outfile,"./recodata/%s_reco",ffoutname);
+	sprintf(outfile,"./recodata/%s_reco",ffoutname);   //Mont DIGI->RECO
       }
     } else {
-      sprintf(outfile,"%s_digi",ffoutname);
+      sprintf(outfile,"%s_digi",ffoutname);          //Mont SIM->DIGI
     }
 
 
