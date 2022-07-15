@@ -1,7 +1,0 @@
-<map id="MultiSimAnalysisDigi::GetCMVadctons" name="MultiSimAnalysisDigi::GetCMVadctons">
-<area shape="rect" id="node1" title=" " alt="" coords="257,74,419,115"/>
-<area shape="rect" id="node2" href="$classCmvCluster.html#acf29013f8990553f5255be8019ad9ca7" title=" " alt="" coords="16,5,199,32"/>
-<area shape="rect" id="node3" href="$classCmvHit.html#ae84a678a930dda18ec6f83da391d7f4c" title=" " alt="" coords="43,56,171,83"/>
-<area shape="rect" id="node4" href="$classCmvCluster.html#a72860a2d836a2b4a7f48d18bc4a94fef" title=" " alt="" coords="5,107,209,133"/>
-<area shape="rect" id="node5" href="$classSipmHit.html#aeed013b41b44e015d625b83e29a117bb" title=" " alt="" coords="40,157,175,184"/>
-</map>

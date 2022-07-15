@@ -1,8 +1,0 @@
-<map id="micalDetectorParameterDef::GetnIRLayer" name="micalDetectorParameterDef::GetnIRLayer">
-<area shape="rect" id="node1" title=" " alt="" coords="459,89,663,131"/>
-<area shape="rect" id="node2" href="$classGeneralRecoInfo.html#a162b21e1cf6db30e4558c47ebf676b40" title=" " alt="" coords="221,5,411,47"/>
-<area shape="rect" id="node3" href="$classInoDigiAlg.html#a102f58f9eba715ef256c09e4b434fabe" title=" " alt="" coords="234,71,398,98"/>
-<area shape="rect" id="node4" href="$classInoRecoAlg.html#a517de28eea24d7f069800cae87dd3b5c" title=" " alt="" coords="228,122,404,149"/>
-<area shape="rect" id="node5" href="$classmicalFieldPropagator.html#a604e48041ba9667af20f545eb733d0f5" title=" " alt="" coords="232,173,400,215"/>
-<area shape="rect" id="node6" href="$classParameterMessenger.html#abdf35ebba13c0ec88f9a32821b5f5de4" title=" " alt="" coords="5,173,173,215"/>
-</map>
