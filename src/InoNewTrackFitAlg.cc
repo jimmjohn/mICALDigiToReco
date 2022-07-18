@@ -2361,7 +2361,7 @@ void InoNewTrackFitAlg::StoreFilteredData(const int NewPlane) {
   temp.x_k5=int(x_k[5]);
   temp.x_k6=true;
   //  FilteredData[NewPlane].clear();
-	//	cout <<"x_k[0] "<<x_k[0]<<" "<< x_k[1]<<endl;
+		cout << "Filtered Data-"<< "x_k[ij(0-5)] ="<<x_k[0]<<" "<< x_k[1]<<" "<<x_k[2]<<" "<< x_k[3]" "<<<<x_k[4]<<" "<< x_k[5]<<endl;
   FilteredData[NewPlane].push_back(temp);
 }
 
@@ -3845,7 +3845,7 @@ bool InoNewTrackFitAlg::PredictedStateCov(double *StateVector, const int Plane, 
   cout<<"DiffPlane "<<DiffPlane<<endl;
   for (int ij = 1; ij <= DiffPlane; ij++) {
     cout<<"DiffPlane "<<DiffPlane<<endl;
-    double i1state[5];double i2state[5]; double i3state[5]={0.0};
+    double i1state[5]; double i2state[5]; double i3state[5]={0.0};
     // i1state is the vector that InoNewTrackFitAlg() has just crossed RPC layer
       // for (int jk=0; jk<5; jk++) {
       //  i1state[jk]= i2state[jk] =0;
@@ -3880,7 +3880,6 @@ bool InoNewTrackFitAlg::PredictedStateCov(double *StateVector, const int Plane, 
 
     for(int jk = 0; jk<5; jk++) {
       i3state[jk]=i1state[jk];
-
 			//      cout<<"i3state "<<jk<<" "<<i3state[jk]<<endl;
     }
 
@@ -3893,7 +3892,7 @@ bool InoNewTrackFitAlg::PredictedStateCov(double *StateVector, const int Plane, 
 		//    cout<<"ZPosLayer[1]"<<ZPosLayer[1]<<endl;
 
     double totdist= (isHalf) ? 0.5*(ZPosLayer[2]-ZPosLayer[1]) : (ZPosLayer[2]-ZPosLayer[1]);
- if(NewPlane==11){totdist =ZPosLayer[NewPlane]-ZPosLayer[Plane]; } //30062022 RSA
+ 		if(NewPlane==11){totdist =ZPosLayer[NewPlane]-ZPosLayer[Plane]; } //30062022 RSA
 
     cout<<"totdist "<<totdist<<endl;
     double f = 2.0;
@@ -3913,7 +3912,7 @@ bool InoNewTrackFitAlg::PredictedStateCov(double *StateVector, const int Plane, 
 			//      cout <<"ilstate "<< i1state[0]<<" "<<i1state[1]<<" "<<i1state[2]<<" "<<i1state[3]<<" "<<i1state[4]<<" "<<f<<endl;
       if (fabs(i1state[2])>7.5) {
 	//  cout<<"check 1"<<endl;
-        i1state[2] = 7.5*(i1state[2]/fabs(i1state[2]));
+        i1state[2] = 7.5*(i1state[2]/fabs(i1state[2]));   //Why set maximum to 7.5
       }
       if (fabs(i1state[3])>7.5) {
 	//  cout<<"check 2"<<endl;
@@ -3953,7 +3952,7 @@ bool InoNewTrackFitAlg::PredictedStateCov(double *StateVector, const int Plane, 
 
 
 
-       cout<<" Printing signp for roof    "<<signp<<endl;
+      cout<<" Printing signp for roof    "<<signp<<endl;
       double dxdz = i1state[2];
       double dydz = i1state[3];
       double dsdz = pow((1.+pow(i1state[2],2)+pow(i1state[3],2)),0.5);
@@ -3982,7 +3981,7 @@ bool InoNewTrackFitAlg::PredictedStateCov(double *StateVector, const int Plane, 
       //  cout<<" material "<<localmat->GetName()<<"     Z "<<Z<<"     A "<<localmat->GetA()<<endl;
       if (snext > 1.0) snext=1.0;
 
-      	cout<<"Current Vol Name: "<<icalGeometry->GetCurrentVolume()->GetName()<<endl;
+      cout<<"Current Vol Name: "<<icalGeometry->GetCurrentVolume()->GetName()<<endl;
 	// if(      strstr(icalGeometry->GetCurrentVolume()->GetName(),"AirRoomLogic")          ){
 
       // 	cout<<posTrack[2]<<" "<<100*ZPosLayer[11]-2<<endl;//in cm
@@ -4101,36 +4100,37 @@ bool InoNewTrackFitAlg::PredictedStateCov(double *StateVector, const int Plane, 
           dz = 0.001*signp;
         }
 
-	if(NewPlane==10 || NewPlane==11){
-	  //	  if (localmat->GetName()=="G4_Air"){
-	     if (strstr(localmat->GetName(),"G4_Air")) {
-	  dz = 0.01*signp;
-	  }
+				if(NewPlane==10 || NewPlane==11){
+	  		//	  if (localmat->GetName()=="G4_Air"){
+	     		if (strstr(localmat->GetName(),"G4_Air")) {
+	  				dz = 0.01*signp;
+	  			}
 
-	}
+				}
 
-	//        cout<<"is this !iron? "<<Z<<endl;
+				//        cout<<"is this !iron? "<<Z<<endl;
       }
 
 
       cout<<"dzgl:dz:totdist:  "<<dzgl<<" "<<dz<<" "<<totdist<<endl;
       if(abs(dzgl+dz)>totdist){
 
-	cout<<"dzgl+dz > totdist: "<<dzgl<<" "<<dz<<" "<<totdist<<endl;
-	dz=signp*(totdist-abs(dzgl)-1.e-8);}
+				cout<<"dzgl+dz > totdist: "<<dzgl<<" "<<dz<<" "<<totdist<<endl;
+				dz=signp*(totdist-abs(dzgl)-1.e-8);
+			}
 
       //if (nstep>=nstepmx) {dz= totdist - abs(dzgl);cout<<"000000000000000000000000000000"<<endl;}
       dzgl +=dz;
 
       //DZ[nstep] = dz;
       if (Z == 26.0) {
-        dzFe += dz;
+      	dzFe += dz;
       }
       if ((NIter == 1) && (GoForward==true) && (NewPlane-MinPlane)==1) {
-        B_in = sqrt(Bx*Bx + By*By);
+      	B_in = sqrt(Bx*Bx + By*By);
       }
       if (Z != 26.0) {
-        dznF += dz;
+      	dznF += dz;
       }
       density = localmat->GetDensity();
       // 			   cout<<"dz "<<dz<<" dzgl "<<dzgl<<" snext "<<snext<<" material "<<icalGeometry->GetCurrentVolume()->GetName()<<" density"<<density<<endl;
@@ -4202,12 +4202,12 @@ bool InoNewTrackFitAlg::PredictedStateCov(double *StateVector, const int Plane, 
         } else if (ZIncreasesWithTime==false && dz > 0)	{
           E_ex= E + Eloss;	//cout<<"b"<<endl;
         }
-	// cout<<E_ex<<" "<<E<<" "<<Eloss<<endl;
+				// cout<<E_ex<<" "<<E<<" "<<Eloss<<endl;
         if ((E_ex-mumas)>0) {
           P_ex= sqrt(E_ex*E_ex - mumas*mumas);	//cout<<"PSC(iron) P_ex = "<<P_ex<<endl;
         }
         i2state[4] = qbyP * (P/P_ex);
-	// cout<<"i2state[4]: "<<i2state[4]<<endl;
+				// cout<<"i2state[4]: "<<i2state[4]<<endl;
         ////i2state[4] = qbyP - qbyP*(ddE/(b*P));
       }
       //          cout<<"P "<<P<<"     P_ex "<<P_ex<<"     dz "<<dz<<"     Eloss "<<Eloss<<endl;

@@ -109,6 +109,13 @@ typedef struct{
 
   void TrackElementMerging(double *Tr1, double TargetZ, double *Tr2);
   void GetInitialCovarianceMatrix(const bool FirstIteration);
+  /**
+  * Fucntion to predict the statevector in NewPlane with the updated information from Plane.
+  * @param StateVector State Vector(x_k) at Plane.
+  * @param Plane Previous layer (k-1) .
+  * @param NewPlane The plane for which x_k has to be found.
+  * @param GoForward Direction of propagation.
+ */
   bool PredictedStateCov(double* StateVector, const int Plane, int& NewPlane, const bool GoForward, double *ax__minus, int isHalf=0, double* dS=0, double* Range=0); //, double* dE=0);
   double GetEnergyLoss(double* istate, double dz, double &axi, double &aT_max, double &aI, TGeoMaterial* material);
   void GetMultipleScattering(double* mstate,double Bx,double By, double dz, /*double axi,*/ double aT_max, double aI, TGeoMaterial* material);
@@ -155,7 +162,7 @@ typedef struct{
   vector<ClustStruct> SlcClustData[doubleLa]; //GMA put a very large value, but need to be put from database
   vector<ClustStruct> InitTrkClustData[doubleLa]; //Only Finder track cluster
 
-  vector<TrkDataStruct> TrkClustsData[doubleLa]; //TrkHitsData[doubleLa]; // TrkStripData[150];
+  vector<TrkDataStruct> TrkClustsData[doubleLa]; //TrkHitsData[doubleLa]; // TrkStripData[150]; /*!<  It contains the cluster data in all layers - saved in form of TrkDataStruct*/
   vector<FiltDataStruct> FilteredData[doubleLa];
 
   double ZPosLayer[12];           /*!< ZPosition of the RPC Layer */
@@ -207,17 +214,17 @@ typedef struct{
   double prevpredn[5];
 
   int OtLStrip;
-  int MaxPlane;               /*!< Top most plane. Initialize as MaxPlane = -20 */
-  int MinPlane;               /*!< Bottom most plane. Initialize as MinPlane = nLayer */
+  int MaxPlane;               /*!< Top most plane. Initialize as MaxPlane = -20. While InitialFramework its set to correct value */
+  int MinPlane;               /*!< Bottom most plane. Initialize as MinPlane = nLayer While InitialFramework its set to correct value*/
   //  unsigned nhits;
   double DeltaZ;
   double DeltaPlane;
 
-  InoTrackCand* fTrackCand;
+  InoTrackCand* fTrackCand;   /*!<  Track list will be copied to track candidate. The vertex and direction cosines will be set depending on how we propagate*/
 
-  bool debug_fit;
+  bool debug_fit;             /*!<  Various debug messages are printed with this flag set  */
 
-  bool ZIncreasesWithTime;
+  bool ZIncreasesWithTime;     /*!< False for bottom to top propagation */
   bool FirstIteration;
   bool PassTrack;
   bool fMT;                     /*!< No Idea why this variable */
